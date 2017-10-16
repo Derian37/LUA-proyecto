@@ -10,6 +10,61 @@ function love.load()
 	message = ""
 	mouseX = ""
 	
+	listB1 = {}
+	listB2 = {}
+	rand=0;
+	i=1;
+	j=1;
+	k=1;
+	--
+	a=1;
+	m=1;
+	e=1;
+	d=1;	
+	
+--PRIMERA BARAJA--
+	while i<=10 do
+	   rand=love.math.random(0,67)
+	   while k<=10 do
+	   if rand==listB1[k] then
+	   	rand=love.math.random(0,67)
+	   end
+	   k=k+1
+	   end
+	   listB1[i]=rand
+	   k=0
+	   i = i+1 
+    end
+ 
+print("BARAJA 1")	
+    while j<=10 do
+       print(listB1[j])
+       j= j+1 
+    end
+--SEGUNDA BARAJA--
+
+	while a<=10 do
+	   rando=love.math.random(0,67)
+	   while e<=10 do
+	   if rando==listB2[e] and listB2[e]==listB1[e] then
+	   	rando=love.math.random(0,67)
+	   end
+	   e=e+1
+	   end
+	   listB2[a]=rando
+	   e=0
+	 
+	   a = a+1 
+    end
+ 
+	print("BARAJA 2")
+    while m<=10 do
+       print(listB2[m])
+       m= m+1 
+    end
+
+      
+
 	objects ={}
 	objects.c1={}
 	objects.c1.body = love.physics.newBody(world,187,65,"static")
