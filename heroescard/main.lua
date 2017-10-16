@@ -13,6 +13,8 @@ function love.load()
 	listB1 = {}
 	listB2 = {}
 	rand=0;
+	aux=0;
+	aux2=0;
 	i=1;
 	j=1;
 	k=1;
@@ -21,7 +23,7 @@ function love.load()
 	m=1;
 	e=1;
 	d=1;	
-	
+	z=1;
 --PRIMERA BARAJA--
 	while i<=10 do
 	   rand=love.math.random(0,67)
@@ -36,17 +38,13 @@ function love.load()
 	   i = i+1 
     end
  
-print("BARAJA 1")	
-    while j<=10 do
-       print(listB1[j])
-       j= j+1 
-    end
+
 --SEGUNDA BARAJA--
 
 	while a<=10 do
 	   rando=love.math.random(0,67)
 	   while e<=10 do
-	   if rando==listB2[e] and listB2[e]==listB1[e] then
+	   if rando==listB2[e] then
 	   	rando=love.math.random(0,67)
 	   end
 	   e=e+1
@@ -57,6 +55,25 @@ print("BARAJA 1")
 	   a = a+1 
     end
  
+ 	while d<=10 do
+       aux=listB1[d]
+       aux2=rando
+       while z<=10 do
+       	if aux == listB2[z]  then
+      		--listB1[z]=aux2	
+       	end
+       z=z+1
+       end
+       z=0
+       d= d+1 
+    end
+	
+	print("BARAJA 1")	
+    while j<=10 do
+       print(listB1[j])
+       j= j+1 
+    end
+
 	print("BARAJA 2")
     while m<=10 do
        print(listB2[m])
