@@ -12,9 +12,9 @@ function love.load()
 	mouseX = ""
 	
 	listB1 = {}
-	listCartas1={"c1","c2","c3","c4","c5","c6","c7","c8","c9","c10"} 
+	listCartas1={"c1","c2","c3","c4","c5","c6","c7","c8","c9","c10","c11","c12","c13","c14","c15","c16","c17","c18","c19","c20"} 
 	listB2 = {}
-	listCartas2={"c11","c12","c13","c14","c15","c16","c17","c18","c19","c20"}
+	listCartas2={}
 	rand=0;
 	aux=0;
 	aux2=0;
@@ -29,9 +29,9 @@ function love.load()
 	z=1;
 
 --PRIMERA BARAJA--
-	while i<=10 do
+	while i<=20 do
 	   rand=love.math.random(0,67)
-	   while k<=10 do
+	   while k<=20 do
 	   if rand==listB1[k] then
 	   	rand=love.math.random(0,67)
 	   end
@@ -44,26 +44,26 @@ function love.load()
  
 --SEGUNDA BARAJA--
 
-	while a<=10 do
-	   rando=love.math.random(0,67)
-	   while e<=10 do
-	   if rando==listB2[e] then
-	   	rando=love.math.random(0,67)
-	   end
-	   e=e+1
-	   end
+--	while a<=10 do
+--	   rando=love.math.random(0,67)
+--	   while e<=10 do
+--	   if rando==listB2[e] then
+--	   	rando=love.math.random(0,67)
+--	   end
+--	   e=e+1
+--	   end
 	  
-	  listB2[a]=rando
+--	  listB2[a]=rando
 	
-	   e=0
+--	   e=0
 	 
-	   a = a+1 
-    end
+--	   a = a+1 
+--   end
  
 
 	
 	print("BARAJA 1")	
-    while j<=10 do
+    while j<=20 do
 
        print(listCartas1[j]..": "..listB1[j])
       -- print(listCartas1[j])
@@ -80,22 +80,17 @@ function love.load()
     carta9 = love.graphics.newImage("recursos/"..listB1[9]..".png")
     carta10 = love.graphics.newImage("recursos/"..listB1[10]..".png")
 
-	print("BARAJA 2")
-    while m<=10 do
-       print(listCartas2[m]..": "..listB2[m])
-       --print(listCartas2[m])
-       m= m+1 
-    end
-    carta11 = love.graphics.newImage("recursos/"..listB2[1]..".png")
-    carta12 = love.graphics.newImage("recursos/"..listB2[2]..".png")
-    carta13 = love.graphics.newImage("recursos/"..listB2[3]..".png")
-    carta14 = love.graphics.newImage("recursos/"..listB2[4]..".png")
-    carta15 = love.graphics.newImage("recursos/"..listB2[5]..".png")
-    carta16 = love.graphics.newImage("recursos/"..listB2[6]..".png")
-    carta17 = love.graphics.newImage("recursos/"..listB2[7]..".png")
-    carta18 = love.graphics.newImage("recursos/"..listB2[8]..".png")
-    carta19 = love.graphics.newImage("recursos/"..listB2[9]..".png")
-    carta20 = love.graphics.newImage("recursos/"..listB2[10]..".png")
+
+    carta11 = love.graphics.newImage("recursos/"..listB1[11]..".png")
+    carta12 = love.graphics.newImage("recursos/"..listB1[12]..".png")
+    carta13 = love.graphics.newImage("recursos/"..listB1[13]..".png")
+    carta14 = love.graphics.newImage("recursos/"..listB1[14]..".png")
+    carta15 = love.graphics.newImage("recursos/"..listB1[15]..".png")
+    carta16 = love.graphics.newImage("recursos/"..listB1[16]..".png")
+    carta17 = love.graphics.newImage("recursos/"..listB1[17]..".png")
+    carta18 = love.graphics.newImage("recursos/"..listB1[18]..".png")
+    carta19 = love.graphics.newImage("recursos/"..listB1[19]..".png")
+    carta20 = love.graphics.newImage("recursos/"..listB1[20]..".png")
       
 
 	objects ={}
