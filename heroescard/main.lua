@@ -3,7 +3,8 @@ function love.load()
 	love.physics.setMeter(64)
 	world = love.physics.newWorld(0, 9.81*64, true)
 	arena = love.graphics.newImage("arena.png")
-	carta = love.graphics.newImage("unknown.png")
+	carta = love.graphics.newImage("recursos/unknown.png")
+
 	--prueba = love.graphics.newImage("joker.png")
 	P1 = love.graphics.newImage("P1.png")
 	P2 = love.graphics.newImage("P2.png")
@@ -63,10 +64,21 @@ function love.load()
 	
 	print("BARAJA 1")	
     while j<=10 do
+
        print(listCartas1[j]..": "..listB1[j])
       -- print(listCartas1[j])
-       j= j+1 
+        j= j+1 
     end
+    carta1 = love.graphics.newImage("recursos/"..listB1[1]..".png")
+    carta2 = love.graphics.newImage("recursos/"..listB1[2]..".png")
+    carta3 = love.graphics.newImage("recursos/"..listB1[3]..".png")
+    carta4 = love.graphics.newImage("recursos/"..listB1[4]..".png")
+    carta5 = love.graphics.newImage("recursos/"..listB1[5]..".png")
+    carta6 = love.graphics.newImage("recursos/"..listB1[6]..".png")
+    carta7 = love.graphics.newImage("recursos/"..listB1[7]..".png")
+    carta8 = love.graphics.newImage("recursos/"..listB1[8]..".png")
+    carta9 = love.graphics.newImage("recursos/"..listB1[9]..".png")
+    carta10 = love.graphics.newImage("recursos/"..listB1[10]..".png")
 
 	print("BARAJA 2")
     while m<=10 do
@@ -74,7 +86,16 @@ function love.load()
        --print(listCartas2[m])
        m= m+1 
     end
-
+    carta11 = love.graphics.newImage("recursos/"..listB2[1]..".png")
+    carta12 = love.graphics.newImage("recursos/"..listB2[2]..".png")
+    carta13 = love.graphics.newImage("recursos/"..listB2[3]..".png")
+    carta14 = love.graphics.newImage("recursos/"..listB2[4]..".png")
+    carta15 = love.graphics.newImage("recursos/"..listB2[5]..".png")
+    carta16 = love.graphics.newImage("recursos/"..listB2[6]..".png")
+    carta17 = love.graphics.newImage("recursos/"..listB2[7]..".png")
+    carta18 = love.graphics.newImage("recursos/"..listB2[8]..".png")
+    carta19 = love.graphics.newImage("recursos/"..listB2[9]..".png")
+    carta20 = love.graphics.newImage("recursos/"..listB2[10]..".png")
       
 
 	objects ={}
@@ -217,34 +238,34 @@ end
 function love.draw()
 	love.graphics.draw(arena, 0, 0)
 
-	love.graphics.draw(carta, objects.c1.body:getX(), objects.c1.body:getY())
-	love.graphics.draw(carta, objects.c2.body:getX(), objects.c2.body:getY())
-	love.graphics.draw(carta, objects.c3.body:getX(), objects.c3.body:getY())
-	love.graphics.draw(carta, objects.c4.body:getX(), objects.c4.body:getY())
-	love.graphics.draw(carta, objects.c5.body:getX(), objects.c5.body:getY())
-	love.graphics.draw(carta, objects.c6.body:getX(), objects.c6.body:getY())
-	love.graphics.draw(carta, objects.c7.body:getX(), objects.c7.body:getY())
-	love.graphics.draw(carta, objects.c8.body:getX(), objects.c8.body:getY())
-	love.graphics.draw(carta, objects.c9.body:getX(), objects.c9.body:getY())
-	love.graphics.draw(carta, objects.c10.body:getX(), objects.c10.body:getY())
+	love.graphics.draw(carta1, objects.c1.body:getX(), objects.c1.body:getY())
+	love.graphics.draw(carta2, objects.c2.body:getX(), objects.c2.body:getY())
+	love.graphics.draw(carta3, objects.c3.body:getX(), objects.c3.body:getY())
+	love.graphics.draw(carta4, objects.c4.body:getX(), objects.c4.body:getY())
+	love.graphics.draw(carta5, objects.c5.body:getX(), objects.c5.body:getY())
+	love.graphics.draw(carta6, objects.c6.body:getX(), objects.c6.body:getY())
+	love.graphics.draw(carta7, objects.c7.body:getX(), objects.c7.body:getY())
+	love.graphics.draw(carta8, objects.c8.body:getX(), objects.c8.body:getY())
+	love.graphics.draw(carta9, objects.c9.body:getX(), objects.c9.body:getY())
+	love.graphics.draw(carta10, objects.c10.body:getX(), objects.c10.body:getY())
 
-	love.graphics.draw(carta, objects.c11.body:getX(), objects.c11.body:getY())
-	love.graphics.draw(carta, objects.c12.body:getX(), objects.c12.body:getY())
-	love.graphics.draw(carta, objects.c13.body:getX(), objects.c13.body:getY())
-	love.graphics.draw(carta, objects.c14.body:getX(), objects.c14.body:getY())
-	love.graphics.draw(carta, objects.c15.body:getX(), objects.c15.body:getY())
-	love.graphics.draw(carta, objects.c16.body:getX(), objects.c16.body:getY())
-	love.graphics.draw(carta, objects.c17.body:getX(), objects.c17.body:getY())
-	love.graphics.draw(carta, objects.c18.body:getX(), objects.c18.body:getY())
-	love.graphics.draw(carta, objects.c19.body:getX(), objects.c19.body:getY())
-	love.graphics.draw(carta, objects.c20.body:getX(), objects.c20.body:getY())
+	love.graphics.draw(carta11, objects.c11.body:getX(), objects.c11.body:getY())
+	love.graphics.draw(carta12, objects.c12.body:getX(), objects.c12.body:getY())
+	love.graphics.draw(carta13, objects.c13.body:getX(), objects.c13.body:getY())
+	love.graphics.draw(carta14, objects.c14.body:getX(), objects.c14.body:getY())
+	love.graphics.draw(carta15, objects.c15.body:getX(), objects.c15.body:getY())
+	love.graphics.draw(carta16, objects.c16.body:getX(), objects.c16.body:getY())
+	love.graphics.draw(carta17, objects.c17.body:getX(), objects.c17.body:getY())
+	love.graphics.draw(carta18, objects.c18.body:getX(), objects.c18.body:getY())
+	love.graphics.draw(carta19, objects.c19.body:getX(), objects.c19.body:getY())
+	love.graphics.draw(carta20, objects.c20.body:getX(), objects.c20.body:getY())
 
 	love.graphics.draw(P1, objects.P1.body:getX(), objects.P1.body:getY())
 	love.graphics.draw(P2, objects.P2.body:getX(), objects.P2.body:getY())
 
 	
 	if love.mouse.isDown(1) then 
-	prueba = love.graphics.newImage("joker.png")
+	prueba = love.graphics.newImage("recursos/joker.png")
 	love.graphics.draw(prueba, objects.c1.body:getX(), objects.c1.body:getY())
 	love.graphics.draw(prueba, objects.P1.body:getX(), objects.P1.body:getY())
 	end
