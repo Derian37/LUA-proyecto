@@ -4,7 +4,7 @@ function love.load()
 	world = love.physics.newWorld(0, 9.81*64, true)
 	arena = love.graphics.newImage("arena.png")
 	carta = love.graphics.newImage("unknown.png")
-	prueba = love.graphics.newImage("joker.png")
+	--prueba = love.graphics.newImage("joker.png")
 	P1 = love.graphics.newImage("P1.png")
 	P2 = love.graphics.newImage("P2.png")
 	message = ""
@@ -208,7 +208,11 @@ function reload()
 end
 
 function love.update(dt)
-	
+	if love.mouse.isDown(1) then 
+	prueba = love.graphics.newImage("joker.png")
+	love.graphics.draw(prueba, objects.c1.body:getX(), objects.c1.body:getY())
+	love.graphics.draw(prueba, objects.P1.body:getX(), objects.P1.body:getY())
+	end
 	
 
 end 
@@ -241,10 +245,7 @@ function love.draw()
 	love.graphics.draw(P2, objects.P2.body:getX(), objects.P2.body:getY())
 
 	
-	if love.mouse.isDown(1) then 
-	love.graphics.draw(prueba, objects.c1.body:getX(), objects.c1.body:getY())
-	love.graphics.draw(prueba, objects.P1.body:getX(), objects.P1.body:getY())
-	end
+	
 end
 
 
