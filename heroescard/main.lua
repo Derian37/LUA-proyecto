@@ -11,7 +11,9 @@ function love.load()
 	mouseX = ""
 	
 	listB1 = {}
+	listCartas1={"c1","c2","c3","c4","c5","c6","c7","c8","c9","c10"} 
 	listB2 = {}
+	listCartas2={"c11","c12","c13","c14","c15","c16","c17","c18","c19","c20"}
 	rand=0;
 	aux=0;
 	aux2=0;
@@ -55,28 +57,19 @@ function love.load()
 	   a = a+1 
     end
  
- 	while d<=10 do
-       aux=listB1[d]
-       aux2=rando
-       while z<=10 do
-       	if aux == listB2[z]  then
-      		--listB1[z]=aux2	
-       	end
-       z=z+1
-       end
-       z=0
-       d= d+1 
-    end
+ 
 	
 	print("BARAJA 1")	
     while j<=10 do
-       print(listB1[j])
+       print(listCartas1[j]..": "..listB1[j])
+      -- print(listCartas1[j])
        j= j+1 
     end
 
 	print("BARAJA 2")
     while m<=10 do
-       print(listB2[m])
+       print(listCartas2[m]..": "..listB2[m])
+       --print(listCartas2[m])
        m= m+1 
     end
 
