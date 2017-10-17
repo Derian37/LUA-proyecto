@@ -26,6 +26,7 @@ function love.load()
 	e=1;
 	d=1;	
 	z=1;
+
 --PRIMERA BARAJA--
 	while i<=10 do
 	   rand=love.math.random(0,67)
@@ -40,7 +41,6 @@ function love.load()
 	   i = i+1 
     end
  
-
 --SEGUNDA BARAJA--
 
 	while a<=10 do
@@ -51,13 +51,15 @@ function love.load()
 	   end
 	   e=e+1
 	   end
-	   listB2[a]=rando
+	  
+	  listB2[a]=rando
+	
 	   e=0
 	 
 	   a = a+1 
     end
  
- 
+
 	
 	print("BARAJA 1")	
     while j<=10 do
@@ -208,11 +210,7 @@ function reload()
 end
 
 function love.update(dt)
-	if love.mouse.isDown(1) then 
-	prueba = love.graphics.newImage("joker.png")
-	love.graphics.draw(prueba, objects.c1.body:getX(), objects.c1.body:getY())
-	love.graphics.draw(prueba, objects.P1.body:getX(), objects.P1.body:getY())
-	end
+	
 	
 
 end 
@@ -245,7 +243,11 @@ function love.draw()
 	love.graphics.draw(P2, objects.P2.body:getX(), objects.P2.body:getY())
 
 	
-	
+	if love.mouse.isDown(1) then 
+	prueba = love.graphics.newImage("joker.png")
+	love.graphics.draw(prueba, objects.c1.body:getX(), objects.c1.body:getY())
+	love.graphics.draw(prueba, objects.P1.body:getX(), objects.P1.body:getY())
+	end
 end
 
 
