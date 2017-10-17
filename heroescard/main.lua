@@ -216,6 +216,118 @@ function love.load()
 	objects.P2.shape =love.physics.newRectangleShape(0,0,10,10)
 	objects.P2.fixture = love.physics.newFixture(objects.P2.body, objects.P2.shape, 5)
 
+--____________________________________________________________________________________________________-
+	objects.o1={}
+	objects.o1.body = love.physics.newBody(world,187,65,"static")
+	objects.o1.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o1.fixture = love.physics.newFixture(objects.c1.body, objects.c1.shape, 5)
+
+	objects.o2={}
+	objects.o2.body = love.physics.newBody(world,277,65,"static")
+	objects.o2.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o2.fixture = love.physics.newFixture(objects.c2.body, objects.c2.shape, 5)
+
+	objects.o3={}
+	objects.o3.body = love.physics.newBody(world,364,65,"static")
+	objects.o3.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o3.fixture = love.physics.newFixture(objects.c3.body, objects.c3.shape, 5)
+
+	objects.o4={}
+	objects.o4.body = love.physics.newBody(world,454,65,"static")
+	objects.o4.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o4.fixture = love.physics.newFixture(objects.c4.body, objects.c4.shape, 5)
+
+	objects.o5={}
+	objects.o5.body = love.physics.newBody(world,542,65,"static")
+	objects.o5.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o5.fixture = love.physics.newFixture(objects.c5.body, objects.c5.shape, 5)
+
+	objects.o6={}
+	objects.o6.body = love.physics.newBody(world,187,165,"static")
+	objects.o6.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o6.fixture = love.physics.newFixture(objects.c6.body, objects.c6.shape, 5)
+
+	objects.o7={}
+	objects.o7.body = love.physics.newBody(world,277,165,"static")
+	objects.o7.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o7.fixture = love.physics.newFixture(objects.c7.body, objects.c7.shape, 5)
+
+
+	objects.o8={}
+	objects.o8.body = love.physics.newBody(world,364,165,"static")
+	objects.o8.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o8.fixture = love.physics.newFixture(objects.c8.body, objects.c8.shape, 5)
+
+	objects.o9={}
+	objects.o9.body = love.physics.newBody(world,454,165,"static")
+	objects.o9.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o9.fixture = love.physics.newFixture(objects.c9.body, objects.c9.shape, 5)
+
+
+	objects.o10={}
+	objects.o10.body = love.physics.newBody(world,542,165,"static")
+	objects.o10.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o10.fixture = love.physics.newFixture(objects.c10.body, objects.c10.shape, 5)
+
+	
+
+	objects.o11={}
+	objects.o11.body = love.physics.newBody(world,187,388,"static")
+	objects.o11.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o11.fixture = love.physics.newFixture(objects.c11.body, objects.c11.shape, 5)
+
+	objects.o12={}
+	objects.o12.body = love.physics.newBody(world,277,388,"static")
+	objects.o12.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o12.fixture = love.physics.newFixture(objects.c12.body, objects.c12.shape, 5)
+
+	objects.o13={}
+	objects.o13.body = love.physics.newBody(world,364,388,"static")
+	objects.o13.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o13.fixture = love.physics.newFixture(objects.c13.body, objects.c13.shape, 5)
+
+	objects.o14={}
+	objects.o14.body = love.physics.newBody(world,454,388,"static")
+	objects.o14.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o14.fixture = love.physics.newFixture(objects.c14.body, objects.c14.shape, 5)
+
+	objects.o15={}
+	objects.o15.body = love.physics.newBody(world,542,388,"static")
+	objects.o15.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o15.fixture = love.physics.newFixture(objects.c15.body, objects.c15.shape, 5)
+
+	objects.o16={}
+	objects.o16.body = love.physics.newBody(world,187,486,"static")
+	objects.o16.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o16.fixture = love.physics.newFixture(objects.c16.body, objects.c16.shape, 5)
+
+	objects.o17={}
+	objects.o17.body = love.physics.newBody(world,277,486,"static")
+	objects.o17.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o17.fixture = love.physics.newFixture(objects.c17.body, objects.c17.shape, 5)
+
+
+	objects.o18={}
+	objects.o18.body = love.physics.newBody(world,364,486,"static")
+	objects.o18.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o18.fixture = love.physics.newFixture(objects.c18.body, objects.c18.shape, 5)
+
+	objects.o19={}
+	objects.o19.body = love.physics.newBody(world,454,486,"static")
+	objects.o19.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o19.fixture = love.physics.newFixture(objects.c19.body, objects.c19.shape, 5)
+
+
+	objects.o20={}
+	objects.o20.body = love.physics.newBody(world,542,486,"static")
+	objects.o20.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.o20.fixture = love.physics.newFixture(objects.c20.body, objects.c20.shape, 5)
+
+--____________________________________________________________________________________________________-
+
+
+
+
 
 
 	love.graphics.setBackgroundColor(104, 136, 248)
@@ -249,6 +361,19 @@ function love.draw()
 	love.graphics.draw(carta9, objects.c9.body:getX(), objects.c9.body:getY())
 	love.graphics.draw(carta10, objects.c10.body:getX(), objects.c10.body:getY())
 
+	--__________________________________________________________________________-
+	love.graphics.draw(carta, objects.o1.body:getX(), objects.o1.body:getY())
+	love.graphics.draw(carta, objects.o2.body:getX(), objects.o2.body:getY())
+	love.graphics.draw(carta, objects.o3.body:getX(), objects.o3.body:getY())
+	love.graphics.draw(carta, objects.o4.body:getX(), objects.o4.body:getY())
+	love.graphics.draw(carta, objects.o5.body:getX(), objects.o5.body:getY())
+	love.graphics.draw(carta, objects.o6.body:getX(), objects.o6.body:getY())
+	love.graphics.draw(carta, objects.o7.body:getX(), objects.o7.body:getY())
+	love.graphics.draw(carta, objects.o8.body:getX(), objects.o8.body:getY())
+	love.graphics.draw(carta, objects.o9.body:getX(), objects.o9.body:getY())
+	love.graphics.draw(carta, objects.o10.body:getX(), objects.o10.body:getY())
+	--__________________________________________________________________________-
+
 	love.graphics.draw(carta11, objects.c11.body:getX(), objects.c11.body:getY())
 	love.graphics.draw(carta12, objects.c12.body:getX(), objects.c12.body:getY())
 	love.graphics.draw(carta13, objects.c13.body:getX(), objects.c13.body:getY())
@@ -260,14 +385,26 @@ function love.draw()
 	love.graphics.draw(carta19, objects.c19.body:getX(), objects.c19.body:getY())
 	love.graphics.draw(carta20, objects.c20.body:getX(), objects.c20.body:getY())
 
+	--__________________________________________________________________________-
+	love.graphics.draw(carta, objects.o11.body:getX(), objects.o11.body:getY())
+	love.graphics.draw(carta, objects.o12.body:getX(), objects.o12.body:getY())
+	love.graphics.draw(carta, objects.o13.body:getX(), objects.o13.body:getY())
+	love.graphics.draw(carta, objects.o14.body:getX(), objects.o14.body:getY())
+	love.graphics.draw(carta, objects.o15.body:getX(), objects.o15.body:getY())
+	love.graphics.draw(carta, objects.o16.body:getX(), objects.o16.body:getY())
+	love.graphics.draw(carta, objects.o17.body:getX(), objects.o17.body:getY())
+	love.graphics.draw(carta, objects.o18.body:getX(), objects.o18.body:getY())
+	love.graphics.draw(carta, objects.o19.body:getX(), objects.o19.body:getY())
+	love.graphics.draw(carta, objects.o20.body:getX(), objects.o20.body:getY())
+	--__________________________________________________________________________-
+
 	love.graphics.draw(P1, objects.P1.body:getX(), objects.P1.body:getY())
 	love.graphics.draw(P2, objects.P2.body:getX(), objects.P2.body:getY())
 
 	
 	if love.mouse.isDown(1) then 
-	prueba = love.graphics.newImage("recursos/joker.png")
-	love.graphics.draw(prueba, objects.c1.body:getX(), objects.c1.body:getY())
-	love.graphics.draw(prueba, objects.P1.body:getX(), objects.P1.body:getY())
+	love.graphics.draw(carta8, objects.P1.body:getX(), objects.P1.body:getY())
+	love.graphics.draw(carta2, objects.P2.body:getX(), objects.P2.body:getY())
 	end
 end
 
