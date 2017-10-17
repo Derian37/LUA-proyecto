@@ -62,7 +62,7 @@ function love.load()
  
 
 	
-	print("BARAJA 1")	
+	print("BARAJAS")	
     while j<=20 do
 
        print(listCartas1[j]..": "..listB1[j])
@@ -79,8 +79,6 @@ function love.load()
     carta8 = love.graphics.newImage("recursos/"..listB1[8]..".png")
     carta9 = love.graphics.newImage("recursos/"..listB1[9]..".png")
     carta10 = love.graphics.newImage("recursos/"..listB1[10]..".png")
-
-
     carta11 = love.graphics.newImage("recursos/"..listB1[11]..".png")
     carta12 = love.graphics.newImage("recursos/"..listB1[12]..".png")
     carta13 = love.graphics.newImage("recursos/"..listB1[13]..".png")
