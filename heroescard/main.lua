@@ -10,7 +10,8 @@ function love.load()
 	P2 = love.graphics.newImage("P2.png")
 	message = ""
 	mouseX = ""
-	
+	x=0;
+	y=0;
 	listB1 = {}
 	listCartas1={"c1","c2","c3","c4","c5","c6","c7","c8","c9","c10","c11","c12","c13","c14","c15","c16","c17","c18","c19","c20"} 
 	listB2 = {}
@@ -18,6 +19,10 @@ function love.load()
 	rand=0;
 	aux=0;
 	aux2=0;
+	printx = 0
+  	printy = 0
+
+
 	i=1;
 	j=1;
 	k=1;
@@ -65,7 +70,7 @@ function love.load()
 	print("BARAJAS")	
     while j<=20 do
 
-       print(listCartas1[j]..": "..listB1[j])
+      -- print(listCartas1[j]..": "..listB1[j])
       -- print(listCartas1[j])
         j= j+1 
     end
@@ -340,6 +345,16 @@ function love.update(dt)
 	
 
 end 
+
+function love.mousepressed(x, y, button, istouch)
+   if button == 1 and x >= 187 and x<=250 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+      printx = x
+      printy = y
+      voltea1 = carta1
+     -- objects.o1.body:setPosition(10000/2, 10000/2)
+   end
+end
+
 function love.draw()
 	love.graphics.draw(arena, 0, 0)
 
@@ -393,13 +408,14 @@ function love.draw()
 
 	love.graphics.draw(P1, objects.P1.body:getX(), objects.P1.body:getY())
 	love.graphics.draw(P2, objects.P2.body:getX(), objects.P2.body:getY())
-
+	--_________________________________________________________________________-
 	
-	if love.mouse.isDown(1) then 
-	love.graphics.draw(carta8, objects.P1.body:getX(), objects.P1.body:getY())
-	love.graphics.draw(carta2, objects.P2.body:getX(), objects.P2.body:getY())
+	if  printx >= 187 and printx<=250 and printy >=67 and printy <= 152 then
+		love.graphics.draw(voltea1, objects.P1.body:getX(), objects.P1.body:getY())
+		love.graphics.draw(voltea1, objects.o1.body:getX(), objects.o1.body:getY())
 	end
 end
+
 
 
 
