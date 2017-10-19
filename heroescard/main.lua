@@ -4,10 +4,12 @@ function love.load()
 	world = love.physics.newWorld(0, 9.81*64, true)
 	arena = love.graphics.newImage("arena.png")
 	carta = love.graphics.newImage("recursos/unknown.png")
-	jugador = 1
+	jugador = 2
 	--prueba = love.graphics.newImage("joker.png")
 	P1 = love.graphics.newImage("P1.png")
 	P2 = love.graphics.newImage("P2.png")
+	Poder1=0;
+	Poder2=0;
 	message = ""
 	mouseX = ""
 	x=0;
@@ -203,14 +205,14 @@ function love.load()
 	objects.c20.shape =love.physics.newRectangleShape(0,0,10,10)
 	objects.c20.fixture = love.physics.newFixture(objects.c20.body, objects.c20.shape, 5)
 
-
+--_____________________________________________________________________________________________________-
 	objects.P1={}
-	objects.P1.body = love.physics.newBody(world,463,273,"static")
+	objects.P1.body = love.physics.newBody(world,460,274,"static")
 	objects.P1.shape =love.physics.newRectangleShape(0,0,10,10)
 	objects.P1.fixture = love.physics.newFixture(objects.P1.body, objects.P1.shape, 5)
 
 	objects.P2={}
-	objects.P2.body = love.physics.newBody(world,265,273,"static")
+	objects.P2.body = love.physics.newBody(world,262,272,"static")
 	objects.P2.shape =love.physics.newRectangleShape(0,0,10,10)
 	objects.P2.fixture = love.physics.newFixture(objects.P2.body, objects.P2.shape, 5)
 
@@ -323,8 +325,16 @@ function love.load()
 
 --____________________________________________________________________________________________________-
 
+	objects.PuntosVidaP1={}
+	objects.PuntosVidaP1.body = love.physics.newBody(world,530,275,"static")
+	objects.PuntosVidaP1.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.PuntosVidaP1.fixture = love.physics.newFixture(objects.c20.body, objects.c20.shape, 5)
 
-
+	objects.PuntosVidaP2={}
+	objects.PuntosVidaP2.body = love.physics.newBody(world,240,275,"static")
+	objects.PuntosVidaP2.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.PuntosVidaP2.fixture = love.physics.newFixture(objects.c20.body, objects.c20.shape, 5)
+--____________________________________________________________________________________________________-
 
 
 
@@ -359,139 +369,159 @@ function love.mousepressed(x, y, button, istouch)
    if button == 1 and x >= 187 and x<=250 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea1 = carta1
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P1 = carta1
+      Poder1=listB1[1]
+      objects.o1.body:setPosition(10000/2, 10000/2)
    end
    if button == 1 and x >= 276 and x<=337 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea2 = carta2
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P1 = carta2
+      Poder1=listB1[2]
+      objects.o2.body:setPosition(10000/2, 10000/2)
    end
 
    if button == 1 and x >= 365 and x<=425 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea3 = carta3
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P1 = carta3
+      Poder1=listB1[3]
+      objects.o3.body:setPosition(10000/2, 10000/2)
    end
 
    if button == 1 and x >= 454 and x<=514 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea4 = carta4
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P1 = carta4
+      Poder1=listB1[4]
+      objects.o4.body:setPosition(10000/2, 10000/2)
    end
 
    if button == 1 and x >= 541 and x<=601 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea5 = carta5
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P1 = carta5
+      Poder1=listB1[5]
+      objects.o5.body:setPosition(10000/2, 10000/2)
    end
 
    if button == 1 and x >= 186 and x<=250 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea6 = carta6
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P1 = carta6
+      Poder1=listB1[6]
+      objects.o6.body:setPosition(10000/2, 10000/2)
    end
 
    if button == 1 and x >= 276 and x<=337 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea7 = carta7
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P1 = carta7
+      Poder1=listB1[7]
+      objects.o7.body:setPosition(10000/2, 10000/2)
    end
 
    if button == 1 and x >= 365 and x<=425 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea8 = carta8
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P1 = carta8
+      Poder1=listB1[8]
+      objects.o8.body:setPosition(10000/2, 10000/2)
    end
 
    if button == 1 and x >= 454 and x<=514 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea9 = carta9
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P1 = carta9
+      Poder1=listB1[9]
+      objects.o9.body:setPosition(10000/2, 10000/2)
    end
 
    if button == 1 and x >= 541 and x<=601 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea10 = carta10
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P1 = carta10
+      Poder1=listB1[10]
+      objects.o10.body:setPosition(10000/2, 10000/2)
    end
 
       if button == 1 and x >= 187 and x<=250 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea11 = carta11
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P2 = carta11
+      Poder2=listB1[11]
+      objects.o11.body:setPosition(10000/2, 10000/2)
    end
    if button == 1 and x >= 276 and x<=337 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea12 = carta12
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P2 = carta12
+      Poder2=listB1[12]
+      objects.o12.body:setPosition(10000/2, 10000/2)
    end
 
    if button == 1 and x >= 365 and x<=425 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea13 = carta13
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P2 = carta13
+      Poder2=listB1[13]
+	  objects.o13.body:setPosition(10000/2, 10000/2)
    end
 
    if button == 1 and x >= 454 and x<=514 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea14 = carta14
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P2 = carta14
+      Poder2=listB1[14]
+      objects.o14.body:setPosition(10000/2, 10000/2)
    end
 
    if button == 1 and x >= 541 and x<=601 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea15 = carta15
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P2 = carta15
+      Poder2=listB1[15]
+      objects.o15.body:setPosition(10000/2, 10000/2)
    end
 
    if button == 1 and x >= 186 and x<=250 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea16 = carta16
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P2 = carta16
+      Poder2=listB1[16]
+      objects.o16.body:setPosition(10000/2, 10000/2)
    end
 
-   if button == 1 and x >= 276 and x<=337 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+   if button == 1 and x >= 256 and x<=336 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea17 = carta17
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P2 = carta17
+      Poder2=listB1[17]
+      objects.o17.body:setPosition(10000/2, 10000/2)
    end
 
-   if button == 1 and x >= 365 and x<=425 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+    if button == 1 and x >= 365 and x<=425 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea18 = carta18
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P2 = carta18
+      Poder2=listB1[18]
+      objects.o18.body:setPosition(10000/2, 10000/2)
    end
 
    if button == 1 and x >= 454 and x<=514 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea19 = carta19
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P2 = carta19
+      Poder2=listB1[19]
+      objects.o19.body:setPosition(10000/2, 10000/2)
    end
 
    if button == 1 and x >= 541 and x<=601 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      voltea20 = carta20
-     -- objects.o1.body:setPosition(10000/2, 10000/2)
+      P2 = carta20
+      Poder2=listB1[20]
+      objects.o20.body:setPosition(10000/2, 10000/2)
    end
  
 end
@@ -549,112 +579,9 @@ function love.draw()
 
 	love.graphics.draw(P1, objects.P1.body:getX(), objects.P1.body:getY())
 	love.graphics.draw(P2, objects.P2.body:getX(), objects.P2.body:getY())
-	love.graphics.draw(P1,printx,printy)
+	love.graphics.print(Poder1, objects.PuntosVidaP1.body:getX(), objects.PuntosVidaP1.body:getY())
+	love.graphics.print(Poder2, objects.PuntosVidaP2.body:getX(), objects.PuntosVidaP2.body:getY())
+	--love.graphics.print("AQUI",printx,printy)
 	--_________________________________________________________________________-
 	
-	if jugador == 1 then
-		if  printx >= 187 and printx<=250 and printy >=67 and printy <= 152 then
-			love.graphics.draw(voltea1, objects.P1.body:getX(), objects.P1.body:getY())
-			love.graphics.draw(voltea1, objects.o1.body:getX(), objects.o1.body:getY())
-		end
-
-		if  printx >= 276 and printx<=337 and printy >=66 and printy <= 152 then
-			love.graphics.draw(voltea2, objects.P1.body:getX(), objects.P1.body:getY())
-			love.graphics.draw(voltea2, objects.o2.body:getX(), objects.o2.body:getY())
-		end
-		if  printx >= 365 and printx<=426 and printy >=66 and printy <= 152 then
-			love.graphics.draw(voltea3, objects.P1.body:getX(), objects.P1.body:getY())
-			love.graphics.draw(voltea3, objects.o3.body:getX(), objects.o3.body:getY())
-		end
-
-		if  printx >= 454 and printx<=514 and printy >=66 and printy <= 152 then
-			love.graphics.draw(voltea4, objects.P1.body:getX(), objects.P1.body:getY())
-			love.graphics.draw(voltea4, objects.o4.body:getX(), objects.o4.body:getY())
-		end
-
-		if  printx >= 541 and printx<=601 and printy >=66 and printy <= 152 then
-			love.graphics.draw(voltea5, objects.P1.body:getX(), objects.P1.body:getY())
-			love.graphics.draw(voltea5, objects.o5.body:getX(), objects.o5.body:getY())
-		end
-
-		if  printx >= 186 and printx<=250 and printy >=162 and printy <= 251 then
-			love.graphics.draw(voltea6, objects.P1.body:getX(), objects.P1.body:getY())
-			love.graphics.draw(voltea6, objects.o6.body:getX(), objects.o6.body:getY())
-		end
-
-		if  printx >= 276 and printx<=337 and printy >=162 and printy <= 251 then
-			love.graphics.draw(voltea7, objects.P1.body:getX(), objects.P1.body:getY())
-			love.graphics.draw(voltea7, objects.o7.body:getX(), objects.o7.body:getY())
-		end
-		if  printx >= 365 and printx<=426 and printy >=162 and printy <= 251 then
-			love.graphics.draw(voltea8, objects.P1.body:getX(), objects.P1.body:getY())
-			love.graphics.draw(voltea8, objects.o8.body:getX(), objects.o8.body:getY())
-		end
-
-		if  printx >= 454 and printx<=514 and printy >=162 and printy <= 251 then
-			love.graphics.draw(voltea9, objects.P1.body:getX(), objects.P1.body:getY())
-			love.graphics.draw(voltea9, objects.o9.body:getX(), objects.o9.body:getY())
-		end
-
-		if  printx >= 541 and printx<=601 and printy >=162 and printy <= 251 then
-			love.graphics.draw(voltea10, objects.P1.body:getX(), objects.P1.body:getY())
-			love.graphics.draw(voltea10, objects.o10.body:getX(), objects.o10.body:getY())
-		end
-
-	end
-
-	if jugador == 2 then
-		if  printx >= 187 and printx<=250 and printy >=386 and printy <= 472 then
-			love.graphics.draw(voltea11, objects.P2.body:getX(), objects.P2.body:getY())
-			love.graphics.draw(voltea11, objects.o11.body:getX(), objects.o11.body:getY())
-		end
-
-		if  printx >= 276 and printx<=337 and printy >=388 and printy <= 570 then
-			love.graphics.draw(voltea12, objects.P2.body:getX(), objects.P2.body:getY())
-			love.graphics.draw(voltea12, objects.o12.body:getX(), objects.o12.body:getY())
-		end
-		if  printx >= 365 and printx<=426 and printy >=388 and printy <= 570 then
-			love.graphics.draw(voltea13, objects.P2.body:getX(), objects.P2.body:getY())
-			love.graphics.draw(voltea13, objects.o13.body:getX(), objects.o13.body:getY())
-		end
-
-		if  printx >= 454 and printx<=514 and printy >=388 and printy <= 570 then
-			love.graphics.draw(voltea14, objects.P2.body:getX(), objects.P2.body:getY())
-			love.graphics.draw(voltea14, objects.o14.body:getX(), objects.o14.body:getY())
-		end
-
-		if  printx >= 541 and printx<=601 and printy >=388 and printy <= 570 then
-			love.graphics.draw(voltea15, objects.P2.body:getX(), objects.P2.body:getY())
-			love.graphics.draw(voltea15, objects.o15.body:getX(), objects.o15.body:getY())
-		end
-
-		if  printx >= 186 and printx<=250 and printy >=486 and printy <= 570 then
-			love.graphics.draw(voltea16, objects.P2.body:getX(), objects.P2.body:getY())
-			--love.graphics.draw(voltea16, objects.o16.body:getX(), objects.o16.body:getY())
-		end
-
-		if  printx >= 276 and printx<=337 and printy >=486 and printy <= 570 then
-			love.graphics.draw(voltea17, objects.P2.body:getX(), objects.P2.body:getY())
-			--love.graphics.draw(voltea17, objects.o17.body:getX(), objects.o17.body:getY())
-		end
-		if  printx >= 365 and printx<=426 and printy >=486 and printy <= 570 then
-			love.graphics.draw(voltea18, objects.P2.body:getX(), objects.P2.body:getY())
-			--love.graphics.draw(voltea18, objects.o18.body:getX(), objects.o18.body:getY())
-		end
-
-		if  printx >= 454 and printx<=514 and printy >=486 and printy <= 570 then
-			love.graphics.draw(voltea19, objects.P2.body:getX(), objects.P2.body:getY())
-			--love.graphics.draw(voltea19, objects.o19.body:getX(), objects.o19.body:getY())
-		end
-
-		if  printx >= 541 and printx<=601 and printy >=486 and printy <= 570 then
-			love.graphics.draw(voltea20, objects.P2.body:getX(), objects.P2.body:getY())
-			--love.graphics.draw(voltea20, objects.o20.body:getX(), objects.o20.body:getY())
-		end
-	end
-	
 end
-
-
-
-
