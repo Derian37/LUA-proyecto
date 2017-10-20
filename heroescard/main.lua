@@ -38,7 +38,8 @@ function love.load()
 	aux2=0;
 	printx = 0
   	printy = 0
-
+  	love.audio.stop()
+	love.audio.play(love.audio.newSource("recursos/audio.mp3","stream"))
 
 	i=1;
 	j=1;
@@ -846,7 +847,7 @@ function love.draw()
 	love.graphics.print(Poder1, objects.PuntosVidaP1.body:getX(), objects.PuntosVidaP1.body:getY())
 	love.graphics.print("Jugador: "..jugador, objects.PJugador.body:getX(), objects.PJugador.body:getY())
 	love.graphics.print(Poder2, objects.PuntosVidaP2.body:getX(), objects.PuntosVidaP2.body:getY())
-	love.graphics.print(Segundacarta2,printx,printy)
+	--love.graphics.print(Segundacarta2,printx,printy)
 	--_________________________________________________________________________-
 	
 end
