@@ -352,11 +352,11 @@ end
 
 function love.mousepressed(x, y, button, istouch)
 	if button == 1 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-   printx = x
+      printx = x
       printy = y
-      --print("X= "..printx)
-      --print("Y= "..printy)
-objects.o1.body:setPosition(10000/2, 10000/2)
+      print("X= "..printx)
+      print("Y= "..printy)
+--	objects.o1.body:setPosition(10000/2, 10000/2)
    end
 
 if jugador == 1  then 
@@ -847,7 +847,7 @@ function love.draw()
 	love.graphics.print(Poder1, objects.PuntosVidaP1.body:getX(), objects.PuntosVidaP1.body:getY())
 	love.graphics.print("Jugador: "..jugador, objects.PJugador.body:getX(), objects.PJugador.body:getY())
 	love.graphics.print(Poder2, objects.PuntosVidaP2.body:getX(), objects.PuntosVidaP2.body:getY())
-	--love.graphics.print(Segundacarta2,printx,printy)
+	love.graphics.print(Primeracarta,printx,printy)
 	--_________________________________________________________________________-
 	
 end
