@@ -630,10 +630,11 @@ if jugador == 2 then
 	      Poder2=listB1[20]
 	      objects.o20.body:setPosition(10000/2, 10000/2)
 	      Primeracarta2=1
+	      --P=1
 	   end   	  
 	end
 	
-	if Segundacarta2 == 0  then
+	if Primeracarta2 == 1  then
 		
       if button == 1 and x >= 187 and x<=250 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		      printx = x
@@ -642,6 +643,7 @@ if jugador == 2 then
 		      Poder1=listB1[1]
 		      objects.o1.body:setPosition(10000/2, 10000/2)
 		      Segundacarta2=1
+		    --  P=0
 		   end
 		   if button == 1 and x >= 276 and x<=337 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		      printx = x
