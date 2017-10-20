@@ -21,8 +21,13 @@ function love.load()
 	Primer19=0
 	Primer20=0
 	--prueba = love.graphics.newImage("joker.png")
-	P1 = love.graphics.newImage("P1.png")
-	P2 = love.graphics.newImage("P2.png")
+	P1 = love.graphics.newImage("recursos/P1.png")
+	P2 = love.graphics.newImage("recursos/P2.png")
+	Puntero1 = love.graphics.newImage("recursos/Puntero1.png")
+	Puntero2 = love.graphics.newImage("recursos/Puntero2.png")
+	Vs=love.graphics.newImage("recursos/vs.png")
+	PCa1=love.graphics.newImage("recursos/Carta1.png")
+	PCa2=love.graphics.newImage("recursos/Carta2.png")
 	Poder1=0;
 	Poder2=0;
 	message = ""
@@ -319,8 +324,13 @@ function love.load()
 	objects.PuntosVidaP1.shape =love.physics.newRectangleShape(0,0,10,10)
 	objects.PuntosVidaP1.fixture = love.physics.newFixture(objects.c20.body, objects.c20.shape, 5)
 
+	objects.PC1={}
+	objects.PC1.body = love.physics.newBody(world,530,287,"static")
+	objects.PC1.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.PC1.fixture = love.physics.newFixture(objects.c20.body, objects.c20.shape, 5)
+
 	objects.PJugador={}
-	objects.PJugador.body = love.physics.newBody(world,176,353,"static")
+	objects.PJugador.body = love.physics.newBody(world,358,303,"static")
 	objects.PJugador.shape =love.physics.newRectangleShape(0,0,10,10)
 	objects.PJugador.fixture = love.physics.newFixture(objects.c20.body, objects.c20.shape, 5)
 
@@ -328,6 +338,11 @@ function love.load()
 	objects.PuntosVidaP2.body = love.physics.newBody(world,240,275,"static")
 	objects.PuntosVidaP2.shape =love.physics.newRectangleShape(0,0,10,10)
 	objects.PuntosVidaP2.fixture = love.physics.newFixture(objects.c20.body, objects.c20.shape, 5)
+
+	objects.PC2={}
+	objects.PC2.body = love.physics.newBody(world,187,287,"static")
+	objects.PC2.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.PC2.fixture = love.physics.newFixture(objects.c20.body, objects.c20.shape, 5)
 --____________________________________________________________________________________________________-
 
 
@@ -845,9 +860,16 @@ function love.draw()
 	love.graphics.draw(P1, objects.P1.body:getX(), objects.P1.body:getY())
 	love.graphics.draw(P2, objects.P2.body:getX(), objects.P2.body:getY())
 	love.graphics.print(Poder1, objects.PuntosVidaP1.body:getX(), objects.PuntosVidaP1.body:getY())
-	love.graphics.print("Jugador: "..jugador, objects.PJugador.body:getX(), objects.PJugador.body:getY())
+	love.graphics.draw(PCa1, objects.PC1.body:getX(), objects.PC1.body:getY())
+	love.graphics.draw(Vs, objects.PJugador.body:getX(), objects.PJugador.body:getY())
+	love.graphics.draw(PCa2, objects.PC2.body:getX(), objects.PC2.body:getY())
 	love.graphics.print(Poder2, objects.PuntosVidaP2.body:getX(), objects.PuntosVidaP2.body:getY())
-	love.graphics.print(Primeracarta,printx,printy)
+	if jugador==1 then
+		love.graphics.draw(Puntero1,printx,printy)
+	end
+	if jugador==2 then
+		love.graphics.draw(Puntero2,printx,printy)
+	end
 	--_________________________________________________________________________-
 	
 end
