@@ -44,7 +44,8 @@ function love.load()
 	printx = 0
   	printy = 0
   	love.audio.stop()
-	love.audio.play(love.audio.newSource("recursos/audio.mp3","stream"))
+	love.audio.play(love.audio.newSource("recursos/audio1.mp3","stream"))
+	
 
 	i=1;
 	j=1;
@@ -355,7 +356,8 @@ function love.load()
 end
 
 function reload()
-	
+love.audio.stop()
+love.audio.play(love.audio.newSource("recursos/audio2.mp3","stream"))	
 
 end
 
