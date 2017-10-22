@@ -2,8 +2,8 @@ function love.load()
 
 	love.physics.setMeter(64)
 	world = love.physics.newWorld(0, 9.81*64, true)
-	arena = love.graphics.newImage("arena.png")
-	carta = love.graphics.newImage("recursos/unknown.png")
+	arena = love.graphics.newImage("Data/recursos/arena.png")
+	carta = love.graphics.newImage("Data/recursos/unknown.png")
 	jugador = 1
 	Primeracarta=0
 	Segundacarta=0
@@ -21,13 +21,13 @@ function love.load()
 	Primer19=0
 	Primer20=0
 	--prueba = love.graphics.newImage("joker.png")
-	P1 = love.graphics.newImage("recursos/P1.png")
-	P2 = love.graphics.newImage("recursos/P2.png")
-	Puntero1 = love.graphics.newImage("recursos/Puntero1.png")
-	Puntero2 = love.graphics.newImage("recursos/Puntero2.png")
-	Vs=love.graphics.newImage("recursos/vs.png")
-	PCa1=love.graphics.newImage("recursos/Carta1.png")
-	PCa2=love.graphics.newImage("recursos/Carta2.png")
+	P1 = love.graphics.newImage("Data/recursos/P1.png")
+	P2 = love.graphics.newImage("Data/recursos/P2.png")
+	Puntero1 = love.graphics.newImage("Data/recursos/Puntero1.png")
+	Puntero2 = love.graphics.newImage("Data/recursos/Puntero2.png")
+	Vs=love.graphics.newImage("Data/recursos/vs.png")
+	PCa1=love.graphics.newImage("Data/recursos/Carta1.png")
+	PCa2=love.graphics.newImage("Data/recursos/Carta2.png")
 	Poder1=0;
 	Poder2=0;
 	message = ""
@@ -47,12 +47,12 @@ function love.load()
 
   	if cancion == 1 then
   	love.audio.stop()
-	love.audio.play(love.audio.newSource("recursos/audio1.mp3","stream"))
+	love.audio.play(love.audio.newSource("Data/audio/audio1.mp3","stream"))
 	end
 
 	if cancion == 2 then
 	love.audio.stop()
-	love.audio.play(love.audio.newSource("recursos/audio2.mp3","stream"))
+	love.audio.play(love.audio.newSource("Data/audio/audio2.mp3","stream"))
 	end
 	i=1;
 	j=1;
@@ -78,26 +78,26 @@ function love.load()
 	   i = i+1 
     end
  
-    carta1 = love.graphics.newImage("recursos/"..listB1[1]..".png")
-    carta2 = love.graphics.newImage("recursos/"..listB1[2]..".png")
-    carta3 = love.graphics.newImage("recursos/"..listB1[3]..".png")
-    carta4 = love.graphics.newImage("recursos/"..listB1[4]..".png")
-    carta5 = love.graphics.newImage("recursos/"..listB1[5]..".png")
-    carta6 = love.graphics.newImage("recursos/"..listB1[6]..".png")
-    carta7 = love.graphics.newImage("recursos/"..listB1[7]..".png")
-    carta8 = love.graphics.newImage("recursos/"..listB1[8]..".png")
-    carta9 = love.graphics.newImage("recursos/"..listB1[9]..".png")
-    carta10 = love.graphics.newImage("recursos/"..listB1[10]..".png")
-    carta11 = love.graphics.newImage("recursos/"..listB1[11]..".png")
-    carta12 = love.graphics.newImage("recursos/"..listB1[12]..".png")
-    carta13 = love.graphics.newImage("recursos/"..listB1[13]..".png")
-    carta14 = love.graphics.newImage("recursos/"..listB1[14]..".png")
-    carta15 = love.graphics.newImage("recursos/"..listB1[15]..".png")
-    carta16 = love.graphics.newImage("recursos/"..listB1[16]..".png")
-    carta17 = love.graphics.newImage("recursos/"..listB1[17]..".png")
-    carta18 = love.graphics.newImage("recursos/"..listB1[18]..".png")
-    carta19 = love.graphics.newImage("recursos/"..listB1[19]..".png")
-    carta20 = love.graphics.newImage("recursos/"..listB1[20]..".png")
+    carta1 = love.graphics.newImage("Data/recursos/"..listB1[1]..".png")
+    carta2 = love.graphics.newImage("Data/recursos/"..listB1[2]..".png")
+    carta3 = love.graphics.newImage("Data/recursos/"..listB1[3]..".png")
+    carta4 = love.graphics.newImage("Data/recursos/"..listB1[4]..".png")
+    carta5 = love.graphics.newImage("Data/recursos/"..listB1[5]..".png")
+    carta6 = love.graphics.newImage("Data/recursos/"..listB1[6]..".png")
+    carta7 = love.graphics.newImage("Data/recursos/"..listB1[7]..".png")
+    carta8 = love.graphics.newImage("Data/recursos/"..listB1[8]..".png")
+    carta9 = love.graphics.newImage("Data/recursos/"..listB1[9]..".png")
+    carta10 = love.graphics.newImage("Data/recursos/"..listB1[10]..".png")
+    carta11 = love.graphics.newImage("Data/recursos/"..listB1[11]..".png")
+    carta12 = love.graphics.newImage("Data/recursos/"..listB1[12]..".png")
+    carta13 = love.graphics.newImage("Data/recursos/"..listB1[13]..".png")
+    carta14 = love.graphics.newImage("Data/recursos/"..listB1[14]..".png")
+    carta15 = love.graphics.newImage("Data/recursos/"..listB1[15]..".png")
+    carta16 = love.graphics.newImage("Data/recursos/"..listB1[16]..".png")
+    carta17 = love.graphics.newImage("Data/recursos/"..listB1[17]..".png")
+    carta18 = love.graphics.newImage("Data/recursos/"..listB1[18]..".png")
+    carta19 = love.graphics.newImage("Data/recursos/"..listB1[19]..".png")
+    carta20 = love.graphics.newImage("Data/recursos/"..listB1[20]..".png")
       
 
 	objects ={}
@@ -358,7 +358,7 @@ function love.load()
 	love.graphics.setBackgroundColor(104, 136, 248)
 	love.window.setMode(1024, 639)
 	love.window.setTitle("H3ROES C4RDS")
-	love.window.setIcon(love.image.newImageData("ico.png"))
+	love.window.setIcon(love.image.newImageData("Data/recursos/ico.png"))
 
 end
 
@@ -813,7 +813,9 @@ if jugador == 2 then
 
  end
 end
+function jugar()
 
+end
 function love.draw()
 	love.graphics.draw(arena, 0, 0)
 
