@@ -43,10 +43,17 @@ function love.load()
 	aux2=0;
 	printx = 0
   	printy = 0
+  	cancion= love.math.random(1,2)
+
+  	if cancion == 1 then
   	love.audio.stop()
 	love.audio.play(love.audio.newSource("recursos/audio1.mp3","stream"))
-	
+	end
 
+	if cancion == 2 then
+	love.audio.stop()
+	love.audio.play(love.audio.newSource("recursos/audio2.mp3","stream"))
+	end
 	i=1;
 	j=1;
 	k=1;
@@ -356,8 +363,7 @@ function love.load()
 end
 
 function reload()
-love.audio.stop()
-love.audio.play(love.audio.newSource("recursos/audio2.mp3","stream"))	
+
 
 end
 
