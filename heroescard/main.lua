@@ -472,7 +472,7 @@ function cubrir()
 	Primer18=0
 	Primer19=0
 	Primer20=0
-
+	
 end
 function reload()
 
@@ -532,11 +532,11 @@ function inicio()
 	else
 		print("inicia jugador 2")
 		jugador=2
+		Primeracarta2=0
+		Segundacarta2=0
 		Primeracarta=0
 		Segundacarta=0
 		dr2=false
-		Primeracarta2=0
-		Segundacarta2=0
 		dr=false
 		bandera= false
 		aleatorio()
@@ -602,9 +602,9 @@ if button == 1 and x >= 724 and x<=760 and y >=566 and y <= 596 then -- Versions
     end
 end
 --__________________________________________________________________________________________________________________________________________
+if (apuesta1 ~=0 and apuesta2 ~=0) then
 
-
-if jugador == 1  and bandera == true then 
+if  bandera == true then 
   
   if Prime==0 then
    if button == 1 and x >= 187 and x<=250 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
@@ -814,7 +814,7 @@ if Prime == 1 and true then
 	  
 		   
 	end
-		
+		print("Primeracarta2: "..Primeracarta2.." Segundacarta2: "..Segundacarta2)
 
 		if(Prime==1 and Prime2==1 and bandera == true)then
 			inicio()
@@ -1066,7 +1066,7 @@ if Segundacarta == 0 and Primeracarta==1 then
 
 if jugador == 2 then
    
-    if Primeracarta2 == 0 then
+    if Primeracarta2 == 0 or Primeracarta2==1 then
     if Primer11==0 then 
 		
 		if button == 1 and x >= 187 and x<=250 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
@@ -1329,7 +1329,7 @@ if jugador == 2 then
 	   
 	end
 	end
-	
+	print("Primeracarta2: "..Primeracarta2.." Segundacarta2: "..Segundacarta2)
 
 	if  Primeracarta2 == 1 and Segundacarta2 ==1 then
 		volver2()
@@ -1337,6 +1337,7 @@ if jugador == 2 then
 	end
 
  end
+end
 end
 
 function love.draw()
