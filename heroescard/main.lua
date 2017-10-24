@@ -398,7 +398,82 @@ function love.load()
 	love.window.setIcon(love.image.newImageData("ico.png"))
 
 end
+function aleatorio()
+	print("se hizo")
+	 r = 0
+	 t = 0
+	--PRIMERA BARAJA--
+	while t<=20 do
+	   rand=love.math.random(0,67)
+	   while r<=20 do
+	   if rand==listB1[r] then
+	   	rand=love.math.random(0,67)
+	   end
+	   r=r+1
+	   end
+	   listB1[t]=rand
+	   r=0
+	   t = t+1 
+    end
+ 
+    carta1 = love.graphics.newImage("Data/recursos/"..listB1[1]..".png")
+    --carta1 = love.graphics.newImage("Data/recursos/67.png")
+    carta2 = love.graphics.newImage("Data/recursos/"..listB1[2]..".png")
+    carta3 = love.graphics.newImage("Data/recursos/"..listB1[3]..".png")
+    carta4 = love.graphics.newImage("Data/recursos/"..listB1[4]..".png")
+    carta5 = love.graphics.newImage("Data/recursos/"..listB1[5]..".png")
+    carta6 = love.graphics.newImage("Data/recursos/"..listB1[6]..".png")
+    carta7 = love.graphics.newImage("Data/recursos/"..listB1[7]..".png")
+    carta8 = love.graphics.newImage("Data/recursos/"..listB1[8]..".png")
+    carta9 = love.graphics.newImage("Data/recursos/"..listB1[9]..".png")
+    carta10 = love.graphics.newImage("Data/recursos/"..listB1[10]..".png")
+    carta11 = love.graphics.newImage("Data/recursos/"..listB1[11]..".png")
+    carta12 = love.graphics.newImage("Data/recursos/"..listB1[12]..".png")
+    carta13 = love.graphics.newImage("Data/recursos/"..listB1[13]..".png")
+    carta14 = love.graphics.newImage("Data/recursos/"..listB1[14]..".png")
+    carta15 = love.graphics.newImage("Data/recursos/"..listB1[15]..".png")
+    carta16 = love.graphics.newImage("Data/recursos/"..listB1[16]..".png")
+    carta17 = love.graphics.newImage("Data/recursos/"..listB1[17]..".png")
+    carta18 = love.graphics.newImage("Data/recursos/"..listB1[18]..".png")
+    carta19 = love.graphics.newImage("Data/recursos/"..listB1[19]..".png")
+	carta20 = love.graphics.newImage("Data/recursos/"..listB1[20]..".png")
+end
 
+function cubrir()
+		print("Entra cubrir")
+		objects.o1.body:setPosition(187, 65)
+    	objects.o2.body:setPosition(277, 65)
+		objects.o3.body:setPosition(364, 65)
+		objects.o4.body:setPosition(454, 65)
+		objects.o5.body:setPosition(542, 65)
+		objects.o6.body:setPosition(187, 165)
+		objects.o7.body:setPosition(277, 165)
+		objects.o8.body:setPosition(364, 165)
+		objects.o9.body:setPosition(454, 165)
+		objects.o10.body:setPosition(542, 165)
+		objects.o11.body:setPosition(187, 388)
+    	objects.o12.body:setPosition(277, 388)
+		objects.o13.body:setPosition(364, 388)
+		objects.o14.body:setPosition(454, 388)
+		objects.o15.body:setPosition(542, 388)
+		objects.o16.body:setPosition(187, 486)
+		objects.o17.body:setPosition(277, 486)
+		objects.o18.body:setPosition(364, 486)
+		objects.o19.body:setPosition(454, 486)
+		objects.o20.body:setPosition(542, 486)
+
+	Primer11=0
+	Primer12=0
+	Primer13=0
+	Primer14=0
+	Primer15=0
+	Primer16=0
+	Primer17=0
+	Primer18=0
+	Primer19=0
+	Primer20=0
+
+end
 function reload()
 
 
@@ -452,6 +527,8 @@ function inicio()
 		Segundacarta2=0
 		dr=false
 		bandera=false
+		aleatorio()
+		cubrir()
 	else
 		print("inicia jugador 2")
 		jugador=2
@@ -462,6 +539,8 @@ function inicio()
 		Segundacarta2=0
 		dr=false
 		bandera= false
+		aleatorio()
+		cubrir()
 	end
 end
 
