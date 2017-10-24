@@ -373,7 +373,7 @@ function love.update(dt)
 	
 
 end 
-function volver1(  )
+function volver1()
 	 --love.timer.sleep( 3 )
     if dr==true then
     	objects.o11.body:setPosition(187, 388)
@@ -388,6 +388,23 @@ function volver1(  )
 		objects.o20.body:setPosition(542, 486)
     end
 end
+
+function volver2()
+	 --love.timer.sleep( 3 )
+    if dr2==true then
+    	objects.o1.body:setPosition(187, 65)
+    	objects.o2.body:setPosition(277, 65)
+		objects.o3.body:setPosition(364, 65)
+		objects.o4.body:setPosition(454, 65)
+		objects.o5.body:setPosition(542, 65)
+		objects.o6.body:setPosition(187, 165)
+		objects.o7.body:setPosition(277, 165)
+		objects.o8.body:setPosition(364, 165)
+		objects.o9.body:setPosition(454, 165)
+		objects.o10.body:setPosition(542, 165)
+    end
+end
+
 function jugarReglasP1()
 		jugador =2	
 		Primeracarta2=0
@@ -399,6 +416,7 @@ function jugarReglasP2()
 		jugador =1
 		Primeracarta=0
 		Segundacarta=0
+		dr2=false
 end
 function love.mousepressed(x, y, button, istouch)
 	if button == 1 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
@@ -679,6 +697,7 @@ if jugador == 2 then
 					objects.o8.body:setPosition(10000/2, 10000/2)
 					objects.o9.body:setPosition(10000/2, 10000/2)
 					objects.o10.body:setPosition(10000/2, 10000/2)
+					dr2 =true
 
   	 	  end
 	      objects.o12.body:setPosition(10000/2, 10000/2)
@@ -910,8 +929,8 @@ if jugador == 2 then
 	
 
 	if  Primeracarta2 == 1 and Segundacarta2 ==1 then
+		volver2()
 		jugarReglasP2()
-		
 	end
 
  end
