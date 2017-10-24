@@ -9,7 +9,7 @@ function love.load()
 	Segundacarta=0
 	Primeracarta2=0
 	Segundacarta2=0
-
+	dr=false
 	Primer11=0
 	Primer12=0
 	Primer13=0
@@ -79,6 +79,7 @@ function love.load()
     end
  
     carta1 = love.graphics.newImage("Data/recursos/"..listB1[1]..".png")
+    --carta1 = love.graphics.newImage("Data/recursos/67.png")
     carta2 = love.graphics.newImage("Data/recursos/"..listB1[2]..".png")
     carta3 = love.graphics.newImage("Data/recursos/"..listB1[3]..".png")
     carta4 = love.graphics.newImage("Data/recursos/"..listB1[4]..".png")
@@ -97,8 +98,8 @@ function love.load()
     carta17 = love.graphics.newImage("Data/recursos/"..listB1[17]..".png")
     carta18 = love.graphics.newImage("Data/recursos/"..listB1[18]..".png")
     carta19 = love.graphics.newImage("Data/recursos/"..listB1[19]..".png")
-    carta20 = love.graphics.newImage("Data/recursos/"..listB1[20]..".png")
-      
+	carta20 = love.graphics.newImage("Data/recursos/"..listB1[20]..".png")
+    --carta20 =  love.graphics.newImage("Data/recursos/67.png") 
 
 	objects ={}
 	objects.c1={}
@@ -358,7 +359,7 @@ function love.load()
 	love.graphics.setBackgroundColor(104, 136, 248)
 	love.window.setMode(1024, 639)
 	love.window.setTitle("H3ROES C4RDS")
-	love.window.setIcon(love.image.newImageData("Data/recursos/ico.png"))
+	love.window.setIcon(love.image.newImageData("ico.png"))
 
 end
 
@@ -372,13 +373,39 @@ function love.update(dt)
 	
 
 end 
+function volver1(  )
+	 --love.timer.sleep( 3 )
+    if dr==true then
+    	objects.o11.body:setPosition(187, 388)
+    	objects.o12.body:setPosition(277, 388)
+		objects.o13.body:setPosition(364, 388)
+		objects.o14.body:setPosition(454, 388)
+		objects.o15.body:setPosition(542, 388)
+		objects.o16.body:setPosition(187, 486)
+		objects.o17.body:setPosition(277, 486)
+		objects.o18.body:setPosition(364, 486)
+		objects.o19.body:setPosition(454, 486)
+		objects.o20.body:setPosition(542, 486)
+    end
+end
+function jugarReglasP1()
+		jugador =2	
+		Primeracarta2=0
+		Segundacarta2=0
+		dr=false
+end
 
+function jugarReglasP2()
+		jugador =1
+		Primeracarta=0
+		Segundacarta=0
+end
 function love.mousepressed(x, y, button, istouch)
 	if button == 1 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-      print("X= "..printx)
-      print("Y= "..printy)
+     -- print("X= "..printx)
+      --print("Y= "..printy)
 --	objects.o1.body:setPosition(10000/2, 10000/2)
    end
 
@@ -390,6 +417,20 @@ if jugador == 1  then
       printy = y
       P1 = carta1
       Poder1=listB1[1]
+      if(Poder1==67)then
+		print("Dr. Manhatan")
+		objects.o11.body:setPosition(10000/2, 10000/2)
+	    objects.o12.body:setPosition(10000/2, 10000/2)
+		objects.o13.body:setPosition(10000/2, 10000/2)
+		objects.o14.body:setPosition(10000/2, 10000/2)
+		objects.o15.body:setPosition(10000/2, 10000/2)
+		objects.o16.body:setPosition(10000/2, 10000/2)
+		objects.o17.body:setPosition(10000/2, 10000/2)
+		objects.o18.body:setPosition(10000/2, 10000/2)
+		objects.o19.body:setPosition(10000/2, 10000/2)
+		objects.o20.body:setPosition(10000/2, 10000/2)
+		dr =true
+  	  end
       objects.o1.body:setPosition(10000/2, 10000/2)
       Primeracarta =1
    end
@@ -398,6 +439,9 @@ if jugador == 1  then
       printy = y
       P1 = carta2
       Poder1=listB1[2]
+      if(Poder1==67)then
+		print("Dr. Manhatan")
+  	  end
       objects.o2.body:setPosition(10000/2, 10000/2)
       Primeracarta =1
    end
@@ -407,6 +451,9 @@ if jugador == 1  then
       printy = y
       P1 = carta3
       Poder1=listB1[3]
+      if(Poder1==67)then
+		print("Dr. Manhatan")
+  	  end
       objects.o3.body:setPosition(10000/2, 10000/2)
       Primeracarta =1
    end
@@ -416,6 +463,9 @@ if jugador == 1  then
       printy = y
       P1 = carta4
       Poder1=listB1[4]
+      if(Poder1==67)then
+		print("Dr. Manhatan")
+  	  end
       objects.o4.body:setPosition(10000/2, 10000/2)
       Primeracarta =1
    end
@@ -425,6 +475,9 @@ if jugador == 1  then
       printy = y
       P1 = carta5
       Poder1=listB1[5]
+      if(Poder1==67)then
+		print("Dr. Manhatan")
+  	  end
       objects.o5.body:setPosition(10000/2, 10000/2)
       Primeracarta =1
    end
@@ -434,6 +487,9 @@ if jugador == 1  then
       printy = y
       P1 = carta6
       Poder1=listB1[6]
+      if(Poder1==67)then
+		print("Dr. Manhatan")
+  	  end
       objects.o6.body:setPosition(10000/2, 10000/2)
       Primeracarta =1
    end
@@ -443,6 +499,9 @@ if jugador == 1  then
       printy = y
       P1 = carta7
       Poder1=listB1[7]
+      if(Poder1==67)then
+		print("Dr. Manhatan")
+  	  end
       objects.o7.body:setPosition(10000/2, 10000/2)
       Primeracarta =1
    end
@@ -452,6 +511,9 @@ if jugador == 1  then
       printy = y
       P1 = carta8
       Poder1=listB1[8]
+      if(Poder1==67)then
+		print("Dr. Manhatan")
+  	  end
       objects.o8.body:setPosition(10000/2, 10000/2)
       Primeracarta =1
    end
@@ -461,6 +523,9 @@ if jugador == 1  then
       printy = y
       P1 = carta9
       Poder1=listB1[9]
+      if(Poder1==67)then
+		print("Dr. Manhatan")
+  	  end
       objects.o9.body:setPosition(10000/2, 10000/2)
       Primeracarta =1
    end
@@ -470,6 +535,9 @@ if jugador == 1  then
       printy = y
       P1 = carta10
       Poder1=listB1[10]
+      if(Poder1==67)then
+		print("Dr. Manhatan")
+  	  end
       objects.o10.body:setPosition(10000/2, 10000/2)
       Primeracarta =1
    end
@@ -568,12 +636,11 @@ if Segundacarta == 0 and Primeracarta==1 then
 	
 	end
 
-	print("Primeracarta: "..Primeracarta.." Segundacarta: "..Segundacarta)
-   
+	--print("Primeracarta: "..Primeracarta.." Segundacarta: "..Segundacarta)
+
    if  Primeracarta == 1 and Segundacarta ==1  then
-		jugador =2	
-		Primeracarta2=0
-		Segundacarta2=0
+   		volver1()
+		jugarReglasP1()
     end
 
 if jugador == 2 then
@@ -586,6 +653,9 @@ if jugador == 2 then
 	      printy = y
 	      P2 = carta11
 	      Poder2=listB1[11]
+	      if(Poder2==67)then
+			print("Dr. Manhatan")
+  	 	  end
 	      objects.o11.body:setPosition(10000/2, 10000/2)
 	      Primer11=1
 	      Primeracarta2=1
@@ -597,6 +667,20 @@ if jugador == 2 then
 	      printy = y
 	      P2 = carta12
 	      Poder2=listB1[12]
+	      if(Poder2==67)then
+				print("Dr. Manhatan")
+					objects.o1.body:setPosition(10000/2, 10000/2)
+	  				objects.o2.body:setPosition(10000/2, 10000/2)
+					objects.o3.body:setPosition(10000/2, 10000/2)
+					objects.o4.body:setPosition(10000/2, 10000/2)
+					objects.o5.body:setPosition(10000/2, 10000/2)
+					objects.o6.body:setPosition(10000/2, 10000/2)
+					objects.o7.body:setPosition(10000/2, 10000/2)
+					objects.o8.body:setPosition(10000/2, 10000/2)
+					objects.o9.body:setPosition(10000/2, 10000/2)
+					objects.o10.body:setPosition(10000/2, 10000/2)
+
+  	 	  end
 	      objects.o12.body:setPosition(10000/2, 10000/2)
 	      Primer12=1
 	      Primeracarta2=1
@@ -608,6 +692,9 @@ if jugador == 2 then
 	      printy = y
 	      P2 = carta13
 	      Poder2=listB1[13]
+	      if(Poder2==67)then
+				print("Dr. Manhatan")
+  	 	  end
 		  objects.o13.body:setPosition(10000/2, 10000/2)
 		  Primer13=1
 		  Primeracarta2=1
@@ -620,6 +707,9 @@ if jugador == 2 then
 	      printy = y
 	      P2 = carta14
 	      Poder2=listB1[14]
+	      if(Poder2==67)then
+				print("Dr. Manhatan")
+  	 	  end
 	      objects.o14.body:setPosition(10000/2, 10000/2)
 	      Primer14=1
 	      Primeracarta2=1
@@ -631,6 +721,9 @@ if jugador == 2 then
 	      printy = y
 	      P2 = carta15
 	      Poder2=listB1[15]
+	      if(Poder2==67)then
+				print("Dr. Manhatan")
+  	 	  end
 	      objects.o15.body:setPosition(10000/2, 10000/2)
 		  Primer15=1
 		  Primeracarta2=1
@@ -642,6 +735,9 @@ if jugador == 2 then
 	      printy = y
 	      P2 = carta16
 	      Poder2=listB1[16]
+	      if(Poder2==67)then
+			print("Dr. Manhatan")
+  	 	  end
 	      objects.o16.body:setPosition(10000/2, 10000/2)
 	      Primer16=1
 	      Primeracarta2=1
@@ -653,6 +749,9 @@ if jugador == 2 then
 	      printy = y
 	      P2 = carta17
 	      Poder2=listB1[17]
+	      if(Poder2==67)then
+				print("Dr. Manhatan")
+  	 	  end
 	      objects.o17.body:setPosition(10000/2, 10000/2)
 	      Primer17=1
 	      Primeracarta2=1
@@ -664,6 +763,9 @@ if jugador == 2 then
 	      printy = y
 	      P2 = carta18
 	      Poder2=listB1[18]
+	      if(Poder2==67)then
+				print("Dr. Manhatan")
+  	 	  end
 	      objects.o18.body:setPosition(10000/2, 10000/2)
 	      Primer18=1
 	      Primeracarta2=1
@@ -675,6 +777,9 @@ if jugador == 2 then
 	      printy = y
 	      P2 = carta19
 	      Poder2=listB1[19]
+	      if(Poder2==67)then
+				print("Dr. Manhatan")
+  	 	  end
 	      objects.o19.body:setPosition(10000/2, 10000/2)
 	      Primer19=1
 	      Primeracarta2=1
@@ -686,6 +791,9 @@ if jugador == 2 then
 	      printy = y
 	      P2 = carta20
 	      Poder2=listB1[20]
+	      if(Poder2==67)then
+				print("Dr. Manhatan")
+  	 	  end
 	      objects.o20.body:setPosition(10000/2, 10000/2)
 	      Primer20=1
 	      Primeracarta2=1
@@ -799,23 +907,16 @@ if jugador == 2 then
 	   
 	end
 	end
-	print("Primer11: "..Primer11.." Primer12: "..Primer12)	
-	print("Primer13: "..Primer13.." Primer14: "..Primer14)	
-	print("Primer15: "..Primer15.." Primer16: "..Primer16)	
-	print("Primer17: "..Primer17.." Primer18: "..Primer18)	
-	print("Primer19: "..Primer19.." Primer20: "..Primer20)
-	print("Primeracarta2: "..Primeracarta2.." Segundacarta2: "..Segundacarta2)	
+	
+
 	if  Primeracarta2 == 1 and Segundacarta2 ==1 then
-		jugador =1
-		Primeracarta=0
-		Segundacarta=0
+		jugarReglasP2()
+		
 	end
 
  end
 end
-function jugar()
 
-end
 function love.draw()
 	love.graphics.draw(arena, 0, 0)
 
