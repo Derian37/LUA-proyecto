@@ -5,10 +5,16 @@ function love.load()
 	arena = love.graphics.newImage("Data/recursos/arena.png")
 	carta = love.graphics.newImage("Data/recursos/unknown.png")
 	jugador = 1
+	creditos1=100;
+	creditos2=100;
 	Primeracarta=0
 	Segundacarta=0
 	Primeracarta2=0
 	Segundacarta2=0
+	totalpts1=0
+	totalpts2=0
+	apuesta1=0
+	apuesta2=0
 	dr=false
 	Primer11=0
 	Primer12=0
@@ -47,12 +53,12 @@ function love.load()
 
   	if cancion == 1 then
   	love.audio.stop()
-	love.audio.play(love.audio.newSource("Data/audio/audio1.mp3","stream"))
+	--love.audio.play(love.audio.newSource("Data/audio/audio1.mp3","stream"))
 	end
 
 	if cancion == 2 then
 	love.audio.stop()
-	love.audio.play(love.audio.newSource("Data/audio/audio2.mp3","stream"))
+	--love.audio.play(love.audio.newSource("Data/audio/audio2.mp3","stream"))
 	end
 	i=1;
 	j=1;
@@ -422,8 +428,8 @@ function love.mousepressed(x, y, button, istouch)
 	if button == 1 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-     -- print("X= "..printx)
-      --print("Y= "..printy)
+      print("X= "..printx)
+      print("Y= "..printy)
 --	objects.o1.body:setPosition(10000/2, 10000/2)
    end
 
@@ -994,6 +1000,15 @@ function love.draw()
 	love.graphics.draw(Vs, objects.PJugador.body:getX(), objects.PJugador.body:getY())
 	love.graphics.draw(PCa2, objects.PC2.body:getX(), objects.PC2.body:getY())
 	love.graphics.print(Poder2, objects.PuntosVidaP2.body:getX(), objects.PuntosVidaP2.body:getY())
+	love.graphics.print(creditos1, 708, 68)
+	love.graphics.print(creditos2, 18, 614)
+
+	love.graphics.print(totalpts1, 715, 18)
+	love.graphics.print(totalpts2, 27, 564)
+
+	love.graphics.print(apuesta1, 122, 65)
+	love.graphics.print(apuesta2, 660, 557)
+
 	if jugador==1 then
 		love.graphics.draw(Puntero1,printx,printy)
 	end
