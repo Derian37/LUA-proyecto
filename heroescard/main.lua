@@ -16,6 +16,7 @@ function love.load()
 	apuesta1=0
 	apuesta2=0
 	dr=false
+	pase=false
 	Primer11=0
 	Primer12=0
 	Primer13=0
@@ -39,6 +40,10 @@ function love.load()
 	Vs=love.graphics.newImage("Data/recursos/vs.png")
 	PCa1=love.graphics.newImage("Data/recursos/Carta1.png")
 	PCa2=love.graphics.newImage("Data/recursos/Carta2.png")
+	btn_suma=love.graphics.newImage("Data/recursos/btn_suma.png")
+	btn_resta=love.graphics.newImage("Data/recursos/btn_resta.jpg")
+	btn_pase1=love.graphics.newImage("Data/recursos/btn_pase1.png")
+	btn_pase2=love.graphics.newImage("Data/recursos/btn_pase2.png")
 	Poder1=0;
 	Poder2=0;
 	message = ""
@@ -390,7 +395,37 @@ function love.load()
 
 --____________________________________________________________________________________________________-
 
+	objects.btnsuma1={}
+	objects.btnsuma1.body = love.physics.newBody(world,655,265,"static")
+	objects.btnsuma1.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.btnsuma1.fixture = love.physics.newFixture(objects.c20.body, objects.c20.shape, 5)
 
+	objects.btnsuma2={}
+	objects.btnsuma2.body = love.physics.newBody(world,107,265,"static")
+	objects.btnsuma2.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.btnsuma2.fixture = love.physics.newFixture(objects.c20.body, objects.c20.shape, 5)
+
+	objects.btnresta1={}
+	objects.btnresta1.body = love.physics.newBody(world,655,309,"static")
+	objects.btnresta1.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.btnresta1.fixture = love.physics.newFixture(objects.c20.body, objects.c20.shape, 5)
+
+	objects.btnresta2={}
+	objects.btnresta2.body = love.physics.newBody(world,107,309,"static")
+	objects.btnresta2.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.btnresta2.fixture = love.physics.newFixture(objects.c20.body, objects.c20.shape, 5)
+
+	objects.btnpase1={}
+	objects.btnpase1.body = love.physics.newBody(world,655,345,"static")
+	objects.btnpase1.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.btnpase1.fixture = love.physics.newFixture(objects.c20.body, objects.c20.shape, 5)
+
+	objects.btnpase2={}
+	objects.btnpase2.body = love.physics.newBody(world,107,345,"static")
+	objects.btnpase2.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.btnpase2.fixture = love.physics.newFixture(objects.c20.body, objects.c20.shape, 5)
+
+--____________________________________________________________________________________________________-
 
 	love.graphics.setBackgroundColor(104, 136, 248)
 	love.window.setMode(1024, 639)
@@ -417,7 +452,6 @@ function aleatorio()
     end
  
     carta1 = love.graphics.newImage("Data/recursos/"..listB1[1]..".png")
-    --carta1 = love.graphics.newImage("Data/recursos/67.png")
     carta2 = love.graphics.newImage("Data/recursos/"..listB1[2]..".png")
     carta3 = love.graphics.newImage("Data/recursos/"..listB1[3]..".png")
     carta4 = love.graphics.newImage("Data/recursos/"..listB1[4]..".png")
@@ -461,18 +495,16 @@ function cubrir()
 		objects.o18.body:setPosition(364, 486)
 		objects.o19.body:setPosition(454, 486)
 		objects.o20.body:setPosition(542, 486)
-
-	Primer11=0
-	Primer12=0
-	Primer13=0
-	Primer14=0
-	Primer15=0
-	Primer16=0
-	Primer17=0
-	Primer18=0
-	Primer19=0
-	Primer20=0
-	
+		Primer11=0
+		Primer12=0
+		Primer13=0
+		Primer14=0
+		Primer15=0
+		Primer16=0
+		Primer17=0
+		Primer18=0
+		Primer19=0
+		Primer20=0
 end
 function reload()
 
@@ -517,6 +549,20 @@ function volver2()
 end
 
 function inicio()
+	if( Poder2>Poder1)then
+		print("inicia jugador 2")
+		jugador=2
+		Primeracarta=0
+		Segundacarta=0
+		dr2=false
+		Primeracarta2=0
+		Segundacarta2=0
+		dr=false
+		bandera=false
+		aleatorio()
+		cubrir()
+	end
+
 	if Poder1 > Poder2 then
 		print("inicia jugador 1")
 		jugador=1
@@ -529,33 +575,38 @@ function inicio()
 		bandera=false
 		aleatorio()
 		cubrir()
-	else
-		print("inicia jugador 2")
-		jugador=2
-		Primeracarta2=0
-		Segundacarta2=0
-		Primeracarta=0
-		Segundacarta=0
-		dr2=false
-		dr=false
-		bandera= false
-		aleatorio()
-		cubrir()
 	end
 end
+function love.mousepressed(x, y, button, istouch)
 
 function jugarReglasP1()
+
+	if(Poder1>Poder2)then
+		if button == 1 and x >= 112 and x<=129 and y >=271 and y <= 285 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+		   print("Funciona")
+		end
+	else
+	pase=true
+	end	
+
+	if(pase==true)then
 		jugador =2	
 		Primeracarta2=0
 		Segundacarta2=0
 		dr=false
+		pase=false
+	end
 end
 
 function jugarReglasP2()
+	if(pase==true)then
 		jugador =1
 		Primeracarta=0
 		Segundacarta=0
 		dr2=false
+		pase=false
+	end
+end
 end
 
 
@@ -578,8 +629,8 @@ function love.mousepressed(x, y, button, istouch)
 	if button == 1 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
       printx = x
       printy = y
-  --    print("X= "..printx)
-   --   print("Y= "..printy)
+      print("X= "..printx)
+      print("Y= "..printy)
 --	objects.o1.body:setPosition(10000/2, 10000/2)
    end
 
@@ -1060,10 +1111,43 @@ if Segundacarta == 0 and Primeracarta==1 then
 	--print("Primeracarta: "..Primeracarta.." Segundacarta: "..Segundacarta)
 
    if  Primeracarta == 1 and Segundacarta ==1  then
-   		volver1()
-		jugarReglasP1()
+	   
+			--jugarReglasP1()
+		if(Poder1>Poder2)then
+			if button == 1 and x >= 662 and x<=676 and y >=271 and y <= 285 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+			   totalpts1=Poder1+totalpts1
+			   pase=true
+			end
+			if button == 1 and x >= 662 and x<=676 and y >=315 and y <= 327 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+			   totalpts1=Poder1-totalpts1
+			   pase=true
+			end
+			if button == 1 and x >= 662 and x<=676 and y >=349 and y <= 368 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+			   pase=true
+			end
+		else
+		pase=true
+		end	
+		if(pase==true)then
+			volver1()
+			jugador =2	
+			Primeracarta2=0
+			Segundacarta2=0
+			Primer11=0
+			Primer12=0
+			Primer13=0
+			Primer14=0
+			Primer15=0
+			Primer16=0
+			Primer17=0
+			Primer18=0
+			Primer19=0
+			Primer20=0
+			dr=false
+			pase=false
+		end
     end
-
+print(Segundacarta)
 if jugador == 2 then
    
     if Primeracarta2 == 0 or Primeracarta2==1 then
@@ -1332,8 +1416,31 @@ if jugador == 2 then
 	print("Primeracarta2: "..Primeracarta2.." Segundacarta2: "..Segundacarta2)
 
 	if  Primeracarta2 == 1 and Segundacarta2 ==1 then
-		volver2()
-		jugarReglasP2()
+		
+		if(Poder2>Poder1)then
+			if button == 1 and x >= 112 and x<=129 and y >=271 and y <= 285 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+			   totalpts2=Poder2+totalpts2
+			   pase=true
+			end
+			if button == 1 and x >= 112 and x<=129 and y >=315 and y <= 327 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+			   totalpts2=totalpts2-Poder2
+			   pase=true
+			end
+			if button == 1 and x >= 112 and x<=129 and y >=349 and y <= 368 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+			   pase=true
+			end
+		else
+		pase=true
+		end	
+		if(pase==true)then
+			volver2()
+			jugador =1
+			Primeracarta=0
+			Segundacarta=0
+			dr2=false
+			pase=false
+		end
+		--jugarReglasP2()
 	end
 
  end
@@ -1389,6 +1496,15 @@ function love.draw()
 	love.graphics.draw(carta, objects.o18.body:getX(), objects.o18.body:getY())
 	love.graphics.draw(carta, objects.o19.body:getX(), objects.o19.body:getY())
 	love.graphics.draw(carta, objects.o20.body:getX(), objects.o20.body:getY())
+	--__________________________________________________________________________-
+	
+	love.graphics.draw(btn_suma, objects.btnsuma1.body:getX(), objects.btnsuma1.body:getY())
+	love.graphics.draw(btn_suma, objects.btnsuma2.body:getX(), objects.btnsuma2.body:getY())
+	love.graphics.draw(btn_resta, objects.btnresta1.body:getX(), objects.btnresta1.body:getY())
+	love.graphics.draw(btn_resta, objects.btnresta2.body:getX(), objects.btnresta2.body:getY())
+	love.graphics.draw(btn_pase1, objects.btnpase1.body:getX(), objects.btnpase1.body:getY())
+	love.graphics.draw(btn_pase2, objects.btnpase2.body:getX(), objects.btnpase2.body:getY())
+
 	--__________________________________________________________________________-
 
 	love.graphics.draw(P1, objects.P1.body:getX(), objects.P1.body:getY())
