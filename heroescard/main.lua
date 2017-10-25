@@ -41,6 +41,8 @@ function love.load()
 	PCa1=love.graphics.newImage("Data/recursos/Carta1.png")
 	PCa2=love.graphics.newImage("Data/recursos/Carta2.png")
 	btn_suma=love.graphics.newImage("Data/recursos/btn_suma.png")
+	btn_resta2=love.graphics.newImage("Data/recursos/btn_resta2.jpg")
+	btn_suma2=love.graphics.newImage("Data/recursos/btn_suma2.png")
 	btn_resta=love.graphics.newImage("Data/recursos/btn_resta.jpg")
 	btn_pase1=love.graphics.newImage("Data/recursos/btn_pase1.png")
 	btn_pase2=love.graphics.newImage("Data/recursos/btn_pase2.png")
@@ -1310,7 +1312,7 @@ if jugador == 2 then
 	end  	  
 	
 	
-	if Segundacarta2 == 0  then
+	if Segundacarta2 == 0 then
 		 
       if button == 1 and x >= 187 and x<=250 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		      printx = x
@@ -1418,14 +1420,13 @@ if jugador == 2 then
 	
 
 	if  Primeracarta2 == 1 and Segundacarta2 ==1 then
-		print("Entra")
-		print("Poder1:"..Poder1)
-		print("Poder2:"..Poder2)
+	
 		if(Poder1<Poder2 or Poder2>Poder1 )then
 			
-			print("Poder2:"..Poder2)
+				print("Entra poder")
+				print("Poder1:"..Poder1)
+				print("Poder2:"..Poder2)
 			if button == 1 and x >= 112 and x<=129 and y >=269 and y <= 287 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-			 	print("Entra if")
 			   totalpts2=Poder2+totalpts2
 			   pase=true
 			end
@@ -1508,9 +1509,9 @@ function love.draw()
 	--__________________________________________________________________________-
 	
 	love.graphics.draw(btn_suma, objects.btnsuma1.body:getX(), objects.btnsuma1.body:getY())
-	love.graphics.draw(btn_suma, objects.btnsuma2.body:getX(), objects.btnsuma2.body:getY())
+	love.graphics.draw(btn_suma2, objects.btnsuma2.body:getX(), objects.btnsuma2.body:getY())
 	love.graphics.draw(btn_resta, objects.btnresta1.body:getX(), objects.btnresta1.body:getY())
-	love.graphics.draw(btn_resta, objects.btnresta2.body:getX(), objects.btnresta2.body:getY())
+	love.graphics.draw(btn_resta2, objects.btnresta2.body:getX(), objects.btnresta2.body:getY())
 	love.graphics.draw(btn_pase1, objects.btnpase1.body:getX(), objects.btnpase1.body:getY())
 	love.graphics.draw(btn_pase2, objects.btnpase2.body:getX(), objects.btnpase2.body:getY())
 
