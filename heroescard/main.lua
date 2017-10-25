@@ -1143,11 +1143,13 @@ if Segundacarta == 0 and Primeracarta==1 then
 			Primer18=0
 			Primer19=0
 			Primer20=0
+			--Poder1=0
+			--Poder2=0
 			dr=false
 			pase=false
 		end
     end
-print(Segundacarta)
+
 if jugador == 2 then
    
     if Primeracarta2 == 0 or Primeracarta2==1 then
@@ -1413,12 +1415,17 @@ if jugador == 2 then
 	   
 	end
 	end
-	print("Primeracarta2: "..Primeracarta2.." Segundacarta2: "..Segundacarta2)
+	
 
 	if  Primeracarta2 == 1 and Segundacarta2 ==1 then
-		
-		if(Poder2>Poder1)then
-			if button == 1 and x >= 112 and x<=129 and y >=271 and y <= 285 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+		print("Entra")
+		print("Poder1:"..Poder1)
+		print("Poder2:"..Poder2)
+		if(Poder1<Poder2 or Poder2>Poder1 )then
+			
+			print("Poder2:"..Poder2)
+			if button == 1 and x >= 112 and x<=129 and y >=269 and y <= 287 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+			 	print("Entra if")
 			   totalpts2=Poder2+totalpts2
 			   pase=true
 			end
@@ -1437,6 +1444,8 @@ if jugador == 2 then
 			jugador =1
 			Primeracarta=0
 			Segundacarta=0
+			--Poder1=0
+		--	Poder2=0
 			dr2=false
 			pase=false
 		end
