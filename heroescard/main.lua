@@ -72,12 +72,12 @@ function love.load()
 
 	if cancion == 1 then
 		love.audio.stop()
-	love.audio.play(love.audio.newSource("Data/audio/audio1.mp3","stream"))
+	--love.audio.play(love.audio.newSource("Data/audio/audio1.mp3","stream"))
 end
 
 if cancion == 2 then
 	love.audio.stop()
-	love.audio.play(love.audio.newSource("Data/audio/audio2.mp3","stream"))
+	--love.audio.play(love.audio.newSource("Data/audio/audio2.mp3","stream"))
 end
 i=1;
 j=1;
@@ -586,7 +586,12 @@ function love.update(dt)
 
 	function love.mousepressed(x, y, button, istouch)
 
-		
+		if button == 1  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+			printx=x
+			printy=y
+		end
+
+
 		if button == 1 and x >= 20 and x<=55 and y >=77 and y <= 100 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 			if(tonumber(text)<=creditos1)then
 				apuesta1=text
@@ -1070,6 +1075,8 @@ end
 				printx = x
 				printy = y
 				totalpts1=totalpts1+(Poder1-Poder2)
+				love.audio.stop()
+				love.audio.play(love.audio.newSource("Data/audio/LifePointEffect.mp3","stream"))
 				pase=true
 			end
 			if button == 1 and x >= 662 and x<=676 and y >=315 and y <= 327 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
