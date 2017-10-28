@@ -40,12 +40,12 @@ function love.load()
 	Vs=love.graphics.newImage("Data/recursos/vs.png")
 	PCa1=love.graphics.newImage("Data/recursos/Carta1.png")
 	PCa2=love.graphics.newImage("Data/recursos/Carta2.png")
-	btn_suma=love.graphics.newImage("Data/recursos/btn_suma.png")
-	btn_resta2=love.graphics.newImage("Data/recursos/btn_resta2.jpg")
-	btn_suma2=love.graphics.newImage("Data/recursos/btn_suma2.png")
-	btn_resta=love.graphics.newImage("Data/recursos/btn_resta.jpg")
-	btn_pase1=love.graphics.newImage("Data/recursos/btn_pase1.png")
-	btn_pase2=love.graphics.newImage("Data/recursos/btn_pase2.png")
+	--btn_suma=love.graphics.newImage("Data/recursos/btn_suma.png")
+	--btn_resta2=love.graphics.newImage("Data/recursos/btn_resta2.jpg")
+	--btn_suma2=love.graphics.newImage("Data/recursos/btn_suma2.png")
+	--btn_resta=love.graphics.newImage("Data/recursos/btn_resta.jpg")
+	--btn_pase1=love.graphics.newImage("Data/recursos/btn_pase1.png")
+	--btn_pase2=love.graphics.newImage("Data/recursos/btn_pase2.png")
 	Poder1=0;
 	Poder2=0;
 	message = ""
@@ -57,8 +57,8 @@ function love.load()
 	aux=0;
 	aux2=0;
 	cancion= love.math.random(1,2)
-	text = ""
-	texto = ""
+	text = 1
+	texto = 2
 
 	printx=0
 	printy=0
@@ -577,14 +577,138 @@ function love.textinput(t)
 	end
 	if(apuesta1~=0)then
 		texto = texto .. t
-	end
+end
 
 end
 
 
 function love.update(dt)
+	world:update(dt)
+	function Reglas1(pase)
+		function love.update(dt)
+				
+			      		if love.keyboard.isDown("up") then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+							printx = x
+							printy = y
+							totalpts1=totalpts1+(Poder1-Poder2)-dt
+							love.audio.stop()
+							love.audio.play(love.audio.newSource("Data/audio/LifePointEffect.mp3","stream"))
+									volver1()
+						jugador =2	
+						Primeracarta2=0
+						Segundacarta2=0
+						Primer11=0
+						Primer12=0
+						Primer13=0
+						Primer14=0
+						Primer15=0
+						Primer16=0
+						Primer17=0
+						Primer18=0
+						Primer19=0
+						Primer20=0
+						dr=false
+						pase=false
+						dt=0;
+						end
+						if love.keyboard.isDown("down") then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+					    	printx = x
+							printy = y
+							totalpts1=totalpts1-(Poder1-Poder2)
+							love.audio.stop()
+							love.audio.play(love.audio.newSource("Data/audio/LifePointEffect.mp3","stream"))
+									volver1()
+						jugador =2	
+						Primeracarta2=0
+						Segundacarta2=0
+						Primer11=0
+						Primer12=0
+						Primer13=0
+						Primer14=0
+						Primer15=0
+						Primer16=0
+						Primer17=0
+						Primer18=0
+						Primer19=0
+						Primer20=0
+						dr=false
+						pase=false
+						dt=0;
+						end
+					 if love.keyboard.isDown("left")  or love.keyboard.isDown("right")then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+						printx = x
+						printy = y
+						volver1()
+						jugador =2	
+						Primeracarta2=0
+						Segundacarta2=0
+						Primer11=0
+						Primer12=0
+						Primer13=0
+						Primer14=0
+						Primer15=0
+						Primer16=0
+						Primer17=0
+						Primer18=0
+						Primer19=0
+						Primer20=0
+						dr=false
+						pase=false
+						dt=0;
+						end
+		
+						
+		end
+	end
 
-	function love.mousepressed(x, y, button, istouch)
+	function Reglas2(pase)
+		function love.update(dt)
+					if love.keyboard.isDown("up") then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+						printx = x
+						printy = y
+						totalpts2=totalpts2+(Poder2-Poder1)
+						love.audio.stop()
+						love.audio.play(love.audio.newSource("Data/audio/LifePointEffect.mp3","stream"))
+						volver2()
+						jugador =1
+						Primeracarta=0
+						Segundacarta=0
+						dr2=false
+						pase=false
+						dr=false
+						pase=false
+					end
+					if love.keyboard.isDown("down") then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+						printx = x
+						printy = y
+						totalpts2=totalpts2-(Poder1-Poder2)
+						love.audio.stop()
+						love.audio.play(love.audio.newSource("Data/audio/LifePointEffect.mp3","stream"))
+						volver2()
+						jugador =1
+						Primeracarta=0
+						Segundacarta=0
+						dr2=false
+						pase=false
+						dr=false
+						pase=false
+					end
+					if love.keyboard.isDown("left")  or love.keyboard.isDown("right") then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+						printx = x
+						printy = y
+						volver2()
+						jugador =1
+						Primeracarta=0
+						Segundacarta=0
+						dr2=false
+						pase=false
+						dr=false
+					end
+    	end
+	end
+end
+
+function love.mousepressed(x, y, button, istouch)
 
 		if button == 1  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 			printx=x
@@ -847,20 +971,6 @@ if jugador == 1  then
    	printy = y
    	P1 = carta1
    	Poder1=listB1[1]
-   	if(Poder1==67)then
-   		print("Dr. Manhatan")
-   		objects.o11.body:setPosition(10000/2, 10000/2)
-   		objects.o12.body:setPosition(10000/2, 10000/2)
-   		objects.o13.body:setPosition(10000/2, 10000/2)
-   		objects.o14.body:setPosition(10000/2, 10000/2)
-   		objects.o15.body:setPosition(10000/2, 10000/2)
-   		objects.o16.body:setPosition(10000/2, 10000/2)
-   		objects.o17.body:setPosition(10000/2, 10000/2)
-   		objects.o18.body:setPosition(10000/2, 10000/2)
-   		objects.o19.body:setPosition(10000/2, 10000/2)
-   		objects.o20.body:setPosition(10000/2, 10000/2)
-   		dr =true
-   	end
    	objects.o1.body:setPosition(10000/2, 10000/2)
    	Primeracarta =1
    end
@@ -869,9 +979,6 @@ if jugador == 1  then
    	printy = y
    	P1 = carta2
    	Poder1=listB1[2]
-   	if(Poder1==67)then
-   		print("Dr. Manhatan")
-   	end
    	objects.o2.body:setPosition(10000/2, 10000/2)
    	Primeracarta =1
    end
@@ -881,9 +988,6 @@ if jugador == 1  then
    	printy = y
    	P1 = carta3
    	Poder1=listB1[3]
-   	if(Poder1==67)then
-   		print("Dr. Manhatan")
-   	end
    	objects.o3.body:setPosition(10000/2, 10000/2)
    	Primeracarta =1
    end
@@ -893,9 +997,6 @@ if jugador == 1  then
    	printy = y
    	P1 = carta4
    	Poder1=listB1[4]
-   	if(Poder1==67)then
-   		print("Dr. Manhatan")
-   	end
    	objects.o4.body:setPosition(10000/2, 10000/2)
    	Primeracarta =1
    end
@@ -905,9 +1006,6 @@ if jugador == 1  then
    	printy = y
    	P1 = carta5
    	Poder1=listB1[5]
-   	if(Poder1==67)then
-   		print("Dr. Manhatan")
-   	end
    	objects.o5.body:setPosition(10000/2, 10000/2)
    	Primeracarta =1
    end
@@ -917,9 +1015,6 @@ if jugador == 1  then
    	printy = y
    	P1 = carta6
    	Poder1=listB1[6]
-   	if(Poder1==67)then
-   		print("Dr. Manhatan")
-   	end
    	objects.o6.body:setPosition(10000/2, 10000/2)
    	Primeracarta =1
    end
@@ -929,9 +1024,6 @@ if jugador == 1  then
    	printy = y
    	P1 = carta7
    	Poder1=listB1[7]
-   	if(Poder1==67)then
-   		print("Dr. Manhatan")
-   	end
    	objects.o7.body:setPosition(10000/2, 10000/2)
    	Primeracarta =1
    end
@@ -941,9 +1033,6 @@ if jugador == 1  then
    	printy = y
    	P1 = carta8
    	Poder1=listB1[8]
-   	if(Poder1==67)then
-   		print("Dr. Manhatan")
-   	end
    	objects.o8.body:setPosition(10000/2, 10000/2)
    	Primeracarta =1
    end
@@ -953,9 +1042,6 @@ if jugador == 1  then
    	printy = y
    	P1 = carta9
    	Poder1=listB1[9]
-   	if(Poder1==67)then
-   		print("Dr. Manhatan")
-   	end
    	objects.o9.body:setPosition(10000/2, 10000/2)
    	Primeracarta =1
    end
@@ -965,9 +1051,6 @@ if jugador == 1  then
    	printy = y
    	P1 = carta10
    	Poder1=listB1[10]
-   	if(Poder1==67)then
-   		print("Dr. Manhatan")
-   	end
    	objects.o10.body:setPosition(10000/2, 10000/2)
    	Primeracarta =1
    end
@@ -1069,49 +1152,29 @@ end
 	
 
 	if  Primeracarta == 1 and Segundacarta ==1  then
-
-			if(Poder1>Poder2)then
-			if button == 1 and x >= 662 and x<=676 and y >=271 and y <= 285 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-				printx = x
-				printy = y
-				totalpts1=totalpts1+(Poder1-Poder2)
-				love.audio.stop()
-				love.audio.play(love.audio.newSource("Data/audio/LifePointEffect.mp3","stream"))
-				pase=true
-			end
-			if button == 1 and x >= 662 and x<=676 and y >=315 and y <= 327 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-				printx = x
-				printy = y
-				totalpts1=totalpts1-(Poder1-Poder2)
-				pase=true
-			end
-			if button == 1 and x >= 662 and x<=676 and y >=349 and y <= 368 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-				printx = x
-				printy = y
-				pase=true
-			end
+		if(Poder1>Poder2)then
+		   Reglas1()
 		else
 			pase=true
-		end	
-		if(pase==true)then
-			volver1()
-			jugador =2	
-			Primeracarta2=0
-			Segundacarta2=0
-			Primer11=0
-			Primer12=0
-			Primer13=0
-			Primer14=0
-			Primer15=0
-			Primer16=0
-			Primer17=0
-			Primer18=0
-			Primer19=0
-			Primer20=0
-			--Poder1=0
-			--Poder2=0
-			dr=false
-			pase=false
+		end
+		 if(pase==true)then
+		volver1()
+						jugador =2	
+						Primeracarta2=0
+						Segundacarta2=0
+						Primer11=0
+						Primer12=0
+						Primer13=0
+						Primer14=0
+						Primer15=0
+						Primer16=0
+						Primer17=0
+						Primer18=0
+						Primer19=0
+						Primer20=0
+						dr=false
+						pase=false
+					
 		end
 	end
 
@@ -1125,9 +1188,6 @@ end
 			printy = y
 			P2 = carta11
 			Poder2=listB1[11]
-			if(Poder2==67)then
-				print("Dr. Manhatan")
-			end
 			objects.o11.body:setPosition(10000/2, 10000/2)
 			Primer11=1
 			Primeracarta2=1
@@ -1139,21 +1199,6 @@ end
 	   	printy = y
 	   	P2 = carta12
 	   	Poder2=listB1[12]
-	   	if(Poder2==67)then
-	   		print("Dr. Manhatan")
-	   		objects.o1.body:setPosition(10000/2, 10000/2)
-	   		objects.o2.body:setPosition(10000/2, 10000/2)
-	   		objects.o3.body:setPosition(10000/2, 10000/2)
-	   		objects.o4.body:setPosition(10000/2, 10000/2)
-	   		objects.o5.body:setPosition(10000/2, 10000/2)
-	   		objects.o6.body:setPosition(10000/2, 10000/2)
-	   		objects.o7.body:setPosition(10000/2, 10000/2)
-	   		objects.o8.body:setPosition(10000/2, 10000/2)
-	   		objects.o9.body:setPosition(10000/2, 10000/2)
-	   		objects.o10.body:setPosition(10000/2, 10000/2)
-	   		dr2 =true
-
-	   	end
 	   	objects.o12.body:setPosition(10000/2, 10000/2)
 	   	Primer12=1
 	   	Primeracarta2=1
@@ -1161,13 +1206,8 @@ end
 	end
 	if Primer13==0 then
 	   if button == 1 and x >= 365 and x<=425 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-	   	printx = x
-	   	printy = y
 	   	P2 = carta13
 	   	Poder2=listB1[13]
-	   	if(Poder2==67)then
-	   		print("Dr. Manhatan")
-	   	end
 	   	objects.o13.body:setPosition(10000/2, 10000/2)
 	   	Primer13=1
 	   	Primeracarta2=1
@@ -1176,13 +1216,8 @@ end
 
 	if Primer14==0 then
 	   if button == 1 and x >= 454 and x<=514 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-	   	printx = x
-	   	printy = y
 	   	P2 = carta14
 	   	Poder2=listB1[14]
-	   	if(Poder2==67)then
-	   		print("Dr. Manhatan")
-	   	end
 	   	objects.o14.body:setPosition(10000/2, 10000/2)
 	   	Primer14=1
 	   	Primeracarta2=1
@@ -1190,13 +1225,8 @@ end
 	end
 	if Primer15==0 then
 	   if button == 1 and x >= 541 and x<=601 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-	   	printx = x
-	   	printy = y
 	   	P2 = carta15
 	   	Poder2=listB1[15]
-	   	if(Poder2==67)then
-	   		print("Dr. Manhatan")
-	   	end
 	   	objects.o15.body:setPosition(10000/2, 10000/2)
 	   	Primer15=1
 	   	Primeracarta2=1
@@ -1204,13 +1234,8 @@ end
 	end
 	if Primer16==0 then
 	   if button == 1 and x >= 186 and x<=250 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-	   	printx = x
-	   	printy = y
 	   	P2 = carta16
 	   	Poder2=listB1[16]
-	   	if(Poder2==67)then
-	   		print("Dr. Manhatan")
-	   	end
 	   	objects.o16.body:setPosition(10000/2, 10000/2)
 	   	Primer16=1
 	   	Primeracarta2=1
@@ -1218,13 +1243,8 @@ end
 	end
 	if Primer17==0 then
 	   if button == 1 and x >= 256 and x<=336 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-	   	printx = x
-	   	printy = y
 	   	P2 = carta17
 	   	Poder2=listB1[17]
-	   	if(Poder2==67)then
-	   		print("Dr. Manhatan")
-	   	end
 	   	objects.o17.body:setPosition(10000/2, 10000/2)
 	   	Primer17=1
 	   	Primeracarta2=1
@@ -1232,13 +1252,8 @@ end
 	end
 	if Primer18==0 then
 	    if button == 1 and x >= 365 and x<=425 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-	    	printx = x
-	    	printy = y
 	    	P2 = carta18
 	    	Poder2=listB1[18]
-	    	if(Poder2==67)then
-	    		print("Dr. Manhatan")
-	    	end
 	    	objects.o18.body:setPosition(10000/2, 10000/2)
 	    	Primer18=1
 	    	Primeracarta2=1
@@ -1246,13 +1261,8 @@ end
 	end
 	if Primer19==0 then
 	   if button == 1 and x >= 454 and x<=514 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-	   	printx = x
-	   	printy = y
 	   	P2 = carta19
 	   	Poder2=listB1[19]
-	   	if(Poder2==67)then
-	   		print("Dr. Manhatan")
-	   	end
 	   	objects.o19.body:setPosition(10000/2, 10000/2)
 	   	Primer19=1
 	   	Primeracarta2=1
@@ -1260,17 +1270,11 @@ end
 	end
 	if Primer20==0 then
 	   if button == 1 and x >= 541 and x<=601 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-	   	printx = x
-	   	printy = y
 	   	P2 = carta20
 	   	Poder2=listB1[20]
-	   	if(Poder2==67)then
-	   		print("Dr. Manhatan")
-	   	end
 	   	objects.o20.body:setPosition(10000/2, 10000/2)
 	   	Primer20=1
 	   	Primeracarta2=1
-	      --P=1
 	  end   
 	end  	  
 	
@@ -1278,18 +1282,12 @@ end
 	if Segundacarta2 == 0 then
 
       if button == 1 and x >= 187 and x<=250 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-      	printx = x
-      	printy = y
       	P1 = carta1
       	Poder1=listB1[1]
       	objects.o1.body:setPosition(10000/2, 10000/2)
       	Segundacarta2=1
-
-		    --  P=0
 		end
 		   if button == 1 and x >= 276 and x<=337 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-		   	printx = x
-		   	printy = y
 		   	P1 = carta2
 		   	Poder1=listB1[2]
 		   	objects.o2.body:setPosition(10000/2, 10000/2)
@@ -1298,19 +1296,14 @@ end
 		   end
 
 		   if button == 1 and x >= 365 and x<=425 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-		   	printx = x
-		   	printy = y
 		   	P1 = carta3
 		   	Poder1=listB1[3]
 		   	objects.o3.body:setPosition(10000/2, 10000/2)
 		   	Segundacarta2=1
 		   	Primeracarta2=1
-
 		   end
 
 		   if button == 1 and x >= 454 and x<=514 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-		   	printx = x
-		   	printy = y
 		   	P1 = carta4
 		   	Poder1=listB1[4]
 		   	objects.o4.body:setPosition(10000/2, 10000/2)
@@ -1319,8 +1312,6 @@ end
 		   end
 
 		   if button == 1 and x >= 541 and x<=601 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-		   	printx = x
-		   	printy = y
 		   	P1 = carta5
 		   	Poder1=listB1[5]
 		   	objects.o5.body:setPosition(10000/2, 10000/2)
@@ -1329,8 +1320,6 @@ end
 		   end
 
 		   if button == 1 and x >= 186 and x<=250 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-		   	printx = x
-		   	printy = y
 		   	P1 = carta6
 		   	Poder1=listB1[6]
 		   	objects.o6.body:setPosition(10000/2, 10000/2)
@@ -1339,8 +1328,6 @@ end
 		   end
 
 		   if button == 1 and x >= 276 and x<=337 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-		   	printx = x
-		   	printy = y
 		   	P1 = carta7
 		   	Poder1=listB1[7]
 		   	objects.o7.body:setPosition(10000/2, 10000/2)
@@ -1349,8 +1336,6 @@ end
 		   end
 
 		if button == 1 and x >= 365 and x<=425 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-			printx = x
-			printy = y
 			P1 = carta8
 			Poder1=listB1[8]
 			objects.o8.body:setPosition(10000/2, 10000/2)
@@ -1359,8 +1344,6 @@ end
 		end
 
 		if button == 1 and x >= 454 and x<=514 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-			printx = x
-			printy = y
 			P1 = carta9
 			Poder1=listB1[9]
 			objects.o9.body:setPosition(10000/2, 10000/2)
@@ -1369,8 +1352,6 @@ end
 		end
 
 	   if button == 1 and x >= 541 and x<=601 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-	   	printx = x
-	   	printy = y
 	   	P1 = carta10
 	   	Poder1=listB1[10]
 	   	objects.o10.body:setPosition(10000/2, 10000/2)
@@ -1380,67 +1361,27 @@ end
 	   
 	end
 end
-
-
-if  Primeracarta2 == 1 and Segundacarta2 ==1 then
-	if(Poder2>Poder1 or Poder1<Poder2)then
-
-			printx = x
-   			printy = y
-			print("x: "..x)
-			print("y: "..y)
-			if love.mouse.isDown(1) and x >= 114 and x<=129 and y >=270 and y <= 287 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-				print("Entra")
-				printx = x
-				printy = y
-				totalpts2=totalpts2+(Poder2-Poder1)
-				pase=true
-			end
-			if love.mouse.isDown(1) and x >= 114 and x<=129 and y >=315 and y <= 327 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-				printx = x
-				printy = y
-				totalpts2=totalpts2-(Poder1-Poder2)
-				pase=true
-			end
-			if love.mouse.isDown(1) and x >= 114 and x<=129 and y >=349 and y <= 368 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-				printx = x
-				printy = y
-				pase=true
-			end
+	if  Primeracarta2 == 1 and Segundacarta2 ==1 then
+		if(Poder2>Poder1 or Poder1<Poder2)then
+			Reglas2(pase)
 		else
 			pase=true
 		end	
-		if(pase==true)then
-			volver2()
-			jugador =1
-			Primeracarta=0
-			Segundacarta=0
-			dr2=false
-			pase=false
-			Primer11=0
-			Primer12=0
-			Primer13=0
-			Primer14=0
-			Primer15=0
-			Primer16=0
-			Primer17=0
-			Primer18=0
-			Primer19=0
-			Primer20=0
-			--Poder1=0
-			--Poder2=0
-			dr=false
-			pase=false
-		end
-		
+			if(pase==true)then
+				volver2()
+				jugador =1
+				Primeracarta=0
+				Segundacarta=0
+				dr2=false
+				pase=false
+				dr=false
+				pase=false
+			end
 	end
 
 end
 end
 end
-end
-
-
 
 
 function love.draw()
@@ -1494,17 +1435,7 @@ function love.draw()
 	love.graphics.draw(carta, objects.o20.body:getX(), objects.o20.body:getY())
 	--__________________________________________________________________________-
 	
-	love.graphics.draw(btn_suma, objects.btnsuma1.body:getX(), objects.btnsuma1.body:getY())
 
-	love.graphics.draw(btn_suma2, objects.btnsuma2.body:getX(), objects.btnsuma2.body:getY())
-
-	love.graphics.draw(btn_resta, objects.btnresta1.body:getX(), objects.btnresta1.body:getY())
-
-	love.graphics.draw(btn_resta2, objects.btnresta2.body:getX(), objects.btnresta2.body:getY())
-
-	love.graphics.draw(btn_pase1, objects.btnpase1.body:getX(), objects.btnpase1.body:getY())
-
-	love.graphics.draw(btn_pase2, objects.btnpase2.body:getX(), objects.btnpase2.body:getY())
 
 	--__________________________________________________________________________-
 
