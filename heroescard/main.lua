@@ -571,8 +571,9 @@ end
 	function Reglas1(pase)
 		toca1=true
 		pase=true
-		if(pase==true) then
+	
 		function love.keypressed(key)
+			if(pase==true) then
   			 	if key == "up" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 							printx = x
 							printy = y
@@ -651,8 +652,9 @@ end
 function Reglas2(pase)
 	toca2=true
 	pase=true
-	if(pase==true) then
+	
 		function love.keypressed(key)
+			if(pase==true) then
   			 	if key == "up" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 						printx = x
 						printy = y
