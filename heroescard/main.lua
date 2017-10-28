@@ -583,35 +583,35 @@ end
 
 
 function love.update(dt)
-	world:update(dt)
+
+end
 	function Reglas1(pase)
-		function love.update(dt)
-				
-			      		if love.keyboard.isDown("up") then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+		function love.keypressed(key)
+  			 	if key == "up" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 							printx = x
 							printy = y
-							totalpts1=totalpts1+(Poder1-Poder2)-dt
+							totalpts1=totalpts1+(Poder1-Poder2)
 							love.audio.stop()
 							love.audio.play(love.audio.newSource("Data/audio/LifePointEffect.mp3","stream"))
-									volver1()
-						jugador =2	
-						Primeracarta2=0
-						Segundacarta2=0
-						Primer11=0
-						Primer12=0
-						Primer13=0
-						Primer14=0
-						Primer15=0
-						Primer16=0
-						Primer17=0
-						Primer18=0
-						Primer19=0
-						Primer20=0
-						dr=false
-						pase=false
-						dt=0;
+							volver1()
+							jugador =2	
+							Primeracarta2=0
+							Segundacarta2=0
+							Primer11=0
+							Primer12=0
+							Primer13=0
+							Primer14=0
+							Primer15=0
+							Primer16=0
+							Primer17=0
+							Primer18=0
+							Primer19=0
+							Primer20=0
+							dr=false
+							pase=false
+							dt=0;
 						end
-						if love.keyboard.isDown("down") then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+						if  key == "down" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 					    	printx = x
 							printy = y
 							totalpts1=totalpts1-(Poder1-Poder2)
@@ -635,7 +635,7 @@ function love.update(dt)
 						pase=false
 						dt=0;
 						end
-					 if love.keyboard.isDown("left")  or love.keyboard.isDown("right")then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+					 if  key == "left" or "right" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 						printx = x
 						printy = y
 						volver1()
@@ -656,14 +656,12 @@ function love.update(dt)
 						pase=false
 						dt=0;
 						end
-		
-						
-		end
+  		 
 	end
-
-	function Reglas2(pase)
-		function love.update(dt)
-					if love.keyboard.isDown("up") then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+end
+function Reglas2(pase)
+		function love.keypressed(key)
+  			 	if key == "up" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 						printx = x
 						printy = y
 						totalpts2=totalpts2+(Poder2-Poder1)
@@ -678,7 +676,7 @@ function love.update(dt)
 						dr=false
 						pase=false
 					end
-					if love.keyboard.isDown("down") then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+					if key == "down" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 						printx = x
 						printy = y
 						totalpts2=totalpts2-(Poder1-Poder2)
@@ -693,7 +691,7 @@ function love.update(dt)
 						dr=false
 						pase=false
 					end
-					if love.keyboard.isDown("left")  or love.keyboard.isDown("right") then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+					if key == "left" or "right" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 						printx = x
 						printy = y
 						volver2()
@@ -704,8 +702,7 @@ function love.update(dt)
 						pase=false
 						dr=false
 					end
-    	end
-	end
+   end 	
 end
 
 function love.mousepressed(x, y, button, istouch)
