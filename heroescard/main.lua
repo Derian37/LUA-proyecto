@@ -4,6 +4,8 @@ function love.load()
 	world = love.physics.newWorld(0, 9.81*64, true)
 	arena = love.graphics.newImage("Data/recursos/arena.png")
 	carta = love.graphics.newImage("Data/recursos/unknown.png")
+	toca1=false
+	toca2=false
 	jugador = 1
 	creditos1=100;
 	creditos2=100;
@@ -40,7 +42,8 @@ function love.load()
 	Vs=love.graphics.newImage("Data/recursos/vs.png")
 	PCa1=love.graphics.newImage("Data/recursos/Carta1.png")
 	PCa2=love.graphics.newImage("Data/recursos/Carta2.png")
-	--btn_suma=love.graphics.newImage("Data/recursos/btn_suma.png")
+	Turno2=love.graphics.newImage("Data/recursos/Turno2.png")
+    Turno1=love.graphics.newImage("Data/recursos/Turno1.png")
 	--btn_resta2=love.graphics.newImage("Data/recursos/btn_resta2.jpg")
 	--btn_suma2=love.graphics.newImage("Data/recursos/btn_suma2.png")
 	--btn_resta=love.graphics.newImage("Data/recursos/btn_resta.jpg")
@@ -392,33 +395,13 @@ objects.Apos2.fixture = love.physics.newFixture(objects.Apos2.body, objects.Apos
 
 --____________________________________________________________________________________________________-
 
-objects.btnsuma1={}
-objects.btnsuma1.body = love.physics.newBody(world,655,265,"static")
-objects.btnsuma1.shape =love.physics.newRectangleShape(0,0,10,10)
-objects.btnsuma1.fixture = love.physics.newFixture(objects.btnsuma1.body, objects.btnsuma1.shape, 5)
-
-objects.btnsuma2={}
-objects.btnsuma2.body = love.physics.newBody(world,107,265,"static")
-objects.btnsuma2.shape =love.physics.newRectangleShape(0,0,10,10)
-objects.btnsuma2.fixture = love.physics.newFixture(objects.btnsuma2.body, objects.btnsuma2.shape, 5)
-
-objects.btnresta1={}
-objects.btnresta1.body = love.physics.newBody(world,655,309,"static")
-objects.btnresta1.shape =love.physics.newRectangleShape(0,0,10,10)
-objects.btnresta1.fixture = love.physics.newFixture(objects.btnresta1.body, objects.btnresta1.shape, 5)
-
-objects.btnresta2={}
-objects.btnresta2.body = love.physics.newBody(world,107,309,"static")
-objects.btnresta2.shape =love.physics.newRectangleShape(0,0,10,10)
-objects.btnresta2.fixture = love.physics.newFixture(objects.btnresta2.body, objects.btnresta2.shape, 5)
-
 objects.btnpase1={}
-objects.btnpase1.body = love.physics.newBody(world,655,345,"static")
+objects.btnpase1.body = love.physics.newBody(world,623,200,"static")
 objects.btnpase1.shape =love.physics.newRectangleShape(0,0,10,10)
 objects.btnpase1.fixture = love.physics.newFixture(objects.btnpase1.body, objects.btnpase1.shape, 5)
 
 objects.btnpase2={}
-objects.btnpase2.body = love.physics.newBody(world,107,345,"static")
+objects.btnpase2.body = love.physics.newBody(world,3,200,"static")
 objects.btnpase2.shape =love.physics.newRectangleShape(0,0,10,10)
 objects.btnpase2.fixture = love.physics.newFixture(objects.btnpase2.body, objects.btnpase2.shape, 5)
 
@@ -586,6 +569,9 @@ function love.update(dt)
 
 end
 	function Reglas1(pase)
+		toca1=true
+		pase=true
+		if(pase==true) then
 		function love.keypressed(key)
   			 	if key == "up" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 							printx = x
@@ -609,6 +595,7 @@ end
 							Primer20=0
 							dr=false
 							pase=false
+							toca1=false
 							dt=0;
 						end
 						if  key == "down" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
@@ -632,6 +619,7 @@ end
 						Primer19=0
 						Primer20=0
 						dr=false
+						toca1=false
 						pase=false
 						dt=0;
 						end
@@ -654,12 +642,16 @@ end
 						Primer20=0
 						dr=false
 						pase=false
+						toca1=false
 						dt=0;
 						end
-  		 
+  		 end
 	end
 end
 function Reglas2(pase)
+	toca2=true
+	pase=true
+	if(pase==true) then
 		function love.keypressed(key)
   			 	if key == "up" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 						printx = x
@@ -674,6 +666,7 @@ function Reglas2(pase)
 						dr2=false
 						pase=false
 						dr=false
+						toca2=false
 						pase=false
 					end
 					if key == "down" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
@@ -689,6 +682,7 @@ function Reglas2(pase)
 						dr2=false
 						pase=false
 						dr=false
+						toca2=false
 						pase=false
 					end
 					if key == "left" or "right" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
@@ -700,7 +694,9 @@ function Reglas2(pase)
 						Segundacarta=0
 						dr2=false
 						pase=false
+						toca2=false
 						dr=false
+					end
 					end
    end 	
 end
@@ -710,6 +706,7 @@ function love.mousepressed(x, y, button, istouch)
 		if button == 1  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 			printx=x
 			printy=y
+	
 		end
 
 
@@ -1150,11 +1147,12 @@ end
 
 	if  Primeracarta == 1 and Segundacarta ==1  then
 		if(Poder1>Poder2)then
-		   Reglas1()
+		   Reglas1(pase)
 		else
 			pase=true
 		end
 		 if(pase==true)then
+		 	toca2=false
 		volver1()
 						jugador =2	
 						Primeracarta2=0
@@ -1365,6 +1363,7 @@ end
 			pase=true
 		end	
 			if(pase==true)then
+				toca1=false
 				volver2()
 				jugador =1
 				Primeracarta=0
@@ -1431,10 +1430,6 @@ function love.draw()
 	love.graphics.draw(carta, objects.o19.body:getX(), objects.o19.body:getY())
 	love.graphics.draw(carta, objects.o20.body:getX(), objects.o20.body:getY())
 	--__________________________________________________________________________-
-	
-
-
-	--__________________________________________________________________________-
 
 	love.graphics.draw(P1, objects.P1.body:getX(), objects.P1.body:getY())
 	love.graphics.draw(P2, objects.P2.body:getX(), objects.P2.body:getY())
@@ -1445,7 +1440,8 @@ function love.draw()
 	love.graphics.print(Poder2, objects.PuntosVidaP2.body:getX(), objects.PuntosVidaP2.body:getY())
 	love.graphics.print(creditos1, 708, 68)
 	love.graphics.print(creditos2, 18, 614)
-
+	--__________________________________________________________________________-
+	
 	love.graphics.print(totalpts1, 715, 18)
 	love.graphics.print(totalpts2, 27, 564)
 
@@ -1459,6 +1455,17 @@ function love.draw()
 	love.graphics.draw(ap1, objects.Apos1.body:getX(), objects.Apos1.body:getY())
 	love.graphics.draw(ap2, objects.Apos2.body:getX(), objects.Apos2.body:getY())
 
+	--__________________________________________________________________________-
+	if(toca1==true) then
+
+			love.graphics.draw(Turno1, objects.btnpase1.body:getX(), objects.btnpase1.body:getY())
+	end
+
+	if(toca2==true) then
+
+			love.graphics.draw(Turno2, objects.btnpase2.body:getX(), objects.btnpase2.body:getY())
+	end
+
 	if jugador==1 then
 		love.graphics.draw(Puntero1,printx,printy)
 	end
@@ -1466,6 +1473,7 @@ function love.draw()
 		love.graphics.draw(Puntero2,printx,printy)
 	end
 
+	--__________________________________________________________________________-
 	collectgarbage("collect")
 	--_________________________________________________________________________-
 	
