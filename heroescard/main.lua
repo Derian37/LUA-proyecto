@@ -550,8 +550,8 @@ end
 							totalpts1=totalpts1+(Poder1-Poder2)
 							love.audio.stop()
 							love.audio.play(love.audio.newSource("Data/audio/LifePointEffect.mp3","stream"))
-						--	Poder1=0
-						--	Poder2=0
+							Poder1=0
+							Poder2=0
 							volver1()
 							jugador =2	
 							Primeracarta2=0
@@ -565,9 +565,9 @@ end
 						end
 						if  key == "down" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 					    	x=0
-			y=0
-			printx=0
-			printy=0
+							y=0
+							printx=0
+							printy=0
 							totalpts1=totalpts1-(Poder1-Poder2)
 							love.audio.stop()
 							love.audio.play(love.audio.newSource("Data/audio/LifePointEffect.mp3","stream"))
@@ -575,8 +575,8 @@ end
 						jugador =2	
 						Primeracarta2=0
 						Segundacarta2=0
-					--	Poder1=0
-					--	Poder2=0
+						Poder1=0
+						Poder2=0
 						dr=false
 						toca1=false
 						pase=false
@@ -585,16 +585,16 @@ end
 						print("CantdiadCartas: "..CantdiadCartas)	
 						end
 					 if  key == "left" or "right" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-					x=0
-			y=0
-			printx=0
-			printy=0
+						x=0
+						y=0
+						printx=0
+						printy=0
 						volver1()
 						jugador =2	
 						Primeracarta2=0
 						Segundacarta2=0
-						--Poder1=0
-						--Poder2=0
+						Poder1=0
+						Poder2=0
 						dr=false
 						pase=false
 						toca1=false
@@ -613,9 +613,9 @@ function Reglas2(pase)
 			if(pase==true) then
   			 	if key == "up" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 						x=0
-			y=0
-			printx=0
-			printy=0
+						y=0
+						printx=0
+						printy=0
 						totalpts2=totalpts2+(Poder2-Poder1)
 						love.audio.stop()
 						love.audio.play(love.audio.newSource("Data/audio/LifePointEffect.mp3","stream"))
@@ -628,16 +628,16 @@ function Reglas2(pase)
 						dr=false
 						toca2=false
 						pase=false
-					--	Poder1=0
-					--	Poder2=0
+						Poder1=0
+						Poder2=0
 					--	CantdiadCartas=CantdiadCartas+1
 						print("CantdiadCartas: "..CantdiadCartas)	
 					end
 					if key == "down" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 						x=0
-			y=0
-			printx=0
-			printy=0
+						y=0
+						printx=0
+						printy=0
 						totalpts2=totalpts2-(Poder1-Poder2)
 						love.audio.stop()
 						love.audio.play(love.audio.newSource("Data/audio/LifePointEffect.mp3","stream"))
@@ -650,16 +650,16 @@ function Reglas2(pase)
 						dr=false
 						toca2=false
 						pase=false
-						--Poder1=0
-						--Poder2=0
+						Poder1=0
+						Poder2=0
 						--CantdiadCartas=CantdiadCartas+1
 						print("CantdiadCartas: "..CantdiadCartas)	
 					end
 					if key == "left" or "right" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-					x=0
-			y=0
-			printx=0
-			printy=0
+						x=0
+						y=0
+						printx=0
+						printy=0
 						volver2()
 						jugador =1
 						Primeracarta=0
@@ -668,8 +668,8 @@ function Reglas2(pase)
 						pase=false
 						toca2=false
 						dr=false
-						--Poder1=0
-						--Poder2=0
+						Poder1=0
+						Poder2=0
 					--	CantdiadCartas=CantdiadCartas+1
 						print("CantdiadCartas: "..CantdiadCartas)	
 					end
