@@ -1575,12 +1575,23 @@
 				end
 		end
 	end
-	if(CantdiadCartas1>5)then
-	print("Termino Partida")
+	if(CantdiadCartas1==5 and CantdiadCartas2==5)then
+	if(totalpts1==34 or  totalpts1 <= 34 or totalpts1>= 34 or totalpts1<= 34)
+		print("Win: P1")
+		Apos1=0
+		Ronda=Ronda+1
+		creditos1= creditos1+Apos2
+		Apos2=0
+		reload()
 	end
-	--until(CantdiadCartas <= 20)
-	--	print("Termino")
-	--until(creditos1 <= 1000 or creditos2<= 1000)
+	if(totalpts2==34 or  totalpts2 <= 34 or  totalpts2>= 34 or totalpts2<= 34)
+		print("Win: P2")
+		Apos2=0
+		Ronda=Ronda+1
+		creditos2= creditos2+Apos1
+		Apos1=0
+		reload()
+	end
 	end
 	end
 
@@ -1646,9 +1657,9 @@
 		love.graphics.print(creditos1, 708, 68)
 		love.graphics.print(creditos2, 18, 614)
 		--__________________________________________________________________________-
-
-		love.graphics.print("P1: "..CantdiadCartas1, 945, 385)
-		love.graphics.print("P2: "..CantdiadCartas2, 945, 395)
+		love.graphics.print(Ronda, 945, 385)
+		--love.graphics.print("P1: "..CantdiadCartas1, 945, 385)
+		--love.graphics.print("P2: "..CantdiadCartas2, 945, 395)
 		
 		love.graphics.print(totalpts1, 715, 18)
 		love.graphics.print(totalpts2, 27, 564)
