@@ -66,14 +66,14 @@
 		printx=0
 		printy=0
 
-		if cancion == 1 then
-			love.audio.stop()
-		--love.audio.play(love.audio.newSource("Data/audio/audio1.mp3","stream"))
+	if cancion == 1 then
+		love.audio.stop()
+		love.audio.play(love.audio.newSource("Data/audio/audio1.mp3","stream"))
 	end
 
 	if cancion == 2 then
 		love.audio.stop()
-		--love.audio.play(love.audio.newSource("Data/audio/audio2.mp3","stream"))
+		love.audio.play(love.audio.newSource("Data/audio/audio2.mp3","stream"))
 	end
 	i=1;
 	j=1;
@@ -420,44 +420,44 @@
 	i=1;
 	j=1;
 	k=1;
-	listB1 = {}
+	
 	while i<=20 do
 		rand=love.math.random(0,67)
 		while k<=20 do
-			if rand==listB1[k] then
+			if rand==listB2[k] then
 				rand=love.math.random(0,67)
 			end
 			k=k+1
 		end
-		listB1[i]=rand
+		listB2[i]=rand
 		k=1
 		i = i+1 
 	end
 	m=1
 	while m<=20 do
-	--print("Carta"..m..": "..listB1[m])
+	 print("Carta"..m..": "..listB2[m])
 	m=m+1
 	end
-		carta1 = love.graphics.newImage("Data/recursos/"..listB1[1]..".png")
-		carta2 = love.graphics.newImage("Data/recursos/"..listB1[2]..".png")
-		carta3 = love.graphics.newImage("Data/recursos/"..listB1[3]..".png")
-		carta4 = love.graphics.newImage("Data/recursos/"..listB1[4]..".png")
-		carta5 = love.graphics.newImage("Data/recursos/"..listB1[5]..".png")
-		carta6 = love.graphics.newImage("Data/recursos/"..listB1[6]..".png")
-		carta7 = love.graphics.newImage("Data/recursos/"..listB1[7]..".png")
-		carta8 = love.graphics.newImage("Data/recursos/"..listB1[8]..".png")
-		carta9 = love.graphics.newImage("Data/recursos/"..listB1[9]..".png")
-		carta10 = love.graphics.newImage("Data/recursos/"..listB1[10]..".png")
-		carta11 = love.graphics.newImage("Data/recursos/"..listB1[11]..".png")
-		carta12 = love.graphics.newImage("Data/recursos/"..listB1[12]..".png")
-		carta13 = love.graphics.newImage("Data/recursos/"..listB1[13]..".png")
-		carta14 = love.graphics.newImage("Data/recursos/"..listB1[14]..".png")
-		carta15 = love.graphics.newImage("Data/recursos/"..listB1[15]..".png")
-		carta16 = love.graphics.newImage("Data/recursos/"..listB1[16]..".png")
-		carta17 = love.graphics.newImage("Data/recursos/"..listB1[17]..".png")
-		carta18 = love.graphics.newImage("Data/recursos/"..listB1[18]..".png")
-		carta19 = love.graphics.newImage("Data/recursos/"..listB1[19]..".png")
-		carta20 = love.graphics.newImage("Data/recursos/"..listB1[20]..".png")
+		carta1 = love.graphics.newImage("Data/recursos/"..listB2[1]..".png")
+		carta2 = love.graphics.newImage("Data/recursos/"..listB2[2]..".png")
+		carta3 = love.graphics.newImage("Data/recursos/"..listB2[3]..".png")
+		carta4 = love.graphics.newImage("Data/recursos/"..listB2[4]..".png")
+		carta5 = love.graphics.newImage("Data/recursos/"..listB2[5]..".png")
+		carta6 = love.graphics.newImage("Data/recursos/"..listB2[6]..".png")
+		carta7 = love.graphics.newImage("Data/recursos/"..listB2[7]..".png")
+		carta8 = love.graphics.newImage("Data/recursos/"..listB2[8]..".png")
+		carta9 = love.graphics.newImage("Data/recursos/"..listB2[9]..".png")
+		carta10 = love.graphics.newImage("Data/recursos/"..listB2[10]..".png")
+		carta11 = love.graphics.newImage("Data/recursos/"..listB2[11]..".png")
+		carta12 = love.graphics.newImage("Data/recursos/"..listB2[12]..".png")
+		carta13 = love.graphics.newImage("Data/recursos/"..listB2[13]..".png")
+		carta14 = love.graphics.newImage("Data/recursos/"..listB2[14]..".png")
+		carta15 = love.graphics.newImage("Data/recursos/"..listB2[15]..".png")
+		carta16 = love.graphics.newImage("Data/recursos/"..listB2[16]..".png")
+		carta17 = love.graphics.newImage("Data/recursos/"..listB2[17]..".png")
+		carta18 = love.graphics.newImage("Data/recursos/"..listB2[18]..".png")
+		carta19 = love.graphics.newImage("Data/recursos/"..listB2[19]..".png")
+		carta20 = love.graphics.newImage("Data/recursos/"..listB2[20]..".png")
 	end
 
 	function cubrir()
