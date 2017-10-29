@@ -6,6 +6,7 @@
 		carta = love.graphics.newImage("Data/recursos/unknown.png")
 		toca1=false
 		toca2=false
+		habilitar=false
 		ganador=0
 		jiandro=false
 		jugador = 1
@@ -492,17 +493,7 @@
 		Primer19=0
 		Primer20=0
 	end
-	function reload()
-		aleatorio()
-		cubrir()
-		Primeracarta=0
-		Segundacarta=0
-		Primeracarta2=0
-		Segundacarta2=0
-		CantdiadCartas1=0
-		CantdiadCartas2=0
-
-	end
+	
 
 
 	function volver1()
@@ -544,11 +535,6 @@
 		if(apuesta1~=0)then
 			texto = texto .. t
 	end
-
-	end
-
-
-	function love.update(dt)
 
 	end
 		function Reglas1(pase)
@@ -668,7 +654,7 @@
 							Poder1=0
 							Poder2=0
 							--CantdiadCartas=CantdiadCartas+1
-							print("CantdiadCartas: "..CantdiadCartas)	
+							--print("CantdiadCartas: "..CantdiadCartas)	
 						end
 						if key == "left" or "right" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 							x=0
@@ -1584,9 +1570,7 @@
 					pase=false
 					dr=false
 					pase=false
-					--CantdiadCartas=CantdiadCartas+1
-					--print("CantdiadCartas: "..CantdiadCartas)
-				end
+			end
 		end
 	end
 
@@ -1619,7 +1603,14 @@
 		totalpts2=0
 		Ronda=Ronda+1
 		apuesta2=0
-		reload()
+		aleatorio()
+		cubrir()
+		Primeracarta=0
+		Segundacarta=0
+		Primeracarta2=0
+		Segundacarta2=0
+		CantdiadCartas1=0
+		CantdiadCartas2=0
 	end
 	if(ganador==totalpts2)then
 		creditos2= creditos2+apuesta2
@@ -1629,21 +1620,28 @@
 		apuesta2=0
 		Ronda=Ronda+1
 		apuesta1=0
-		reload()
+		aleatorio()
+		cubrir()
+		Primeracarta=0
+		Segundacarta=0
+		Primeracarta2=0
+		Segundacarta2=0
+		CantdiadCartas1=0
+		CantdiadCartas2=0
 	
 	end
 end
 end
-	if(CantdiadCartas1==5 and CantdiadCartas2==4 or CantdiadCartas1==4 and CantdiadCartas2==5)then
-		
+
+	end
+		if(CantdiadCartas1==5 and CantdiadCartas2==4 or CantdiadCartas1==4 and CantdiadCartas2==5)then
+		habilitar=true
 		 if button == 1 and x >= 669 and x<=694 and y >=124 and y <= 149 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-		    CantdiadCartas1=CantdiadCartas1
-		    CantdiadCartas2=CantdiadCartas2+1
+		    CantdiadCartas1=5
+		    CantdiadCartas2=5
 		    winronda(CantdiadCartas1,CantdiadCartas2)
 		 end
   	
-	end
-
 	end
 end
 	
@@ -1712,7 +1710,9 @@ end
 		--__________________________________________________________________________-
 		love.graphics.print(Ronda, 945, 385)
 		--love.graphics.print("P1: "..CantdiadCartas1, 945, 385)
+		if(habilitar==true)then
 		love.graphics.draw(btn_win, objects.btn_win.body:getX(), objects.btn_win.body:getY())
+		end
 		love.graphics.setColor(255, 255, 255)
 		love.graphics.printf(message, 250, 180, 500, "center")
 		love.graphics.print(totalpts1, 715, 18)
