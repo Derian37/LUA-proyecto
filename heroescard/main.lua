@@ -6,6 +6,7 @@
 		carta = love.graphics.newImage("Data/recursos/unknown.png")
 		toca1=false
 		toca2=false
+		ganador=0
 		jugador = 1
 		creditos1=100;
 		creditos2=100;
@@ -928,7 +929,7 @@
 				y=0
 				printx=0
 				printy=0
-				CantdiadCartas1=0
+				CantdiadCartas1=-1
 				CantdiadCartas2=0
 				print("inicia jugador 2")
 				Primeracarta=0
@@ -949,7 +950,7 @@
 				printx=0
 				printy=0
 				CantdiadCartas1=0
-				CantdiadCartas2=0
+				CantdiadCartas2=-1
 				print("inicia jugador 1")
 				jugador=1
 				Primeracarta=0
@@ -1575,24 +1576,43 @@
 				end
 		end
 	end
-	if(CantdiadCartas1==5 and CantdiadCartas2==5)then
-	if(totalpts1==34 or  totalpts1 <= 34 or totalpts1>= 34 or totalpts1<= 34)
+	if(CantdiadCartas1==5 and CantdiadCartas2==4 or CantdiadCartas1==4 and CantdiadCartas2==5)then
+		ReglaOro = 34
+		totales = {totalpts1,totalpts2}
+		function NearestValue(totales, number)
+		    local smallestSoFar, smallestIndex
+		    for i, y in ipairs(totales) do
+		        if not smallestSoFar or (math.abs(number-y) < smallestSoFar) then
+		            smallestSoFar = math.abs(number-y)
+		            smallestIndex = i
+		        end
+		    end
+		    return smallestIndex, totales[smallestIndex]
+		end
+
+		index, ganador = NearestValue(totales,ReglaOro)
+
+
+		print(ganador)
+
+	if(ganador==totalpts1)then
+		creditos1= creditos1+apuesta1
 		print("Win: P1")
-		Apos1=0
+		apuesta1=0
 		Ronda=Ronda+1
-		creditos1= creditos1+Apos2
-		Apos2=0
-		reload()
+		apuesta2=0
+		--reload()
 	end
-	if(totalpts2==34 or  totalpts2 <= 34 or  totalpts2>= 34 or totalpts2<= 34)
+	if(ganador==totalpts2)then
+		creditos2= creditos2+apuesta2
 		print("Win: P2")
-		Apos2=0
+		apuesta2=0
 		Ronda=Ronda+1
-		creditos2= creditos2+Apos1
-		Apos1=0
-		reload()
+		apuesta1=0
+		--reload()
 	end
 	end
+end
 	end
 
 
@@ -1657,9 +1677,9 @@
 		love.graphics.print(creditos1, 708, 68)
 		love.graphics.print(creditos2, 18, 614)
 		--__________________________________________________________________________-
-		love.graphics.print(Ronda, 945, 385)
-		--love.graphics.print("P1: "..CantdiadCartas1, 945, 385)
-		--love.graphics.print("P2: "..CantdiadCartas2, 945, 395)
+		--love.graphics.print(Ronda, 945, 385)
+		love.graphics.print("P1: "..CantdiadCartas1, 945, 385)
+		love.graphics.print("P2: "..CantdiadCartas2, 945, 395)
 		
 		love.graphics.print(totalpts1, 715, 18)
 		love.graphics.print(totalpts2, 27, 564)
