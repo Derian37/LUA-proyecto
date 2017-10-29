@@ -7,6 +7,7 @@
 		toca1=false
 		toca2=false
 		ganador=0
+		jiandro=false
 		jugador = 1
 		creditos1=100;
 		creditos2=100;
@@ -44,6 +45,7 @@
 		PCa2=love.graphics.newImage("Data/recursos/Carta2.png")
 		Turno2=love.graphics.newImage("Data/recursos/Turno2.png")
 	    Turno1=love.graphics.newImage("Data/recursos/Turno1.png")
+	    btn_win=love.graphics.newImage("Data/recursos/btn_resultado.png")
 	    Ronda=1
 	   	CantdiadCartas1=0
 	   	CantdiadCartas2=0
@@ -389,6 +391,10 @@
 	objects.Apos2.fixture = love.physics.newFixture(objects.Apos2.body, objects.Apos2.shape, 5)
 
 	--____________________________________________________________________________________________________-
+	objects.btn_win={}
+	objects.btn_win.body = love.physics.newBody(world,645,105,"static")
+	objects.btn_win.shape =love.physics.newRectangleShape(0,0,10,10)
+	objects.btn_win.fixture = love.physics.newFixture(objects.btn_win.body, objects.btn_win.shape, 5)
 
 	objects.btnpase1={}
 	objects.btnpase1.body = love.physics.newBody(world,623,200,"static")
@@ -487,7 +493,14 @@
 		Primer20=0
 	end
 	function reload()
-
+		aleatorio()
+		cubrir()
+		Primeracarta=0
+		Segundacarta=0
+		Primeracarta2=0
+		Segundacarta2=0
+		CantdiadCartas1=0
+		CantdiadCartas2=0
 
 	end
 
@@ -678,7 +691,7 @@
 						end
 	   end 	
 	end
-
+	
 	function love.mousepressed(x, y, button, istouch)
 
 			if button == 1  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
@@ -1576,7 +1589,10 @@
 				end
 		end
 	end
-	if(CantdiadCartas1==5 and CantdiadCartas2==4 or CantdiadCartas1==4 and CantdiadCartas2==5)then
+
+
+	function winronda(CantdiadCartas1,CantdiadCartas2)
+			if(CantdiadCartas1==5 and CantdiadCartas2==5)then
 		ReglaOro = 34
 		totales = {totalpts1,totalpts2}
 		function NearestValue(totales, number)
@@ -1599,21 +1615,38 @@
 		creditos1= creditos1+apuesta1
 		print("Win: P1")
 		apuesta1=0
+		totalpts1=0
+		totalpts2=0
 		Ronda=Ronda+1
 		apuesta2=0
-		--reload()
+		reload()
 	end
 	if(ganador==totalpts2)then
 		creditos2= creditos2+apuesta2
 		print("Win: P2")
+		totalpts1=0
+		totalpts2=0
 		apuesta2=0
 		Ronda=Ronda+1
 		apuesta1=0
-		--reload()
-	end
+		reload()
+	
 	end
 end
+end
+	if(CantdiadCartas1==5 and CantdiadCartas2==4 or CantdiadCartas1==4 and CantdiadCartas2==5)then
+		
+		 if button == 1 and x >= 669 and x<=694 and y >=124 and y <= 149 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+		    CantdiadCartas1=CantdiadCartas1
+		    CantdiadCartas2=CantdiadCartas2+1
+		    winronda(CantdiadCartas1,CantdiadCartas2)
+		 end
+  	
 	end
+
+	end
+end
+	
 
 
 	function love.draw()
@@ -1677,10 +1710,11 @@ end
 		love.graphics.print(creditos1, 708, 68)
 		love.graphics.print(creditos2, 18, 614)
 		--__________________________________________________________________________-
-		--love.graphics.print(Ronda, 945, 385)
-		love.graphics.print("P1: "..CantdiadCartas1, 945, 385)
-		love.graphics.print("P2: "..CantdiadCartas2, 945, 395)
-		
+		love.graphics.print(Ronda, 945, 385)
+		--love.graphics.print("P1: "..CantdiadCartas1, 945, 385)
+		love.graphics.draw(btn_win, objects.btn_win.body:getX(), objects.btn_win.body:getY())
+		love.graphics.setColor(255, 255, 255)
+		love.graphics.printf(message, 250, 180, 500, "center")
 		love.graphics.print(totalpts1, 715, 18)
 		love.graphics.print(totalpts2, 27, 564)
 
