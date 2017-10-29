@@ -32,7 +32,6 @@ function love.load()
 	Prime=0
 	Prime2=0
 	bandera=true
-	--prueba = love.graphics.newImage("joker.png")
 	P1 = love.graphics.newImage("Data/recursos/P1.png")
 	P2 = love.graphics.newImage("Data/recursos/P2.png")
 	ap1=love.graphics.newImage("Data/recursos/btn_apostar1.jpg")
@@ -44,11 +43,8 @@ function love.load()
 	PCa2=love.graphics.newImage("Data/recursos/Carta2.png")
 	Turno2=love.graphics.newImage("Data/recursos/Turno2.png")
     Turno1=love.graphics.newImage("Data/recursos/Turno1.png")
-	--btn_resta2=love.graphics.newImage("Data/recursos/btn_resta2.jpg")
-	--btn_suma2=love.graphics.newImage("Data/recursos/btn_suma2.png")
-	--btn_resta=love.graphics.newImage("Data/recursos/btn_resta.jpg")
-	--btn_pase1=love.graphics.newImage("Data/recursos/btn_pase1.png")
-	--btn_pase2=love.graphics.newImage("Data/recursos/btn_pase2.png")
+    Ronda=1
+   	CantdiadCartas=0
 	Poder1=0;
 	Poder2=0;
 	message = ""
@@ -62,16 +58,8 @@ function love.load()
 	cancion= love.math.random(1,2)
 	text = 1
 	texto = 2
-
 	printx=0
 	printy=0
-
-	--love.textinput(  )
-
-
-
-
-
 
 	if cancion == 1 then
 		love.audio.stop()
