@@ -2033,11 +2033,13 @@ function jugoNuevo(  )
 		creditos1= creditos1+(apuesta1*2)
 		creditos2= creditos2-apuesta2
 		print("Win: P1")
-		apuesta1=0
 		totalpts1=0
 		totalpts2=0
 		Ronda=Ronda+1
+		apuesta1=0
 		apuesta2=0
+		text=0
+		texto=0
 		aleatorio()
 		cubrir()
 		Primeracarta=0
@@ -2086,9 +2088,11 @@ function jugoNuevo(  )
 		print("Win: P2")
 		totalpts1=0
 		totalpts2=0
-		apuesta2=0
 		Ronda=Ronda+1
 		apuesta1=0
+		apuesta2=0
+		text=0
+		texto=0
 		aleatorio()
 		cubrir()
 		Primeracarta=0
