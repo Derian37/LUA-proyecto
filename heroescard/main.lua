@@ -8,7 +8,7 @@
 		habilitar=false
 		ganador=0
 		jugador = 1
-		creditos1=100;
+		creditos1=1000;
 		creditos2=100;
 		Primeracarta=0
 		Segundacarta=0
@@ -30,6 +30,26 @@
 		Primer18=0
 		Primer19=0
 		Primer20=0
+		v1=0
+		v2=0
+		v3=0
+		v4=0
+		v5=0
+		v6=0
+		v7=0
+		v8=0
+		v9=0
+		v10=0
+		s11=0
+		s12=0
+		s13=0
+		s14=0
+		s15=0
+		s16=0
+		s17=0
+		s18=0
+		s19=0
+		s20=0
 		Prime=0
 		Prime2=0
 		bandera=true
@@ -52,6 +72,7 @@
 		Poder2=0;
 		message = ""
 		listB1 = {}
+		Oculta = {}
 		rand=0;
 		aux=0;
 		aux2=0;
@@ -69,7 +90,7 @@
 	end
 	if cancion == 2 then
 		love.audio.stop()
-		love.audio.play(love.audio.newSource("Data/audio/audio2.mp3","stream"))
+		--love.audio.play(love.audio.newSource("Data/audio/audio2.mp3","stream"))
 	end
 	if cancion == 3 then
 		love.audio.stop()
@@ -429,8 +450,112 @@ function volver1()
 		 	objects.o20.body:setPosition(542, 486)
 		 end
 end
+function voltear1()
+			objects.o11.body:setPosition(187, 388)
+		 	objects.o12.body:setPosition(277, 388)
+		 	objects.o13.body:setPosition(364, 388)
+		 	objects.o14.body:setPosition(454, 388)
+		 	objects.o15.body:setPosition(542, 388)
+		 	objects.o16.body:setPosition(187, 486)
+		 	objects.o17.body:setPosition(277, 486)
+		 	objects.o18.body:setPosition(364, 486)
+		 	objects.o19.body:setPosition(454, 486)
+		 	objects.o20.body:setPosition(542, 486)	
+		 		if(s11==1)then
+		 			objects.o11.body:setPosition(2000, 2000)
+		 	end	
+		 		if(s12==1)then
+		 			objects.o12.body:setPosition(2000, 2000)
+		 	end	
+		 		if(s13==1)then
+		 			objects.o13.body:setPosition(2000, 2000)
+		 	end	
+		 		if(s14==1)then
+		 			objects.o14.body:setPosition(2000, 2000)
+		 	end	
+		 		if(s15==1)then
+		 			objects.o15.body:setPosition(2000, 2000)
+		 	end	
+		 		if(s16==1)then
+		 			objects.o16.body:setPosition(2000, 2000)
+		 	end	
+		 		if(s17==1)then
+		 			objects.o17.body:setPosition(2000, 2000)
+
+		 	end
+		 		if(s18==1)then
+		 		 	objects.o18.body:setPosition(2000, 2000)
+		 	
+		 	end	
+		 		if(s19==1)then
+		 			objects.o19.body:setPosition(2000, 2000)
+		 	end	
+		 		if(s20==1)then
+		 		objects.o20.body:setPosition(2000, 2000)
+		 	end	
+end
+function voltear2()
+		 	objects.o1.body:setPosition(187, 65)
+		 	objects.o2.body:setPosition(277, 65)
+		 	objects.o3.body:setPosition(364, 65)
+		 	objects.o4.body:setPosition(454, 65)
+		 	objects.o5.body:setPosition(542, 65)
+		 	objects.o6.body:setPosition(187, 165)
+		 	objects.o7.body:setPosition(277, 165)
+		 	objects.o8.body:setPosition(364, 165)
+		 	objects.o9.body:setPosition(454, 165)
+		 	objects.o10.body:setPosition(542, 165)
+		 	if(v1==1)then
+		 			objects.o1.body:setPosition(2000, 2000)
+		 	end	
+		 		if(v2==1)then
+		 			objects.o2.body:setPosition(2000, 2000)
+		 	end	
+		 		if(v3==1)then
+		 			objects.o3.body:setPosition(2000, 2000)
+		 	end	
+		 		if(v4==1)then
+		 			objects.o4.body:setPosition(2000, 2000)
+		 	end	
+		 		if(v5==1)then
+		 			objects.o5.body:setPosition(2000, 2000)
+		 	end	
+		 		if(v6==1)then
+		 			objects.o6.body:setPosition(2000, 2000)
+		 	end	
+		 		if(v7==1)then
+		 			objects.o7.body:setPosition(2000, 2000)
+
+		 	end
+		 		if(v8==1)then
+		 		 	objects.o8.body:setPosition(2000, 2000)
+		 	
+		 	end	
+		 		if(v9==1)then
+		 			objects.o9.body:setPosition(2000, 2000)
+		 	end	
+		 		if(v10==1)then
+		 		objects.o10.body:setPosition(2000, 2000)
+		 	end	
+end
+
+function volver2()
+		 --love.timer.sleep( 3 )
+		 if dr2==true then
+		 	objects.o1.body:setPosition(187, 65)
+		 	objects.o2.body:setPosition(277, 65)
+		 	objects.o3.body:setPosition(364, 65)
+		 	objects.o4.body:setPosition(454, 65)
+		 	objects.o5.body:setPosition(542, 65)
+		 	objects.o6.body:setPosition(187, 165)
+		 	objects.o7.body:setPosition(277, 165)
+		 	objects.o8.body:setPosition(364, 165)
+		 	objects.o9.body:setPosition(454, 165)
+		 	objects.o10.body:setPosition(542, 165)
+		 end
+end
+		
 function ver1()
-	
 		 	objects.o11.body:setPosition(2000, 2000)
 		 	objects.o12.body:setPosition(2000, 2000)
 		 	objects.o13.body:setPosition(2000, 2000)
@@ -455,21 +580,7 @@ function ver2()
 		 	objects.o9.body:setPosition(2000, 2000)
      	 	objects.o10.body:setPosition(2000, 2000)
 end
-function volver2()
-		 --love.timer.sleep( 3 )
-		 if dr2==true then
-		 	objects.o1.body:setPosition(187, 65)
-		 	objects.o2.body:setPosition(277, 65)
-		 	objects.o3.body:setPosition(364, 65)
-		 	objects.o4.body:setPosition(454, 65)
-		 	objects.o5.body:setPosition(542, 65)
-		 	objects.o6.body:setPosition(187, 165)
-		 	objects.o7.body:setPosition(277, 165)
-		 	objects.o8.body:setPosition(364, 165)
-		 	objects.o9.body:setPosition(454, 165)
-		 	objects.o10.body:setPosition(542, 165)
-		 end
-		end
+
 function jugoNuevo(  )
 		toca1=false
 		toca2=false
@@ -477,7 +588,7 @@ function jugoNuevo(  )
 		ganador=0
 		jiandro=false
 		jugador = 1
-		creditos1=1000;
+		creditos1=100;
 		creditos2=100;
 		Primeracarta=0
 		Segundacarta=0
@@ -499,6 +610,26 @@ function jugoNuevo(  )
 		Primer18=0
 		Primer19=0
 		Primer20=0
+		v1=0
+		v2=0
+		v3=0
+		v4=0
+		v5=0
+		v6=0
+		v7=0
+		v8=0
+		v9=0
+		v10=0
+		s11=0
+		s12=0
+		s13=0
+		s14=0
+		s15=0
+		s16=0
+		s17=0
+		s18=0
+		s19=0
+		s20=0
 		Prime=0
 		Prime2=0
 		bandera=true
@@ -888,6 +1019,26 @@ function jugoNuevo(  )
 				bandera=false
 				aleatorio()
 				cubrir()
+				v1=0
+				v2=0
+				v3=0
+				v4=0
+				v5=0
+				v6=0
+				v7=0
+				v8=0
+				v9=0
+				v10=0
+				s11=0
+				s12=0
+				s13=0
+				s14=0
+				s15=0
+				s16=0
+				s17=0
+				s18=0
+				s19=0
+				s20=0
 				jugador=2
 			end
 			if (Poder1 > Poder2) then
@@ -907,6 +1058,26 @@ function jugoNuevo(  )
 				dr=false
 				bandera=false
 				aleatorio()
+				v1=0
+				v2=0
+				v3=0
+				v4=0
+				v5=0
+				v6=0
+				v7=0
+				v8=0
+				v9=0
+				v10=0
+				s11=0
+				s12=0
+				s13=0
+				s14=0
+				s15=0
+				s16=0
+				s17=0
+				s18=0
+				s19=0
+				s20=0
 				cubrir()
 			end
 		end
@@ -927,11 +1098,23 @@ function jugoNuevo(  )
 	   	if(Poder1==0)then
 	   		Poder1= love.math.random(1,68)
 	   	end
+	   	v1=1
+	   	objects.o1.body:setPosition(10000/2, 10000/2)
 	   	if(Poder1==67 and bandera==false)then
 	   		ver1()
+	   		R=073; G=103; B=141
+	   		message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   			function love.keypressed(key)
+					if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear1()
+	   						Primeracarta =1
+				    end
+				end
+	   	else
+	   	 	Primeracarta =1
 	   	end
-	   	objects.o1.body:setPosition(10000/2, 10000/2)
-	   	Primeracarta =1
 	   end
 	   if button == 1 and x >= 276 and x<=337 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 	   	printx = x
@@ -939,16 +1122,28 @@ function jugoNuevo(  )
 	   	if(jugador==1)then
 	    	CantdiadCartas1=CantdiadCartas1+1
 	  	end
-	  	if(Poder1==67 and bandera==false)then
-	   		ver1()
-	   	end
 	   	P1 = carta2
 	   	Poder1=listB1[2]
 	   	if(Poder1==0)then
 	   		Poder1= love.math.random(1,68)
 	   	end
-	   	objects.o2.body:setPosition(10000/2, 10000/2)
-	   	Primeracarta =1
+	   v2=1
+	   objects.o2.body:setPosition(10000/2, 10000/2)
+	   if(Poder1==67 and bandera==false)then
+	   		ver1()
+	   		R=073; G=103; B=141
+	   		message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   			function love.keypressed(key)
+					if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear1()
+	   						Primeracarta =1
+				    end
+				end
+	   	else
+	   	 	Primeracarta =1
+	   	end
 	   end
 	   if button == 1 and x >= 365 and x<=425 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 	   	printx = x
@@ -956,16 +1151,28 @@ function jugoNuevo(  )
 	   	if(jugador==1)then
 	    	CantdiadCartas1=CantdiadCartas1+1
 	  	end
-	  	if(Poder1==67 and bandera==false)then
-	   		ver1()
-	   	end
 	   	P1 = carta3
 	   	Poder1=listB1[3]
 	   	if(Poder1==0)then
 	   		Poder1= love.math.random(1,68)
 	   	end
-	   	objects.o3.body:setPosition(10000/2, 10000/2)
-	   	Primeracarta =1
+	   	v3=1
+	  	objects.o3.body:setPosition(10000/2, 10000/2)
+	  	if(Poder1==67 and bandera==false)then
+	   		ver1()
+	   		R=073; G=103; B=141
+	   		message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   			function love.keypressed(key)
+					if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear1()
+	   						Primeracarta =1
+				    end
+				end
+	   	else
+	   	 	Primeracarta =1
+	   	end
 	   end
 	   if button == 1 and x >= 454 and x<=514 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 	   	printx = x
@@ -978,11 +1185,23 @@ function jugoNuevo(  )
 	   	if(Poder1==0)then
 	   		Poder1= love.math.random(1,68)
 	   	end
+	   	v4=1
+	   	objects.o4.body:setPosition(10000/2, 10000/2)
 	   	if(Poder1==67 and bandera==false)then
 	   		ver1()
+	   		R=073; G=103; B=141
+	   		message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   			function love.keypressed(key)
+					if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear1()
+	   						Primeracarta =1
+				    end
+				end
+	   	else
+	   	 	Primeracarta =1
 	   	end
-	   	objects.o4.body:setPosition(10000/2, 10000/2)
-	   	Primeracarta =1
 	   end
 	   if button == 1 and x >= 541 and x<=601 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 	   	printx = x
@@ -995,11 +1214,23 @@ function jugoNuevo(  )
 	   	if(Poder1==0)then
 	   		Poder1= love.math.random(1,68)
 	   	end
+	   	v5=1
+	   	objects.o5.body:setPosition(10000/2, 10000/2)
 	   	if(Poder1==67 and bandera==false)then
 	   		ver1()
+	   		R=073; G=103; B=141
+	   		message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   			function love.keypressed(key)
+					if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear1()
+	   						Primeracarta =1
+				    end
+				end
+	   	else
+	   	 	Primeracarta =1
 	   	end
-	   	objects.o5.body:setPosition(10000/2, 10000/2)
-	   	Primeracarta =1
 	   end
 	   if button == 1 and x >= 186 and x<=250 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 	   	printx = x
@@ -1012,11 +1243,23 @@ function jugoNuevo(  )
 	   	if(Poder1==0)then
 	   		Poder1= love.math.random(1,68)
 	   	end
+	   	v=6
+	   	objects.o6.body:setPosition(10000/2, 10000/2)
 	   	if(Poder1==67 and bandera==false)then
 	   		ver1()
+	   		R=073; G=103; B=141
+	   		message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   			function love.keypressed(key)
+					if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear1()
+	   						Primeracarta =1
+				    end
+				end
+	   	else
+	   	 	Primeracarta =1
 	   	end
-	   	objects.o6.body:setPosition(10000/2, 10000/2)
-	   	Primeracarta =1
 	   end
 	   if button == 1 and x >= 276 and x<=337 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 	   	printx = x
@@ -1029,28 +1272,52 @@ function jugoNuevo(  )
 	   	if(Poder1==0)then
 	   		Poder1= love.math.random(1,68)
 	   	end
+	   	v7=1
+	   	objects.o7.body:setPosition(10000/2, 10000/2)
 	   	if(Poder1==67 and bandera==false)then
 	   		ver1()
+	   		R=073; G=103; B=141
+	   		message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   			function love.keypressed(key)
+					if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear1()
+	   						Primeracarta =1
+				    end
+				end
+	   	else
+	   	 	Primeracarta =1
 	   	end
-	   	objects.o7.body:setPosition(10000/2, 10000/2)
-	   	Primeracarta =1
 	   end
 	   if button == 1 and x >= 365 and x<=425 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 	   	printx = x
 	    printy = y
 	   	P1 = carta8
 	   	Poder1=listB1[8]
-	   		if(jugador==1)then
+	   	if(jugador==1)then
 	    	CantdiadCartas1=CantdiadCartas1+1
 	  	end
 	   	if(Poder1==0)then
 	   		Poder1= love.math.random(1,68)
 	   	end
-	   	if(Poder1==67 and bandera==false)then
-	   		ver1()
-	   	end
+	   	v8=1
 	   	objects.o8.body:setPosition(10000/2, 10000/2)
-	   	Primeracarta =1
+	   	 	if(Poder1==67 and bandera==false)then
+	   		ver1()
+	   		R=073; G=103; B=141
+	   		message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   			function love.keypressed(key)
+					if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear1()
+	   						Primeracarta =1
+				    end
+				end
+	   	else
+	   	 	Primeracarta =1
+	   	end
 	   end
 	   if button == 1 and x >= 454 and x<=514 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 	   	printx = x
@@ -1063,11 +1330,23 @@ function jugoNuevo(  )
 	   	if(Poder1==0)then
 	   		Poder1= love.math.random(1,68)
 	   	end
+	   	v9=1
+	   	objects.o9.body:setPosition(10000/2, 10000/2)
 	   	if(Poder1==67 and bandera==false)then
 	   		ver1()
+	   		R=073; G=103; B=141
+	   		message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   			function love.keypressed(key)
+					if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear1()
+	   						Primeracarta =1
+				    end
+				end
+	   	else
+	   	 	Primeracarta =1
 	   	end
-	   	objects.o9.body:setPosition(10000/2, 10000/2)
-	   	Primeracarta =1
 	   end
 	   if button == 1 and x >= 541 and x<=601 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 	   	printx = x
@@ -1080,11 +1359,24 @@ function jugoNuevo(  )
 	   	if(Poder1==0)then
 	   		Poder1= love.math.random(1,68)
 	   	end
-	   	if(Poder1==67 and bandera==false)then
-	   		ver1()
-	   	end
+	   	v10=1
 	   	objects.o10.body:setPosition(10000/2, 10000/2)
-	   	Primeracarta =1
+	   	 	if(Poder1==67 and bandera==false)then
+	   		ver1()
+	   		R=073; G=103; B=141
+	   		message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   			function love.keypressed(key)
+					if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear1()
+	   						Primeracarta =1
+				    end
+				end
+	   	else
+	   	 	Primeracarta =1
+	   	end
+	  
 	   end
 	end
 	if Segundacarta == 0 and Primeracarta==1 then
@@ -1093,14 +1385,16 @@ function jugoNuevo(  )
 	      	printy = y
 	      	P2 = carta11
 	      	Poder2=listB1[11]
+      		s11=1
 	      	objects.o11.body:setPosition(10000/2, 10000/2)
-	      	Segundacarta=1
+	       	Segundacarta=1
 	      end
 	   if button == 1 and x >= 276 and x<=337 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 	   	printx = x
      	printy = y
 	   	P2 = carta12
 	   	Poder2=listB1[12]
+   		s12=1
 	   	objects.o12.body:setPosition(10000/2, 10000/2)
 	   	Segundacarta=1
 	   end
@@ -1109,6 +1403,7 @@ function jugoNuevo(  )
 	   	printy = y
 	   	P2 = carta13
 	   	Poder2=listB1[13]
+    	s13=1
 	   	objects.o13.body:setPosition(10000/2, 10000/2)
 	   	Segundacarta=1
 	   end
@@ -1117,6 +1412,7 @@ function jugoNuevo(  )
 	   	printy = y
 	   	P2 = carta14
 	   	Poder2=listB1[14]
+      	s14=1
 	   	objects.o14.body:setPosition(10000/2, 10000/2)
 	   	Segundacarta=1
 	   end
@@ -1125,6 +1421,7 @@ function jugoNuevo(  )
 	   	printy = y
 	   	P2 = carta15
 	   	Poder2=listB1[15]
+    	s15=1
 	   	objects.o15.body:setPosition(10000/2, 10000/2)
 	   	Segundacarta=1
 	   end
@@ -1133,6 +1430,7 @@ function jugoNuevo(  )
 	    printy = y
 	   	P2 = carta16
 	   	Poder2=listB1[16]
+    	s16=1
 	   	objects.o16.body:setPosition(10000/2, 10000/2)
 	   	Segundacarta=1
 	   end
@@ -1141,6 +1439,7 @@ function jugoNuevo(  )
 	   	printy = y
 	   	P2 = carta17
 	   	Poder2=listB1[17]
+   		s17=1
 	   	objects.o17.body:setPosition(10000/2, 10000/2)
 	   	Segundacarta=1
 	   end
@@ -1150,6 +1449,7 @@ function jugoNuevo(  )
 	    	printy = y
 	    	P2 = carta18
 	    	Poder2=listB1[18]
+      		s18=1
 	    	objects.o18.body:setPosition(10000/2, 10000/2)
 	    	Segundacarta=1
 	    end
@@ -1158,6 +1458,7 @@ function jugoNuevo(  )
 	   	printy = y
 	   	P2 = carta19
 	   	Poder2=listB1[19]
+    	s19=1
 	   	objects.o19.body:setPosition(10000/2, 10000/2)
 	   	Segundacarta=1
 	   end
@@ -1167,12 +1468,14 @@ function jugoNuevo(  )
 		   	printy = y
 		   	P2 = carta20
 		   	Poder2=listB1[20]
-		   	objects.o20.body:setPosition(10000/2, 10000/2)
+		   	s20=1
+	       	objects.o20.body:setPosition(10000/2, 10000/2)
 		   	Segundacarta=1
 		   end
 		end
 	end
 		if  Primeracarta == 1 and Segundacarta ==1  then
+			print(s20)
 			if(Poder1>Poder2)then
 			   Reglas1(pase)
 			else
@@ -1209,13 +1512,25 @@ function jugoNuevo(  )
 				if(Poder2==0)then
 	   				Poder2= love.math.random(1,68)
 	   			end
-	   		 	if(Poder2==67 and bandera==false)then
-	   				ver2()
-	   			end
+	   			s11=1
 				objects.o11.body:setPosition(10000/2, 10000/2)
 				Primer11=1
-				Primeracarta2=1
-			end
+	   		 	if(Poder2==67 and bandera==false)then
+	   				ver2()
+	   				R=073; G=103; B=141
+	   				message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   				function love.keypressed(key)
+						if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear2()
+	   						Primeracarta2 =1
+					    end
+					end
+					else
+					Primeracarta2=1
+	   			end
+	   		end
 		end
 		if Primer12==0 then 
 		   if button == 1 and x >= 276 and x<=337 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
@@ -1229,12 +1544,24 @@ function jugoNuevo(  )
 		   	if(Poder2==0)then
 	   			Poder2= love.math.random(1,68)
 	   		end
-		   	if(Poder2==67 and bandera==false)then
-	   			ver2()
-	   		end
+		 	s12=1
 		   	objects.o12.body:setPosition(10000/2, 10000/2)
 		   	Primer12=1
-		   	Primeracarta2=1
+		   if(Poder2==67 and bandera==false)then
+	   				ver2()
+	   				R=073; G=103; B=141
+	   				message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   				function love.keypressed(key)
+						if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear2()
+	   						Primeracarta2 =1
+					    end
+					end
+					else
+					Primeracarta2=1
+	   			end
 		   end
 		end
 		if Primer13==0 then
@@ -1249,12 +1576,24 @@ function jugoNuevo(  )
 		   	if(Poder2==0)then
 	   					Poder2= love.math.random(1,68)
 	   		end
-		   	if(Poder2==67 and bandera==false)then
-	   			ver2()
-	   		end
+		  	s13=1
 		   	objects.o13.body:setPosition(10000/2, 10000/2)
 		   	Primer13=1
-		   	Primeracarta2=1
+		   if(Poder2==67 and bandera==false)then
+	   				ver2()
+	   				R=073; G=103; B=141
+	   				message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   				function love.keypressed(key)
+						if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear2()
+	   						Primeracarta2 =1
+					    end
+					end
+					else
+					Primeracarta2=1
+	   			end
 		   end
 		end
 
@@ -1270,18 +1609,30 @@ function jugoNuevo(  )
 		   	if(Poder2==0)then
 	   					Poder2= love.math.random(1,68)
 	   		end
-		   	if(Poder2==67 and bandera==false)then
-	   			ver2()
-	   		end
+		 	s14=1
 		   	objects.o14.body:setPosition(10000/2, 10000/2)
 		   	Primer14=1
-		   	Primeracarta2=1
+		   	if(Poder2==67 and bandera==false)then
+	   				ver2()
+	   				R=073; G=103; B=141
+	   				message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   				function love.keypressed(key)
+						if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear2()
+	   						Primeracarta2 =1
+					    end
+					end
+					else
+					Primeracarta2=1
+	   			end
 		   end
 		end
 		if Primer15==0 then
 		   if button == 1 and x >= 541 and x<=601 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		   	printx = x
-	   	printy = y
+	   		printy = y
 		   	P2 = carta15
 		   	Poder2=listB1[15] 	
 		   	if(jugador==2)then
@@ -1290,19 +1641,31 @@ function jugoNuevo(  )
 		   	if(Poder2==0)then
 	   			Poder2= love.math.random(1,68)
 	   		end
-		   	if(Poder2==67 and bandera==false)then
-	   			ver2()
-	   		end
+		  	s15=1
 		   	objects.o15.body:setPosition(10000/2, 10000/2)
 		   	Primer15=1
-		   	Primeracarta2=1
+		   	if(Poder2==67 and bandera==false)then
+	   				ver2()
+	   				R=073; G=103; B=141
+	   				message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   				function love.keypressed(key)
+						if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear2()
+	   						Primeracarta2 =1
+					    end
+					end
+					else
+					Primeracarta2=1
+	   			end
 		   end
 		end
 		if Primer16==0 then
 		  
 		   if button == 1 and x >= 186 and x<=250 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		   	printx = x
-	   	printy = y
+	   		printy = y
 		   	P2 = carta16
 		   	Poder2=listB1[16]
 		 	 	if(jugador==2)then
@@ -1311,12 +1674,24 @@ function jugoNuevo(  )
 		   	if(Poder2==0)then
 	   			Poder2= love.math.random(1,68)
 	   		end
-		  	if(Poder2==67 and bandera==false)then
-	   			ver2()
-	   		end
+			s16=1
 		   	objects.o16.body:setPosition(10000/2, 10000/2)
 		   	Primer16=1
-		   	Primeracarta2=1
+		   	if(Poder2==67 and bandera==false)then
+	   				ver2()
+	   				R=073; G=103; B=141
+	   				message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   				function love.keypressed(key)
+						if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear2()
+	   						Primeracarta2 =1
+					    end
+					end
+					else
+					Primeracarta2=1
+	   			end
 		   end
 		end
 		if Primer17==0 then
@@ -1331,12 +1706,24 @@ function jugoNuevo(  )
 		   	if(Poder2==0)then
 	   					Poder2= love.math.random(1,68)
 	   		end
-		  	if(Poder2==67 and bandera==false)then
-	   			ver2()
-	   		end
+		 	s17=1
 		   	objects.o17.body:setPosition(10000/2, 10000/2)
 		   	Primer17=1
-		   	Primeracarta2=1
+		   	if(Poder2==67 and bandera==false)then
+	   				ver2()
+	   				R=073; G=103; B=141
+	   				message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   				function love.keypressed(key)
+						if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear2()
+	   						Primeracarta2 =1
+					    end
+					end
+					else
+					Primeracarta2=1
+	   			end
 		   end
 		end
 		if Primer18==0 then
@@ -1352,12 +1739,24 @@ function jugoNuevo(  )
 		    if(Poder2==0)then
 	   			Poder2= love.math.random(1,68)
 	   		end
-		   	if(Poder2==67 and bandera==false)then
-	   			ver2()
-	   		end
+			s18=1
 		    objects.o18.body:setPosition(10000/2, 10000/2)
 		    Primer18=1
-		    Primeracarta2=1
+		    if(Poder2==67 and bandera==false)then
+	   				ver2()
+	   				R=073; G=103; B=141
+	   				message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   				function love.keypressed(key)
+						if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear2()
+	   						Primeracarta2 =1
+					    end
+					end
+					else
+					Primeracarta2=1
+	   			end
 		    end
 		end
 		if Primer19==0 then
@@ -1372,12 +1771,24 @@ function jugoNuevo(  )
 		   	if(Poder2==0)then
 	   					Poder2= love.math.random(1,68)
 	   		end
-		   	if(Poder2==67 and bandera==false)then
-	   			ver2()
-	   		end
+		  	s19=1
 		   	objects.o19.body:setPosition(10000/2, 10000/2)
 		   	Primer19=1
-		   	Primeracarta2=1
+		   	if(Poder2==67 and bandera==false)then
+	   				ver2()
+	   				R=073; G=103; B=141
+	   				message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   				function love.keypressed(key)
+						if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear2()
+	   						Primeracarta2 =1
+					    end
+					end
+					else
+					Primeracarta2=1
+	   			end
 		   end
 		end
 		if Primer20==0 then
@@ -1392,12 +1803,24 @@ function jugoNuevo(  )
 		   	if(Poder2==0)then
 	   					Poder2= love.math.random(1,68)
 	   		end
-		   	if(Poder2==67 and bandera==false)then
-	   			ver2()
-	   		end
+		  	s20=1
 		   	objects.o20.body:setPosition(10000/2, 10000/2)
 		   	Primer20=1
-		   	Primeracarta2=1
+		   if(Poder2==67 and bandera==false)then
+	   				ver2()
+	   				R=073; G=103; B=141
+	   				message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+	   				function love.keypressed(key)
+						if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	  			 			R=255;G=255;B=255
+	      					message=""
+	   						voltear2()
+	   						Primeracarta2 =1
+					    end
+					end
+					else
+					Primeracarta2=1
+	   			end
 		  end   
 		end  	  
 		
@@ -1409,14 +1832,16 @@ function jugoNuevo(  )
 	   		printy = y
 	      	P1 = carta1
 	      	Poder1=listB1[1]
+	      	v1=1
 	      	objects.o1.body:setPosition(10000/2, 10000/2)
 	      	Segundacarta2=1
-			end
+	      	end
 			   if button == 1 and x >= 276 and x<=337 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 			    printx = x
 			   	printy = y
 			    P1 = carta2
 			   	Poder1=listB1[2]
+			   	v2=1
 			   	objects.o2.body:setPosition(10000/2, 10000/2)
 			   	Segundacarta2=1
 			   	Primeracarta2=1
@@ -1427,6 +1852,7 @@ function jugoNuevo(  )
 	 		  	printy = y
 			   	P1 = carta3
 			   	Poder1=listB1[3]
+			   	v3=1
 			   	objects.o3.body:setPosition(10000/2, 10000/2)
 			   	Segundacarta2=1
 			   	Primeracarta2=1
@@ -1436,6 +1862,7 @@ function jugoNuevo(  )
 	 		  	printy = y
 			   	P1 = carta4
 			   	Poder1=listB1[4]
+			   	v4=1
 			   	objects.o4.body:setPosition(10000/2, 10000/2)
 			   	Segundacarta2=1
 			   	Primeracarta2=1
@@ -1445,6 +1872,7 @@ function jugoNuevo(  )
 	 		  	printy = y
 			   	P1 = carta5
 			   	Poder1=listB1[5]
+			   	v5=1
 			   	objects.o5.body:setPosition(10000/2, 10000/2)
 			   	Segundacarta2=1
 			   	Primeracarta2=1
@@ -1454,6 +1882,7 @@ function jugoNuevo(  )
 	  		 	printy = y
 			   	P1 = carta6
 			   	Poder1=listB1[6]
+			   	v6=1
 			   	objects.o6.body:setPosition(10000/2, 10000/2)
 			   	Segundacarta2=1
 			   	Primeracarta2=1
@@ -1463,6 +1892,7 @@ function jugoNuevo(  )
 	   			printy = y
 			   	P1 = carta7
 			   	Poder1=listB1[7]
+			   	v7=1
 			   	objects.o7.body:setPosition(10000/2, 10000/2)
 			   	Segundacarta2=1
 			   	Primeracarta2=1
@@ -1472,15 +1902,17 @@ function jugoNuevo(  )
 	  		 	printy = y	
 				P1 = carta8
 				Poder1=listB1[8]
+				v8=1
 				objects.o8.body:setPosition(10000/2, 10000/2)
 				Segundacarta2=1
 				Primeracarta2=1
 			end
 			if button == 1 and x >= 454 and x<=514 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-				 printx = x
-	   	printy = y
+				printx = x
+	   			printy = y
 				P1 = carta9
 				Poder1=listB1[9]
+				v9=1
 				objects.o9.body:setPosition(10000/2, 10000/2)
 				Segundacarta2=1
 				Primeracarta2=1
@@ -1490,6 +1922,7 @@ function jugoNuevo(  )
 	   		printy = y
 		   	P1 = carta10
 		   	Poder1=listB1[10]
+		   	v10=1
 		   	objects.o10.body:setPosition(10000/2, 10000/2)
 		   	Segundacarta2=1
 		   	Primeracarta2=1
@@ -1562,6 +1995,26 @@ function jugoNuevo(  )
 		P2 = love.graphics.newImage("Data/recursos/P2.png")
 		x=0
 		y=0
+			v1=0
+				v2=0
+				v3=0
+				v4=0
+				v5=0
+				v6=0
+				v7=0
+				v8=0
+				v9=0
+				v10=0
+				s11=0
+				s12=0
+				s13=0
+				s14=0
+				s15=0
+				s16=0
+				s17=0
+				s18=0
+				s19=0
+				s20=0
 		printy=y
 		printx=x
 		Jugador=1
@@ -1592,6 +2045,26 @@ function jugoNuevo(  )
 		P2 = love.graphics.newImage("Data/recursos/P2.png")
 		x=0
 		y=0
+			v1=0
+				v2=0
+				v3=0
+				v4=0
+				v5=0
+				v6=0
+				v7=0
+				v8=0
+				v9=0
+				v10=0
+				s11=0
+				s12=0
+				s13=0
+				s14=0
+				s15=0
+				s16=0
+				s17=0
+				s18=0
+				s19=0
+				s20=0
 		printy=y
 		printx=x
 		Jugador=1
@@ -1614,6 +2087,7 @@ if(creditos2==1000) then
  if button == 1  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		     R=255; G=255; B=255
 		     message=""
+		     jugoNuevo()
  end
  end
  if(creditos1==1000) then 
@@ -1623,6 +2097,7 @@ if(creditos2==1000) then
  if button == 2  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		     R=255; G=255; B=255
 		     message=""
+		     jugoNuevo()
  end
  end
 end
