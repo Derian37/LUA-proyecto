@@ -428,8 +428,33 @@ function volver1()
 		 	objects.o19.body:setPosition(454, 486)
 		 	objects.o20.body:setPosition(542, 486)
 		 end
-		end
-
+end
+function ver1()
+	
+		 	objects.o11.body:setPosition(2000, 2000)
+		 	objects.o12.body:setPosition(2000, 2000)
+		 	objects.o13.body:setPosition(2000, 2000)
+		 	objects.o14.body:setPosition(2000, 2000)
+		 	objects.o15.body:setPosition(2000, 2000)
+		 	objects.o16.body:setPosition(2000, 2000)
+		 	objects.o17.body:setPosition(2000, 2000)
+		 	objects.o18.body:setPosition(2000, 2000)
+		 	objects.o19.body:setPosition(2000, 2000)
+     	 	objects.o20.body:setPosition(2000, 2000)
+end
+function ver2()
+	
+		 	objects.o1.body:setPosition(2000, 2000)
+		 	objects.o2.body:setPosition(2000, 2000)
+		 	objects.o3.body:setPosition(2000, 2000)
+		 	objects.o4.body:setPosition(2000, 2000)
+		 	objects.o5.body:setPosition(2000, 2000)
+		 	objects.o6.body:setPosition(2000, 2000)
+		 	objects.o7.body:setPosition(2000, 2000)
+		 	objects.o8.body:setPosition(2000, 2000)
+		 	objects.o9.body:setPosition(2000, 2000)
+     	 	objects.o10.body:setPosition(2000, 2000)
+end
 function volver2()
 		 --love.timer.sleep( 3 )
 		 if dr2==true then
@@ -902,6 +927,9 @@ function jugoNuevo(  )
 	   	if(Poder1==0)then
 	   		Poder1= love.math.random(1,68)
 	   	end
+	   	if(Poder1==67 and bandera==false)then
+	   		ver1()
+	   	end
 	   	objects.o1.body:setPosition(10000/2, 10000/2)
 	   	Primeracarta =1
 	   end
@@ -911,6 +939,9 @@ function jugoNuevo(  )
 	   	if(jugador==1)then
 	    	CantdiadCartas1=CantdiadCartas1+1
 	  	end
+	  	if(Poder1==67 and bandera==false)then
+	   		ver1()
+	   	end
 	   	P1 = carta2
 	   	Poder1=listB1[2]
 	   	if(Poder1==0)then
@@ -925,6 +956,9 @@ function jugoNuevo(  )
 	   	if(jugador==1)then
 	    	CantdiadCartas1=CantdiadCartas1+1
 	  	end
+	  	if(Poder1==67 and bandera==false)then
+	   		ver1()
+	   	end
 	   	P1 = carta3
 	   	Poder1=listB1[3]
 	   	if(Poder1==0)then
@@ -944,6 +978,9 @@ function jugoNuevo(  )
 	   	if(Poder1==0)then
 	   		Poder1= love.math.random(1,68)
 	   	end
+	   	if(Poder1==67 and bandera==false)then
+	   		ver1()
+	   	end
 	   	objects.o4.body:setPosition(10000/2, 10000/2)
 	   	Primeracarta =1
 	   end
@@ -957,6 +994,9 @@ function jugoNuevo(  )
 	   	Poder1=listB1[5]
 	   	if(Poder1==0)then
 	   		Poder1= love.math.random(1,68)
+	   	end
+	   	if(Poder1==67 and bandera==false)then
+	   		ver1()
 	   	end
 	   	objects.o5.body:setPosition(10000/2, 10000/2)
 	   	Primeracarta =1
@@ -972,19 +1012,25 @@ function jugoNuevo(  )
 	   	if(Poder1==0)then
 	   		Poder1= love.math.random(1,68)
 	   	end
+	   	if(Poder1==67 and bandera==false)then
+	   		ver1()
+	   	end
 	   	objects.o6.body:setPosition(10000/2, 10000/2)
 	   	Primeracarta =1
 	   end
 	   if button == 1 and x >= 276 and x<=337 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 	   	printx = x
 	   	printy = y
-	   		if(jugador==1)then
+	   	if(jugador==1)then
 	    	CantdiadCartas1=CantdiadCartas1+1
 	  	end
 	   	P1 = carta7
 	   	Poder1=listB1[7]
 	   	if(Poder1==0)then
 	   		Poder1= love.math.random(1,68)
+	   	end
+	   	if(Poder1==67 and bandera==false)then
+	   		ver1()
 	   	end
 	   	objects.o7.body:setPosition(10000/2, 10000/2)
 	   	Primeracarta =1
@@ -1000,6 +1046,9 @@ function jugoNuevo(  )
 	   	if(Poder1==0)then
 	   		Poder1= love.math.random(1,68)
 	   	end
+	   	if(Poder1==67 and bandera==false)then
+	   		ver1()
+	   	end
 	   	objects.o8.body:setPosition(10000/2, 10000/2)
 	   	Primeracarta =1
 	   end
@@ -1014,6 +1063,9 @@ function jugoNuevo(  )
 	   	if(Poder1==0)then
 	   		Poder1= love.math.random(1,68)
 	   	end
+	   	if(Poder1==67 and bandera==false)then
+	   		ver1()
+	   	end
 	   	objects.o9.body:setPosition(10000/2, 10000/2)
 	   	Primeracarta =1
 	   end
@@ -1027,6 +1079,9 @@ function jugoNuevo(  )
 	  	end
 	   	if(Poder1==0)then
 	   		Poder1= love.math.random(1,68)
+	   	end
+	   	if(Poder1==67 and bandera==false)then
+	   		ver1()
 	   	end
 	   	objects.o10.body:setPosition(10000/2, 10000/2)
 	   	Primeracarta =1
@@ -1126,9 +1181,6 @@ function jugoNuevo(  )
 				pase=true
 			end
 			if(pase==true)then
-				--CantdiadCartas=CantdiadCartas+1
-			--	x=0
-			--	y=0
 				printx=0
 				printy=0
 			 	toca2=false
@@ -1139,10 +1191,7 @@ function jugoNuevo(  )
 				Primeracarta=0
 				Segundacarta=0
 				dr=false
-				--Poder1=0
-				--Poder2=0
 				pase=false
-				--print("CantdiadCartas: "..CantdiadCartas)		
 			end
 		end
 		if jugador == 2 then
@@ -1152,14 +1201,17 @@ function jugoNuevo(  )
 			if button == 1 and x >= 187 and x<=250 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 				printx = x
 				printy = y
-				 	if(jugador==2)then
+				if(jugador==2)then
 		   		CantdiadCartas2=CantdiadCartas2+1
-		   	end
+		 	  	end
 				P2 = carta11
 				Poder2=listB1[11]
-					if(Poder2==0)then
-	   					Poder2= love.math.random(1,68)
-	   				end
+				if(Poder2==0)then
+	   				Poder2= love.math.random(1,68)
+	   			end
+	   		 	if(Poder2==67 and bandera==false)then
+	   				ver2()
+	   			end
 				objects.o11.body:setPosition(10000/2, 10000/2)
 				Primer11=1
 				Primeracarta2=1
@@ -1169,13 +1221,16 @@ function jugoNuevo(  )
 		   if button == 1 and x >= 276 and x<=337 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		   	printx = x
 		   	printy = y
-		   	 	if(jugador==2)then
+		   	if(jugador==2)then
 		   		CantdiadCartas2=CantdiadCartas2+1
 		   	end
 		   	P2 = carta12
 		   	Poder2=listB1[12]
 		   	if(Poder2==0)then
-	   					Poder2= love.math.random(1,68)
+	   			Poder2= love.math.random(1,68)
+	   		end
+		   	if(Poder2==67 and bandera==false)then
+	   			ver2()
 	   		end
 		   	objects.o12.body:setPosition(10000/2, 10000/2)
 		   	Primer12=1
@@ -1187,12 +1242,15 @@ function jugoNuevo(  )
 		  	printx = x
 		   	printy = y
 		   	P2 = carta13
-		   	 	if(jugador==2)then
+		   	if(jugador==2)then
 		   		CantdiadCartas2=CantdiadCartas2+1
 		   	end
 		   	Poder2=listB1[13]
 		   	if(Poder2==0)then
 	   					Poder2= love.math.random(1,68)
+	   		end
+		   	if(Poder2==67 and bandera==false)then
+	   			ver2()
 	   		end
 		   	objects.o13.body:setPosition(10000/2, 10000/2)
 		   	Primer13=1
@@ -1212,6 +1270,9 @@ function jugoNuevo(  )
 		   	if(Poder2==0)then
 	   					Poder2= love.math.random(1,68)
 	   		end
+		   	if(Poder2==67 and bandera==false)then
+	   			ver2()
+	   		end
 		   	objects.o14.body:setPosition(10000/2, 10000/2)
 		   	Primer14=1
 		   	Primeracarta2=1
@@ -1227,7 +1288,10 @@ function jugoNuevo(  )
 		   		CantdiadCartas2=CantdiadCartas2+1
 		   	end
 		   	if(Poder2==0)then
-	   					Poder2= love.math.random(1,68)
+	   			Poder2= love.math.random(1,68)
+	   		end
+		   	if(Poder2==67 and bandera==false)then
+	   			ver2()
 	   		end
 		   	objects.o15.body:setPosition(10000/2, 10000/2)
 		   	Primer15=1
@@ -1245,7 +1309,10 @@ function jugoNuevo(  )
 		   		CantdiadCartas2=CantdiadCartas2+1
 		   	end
 		   	if(Poder2==0)then
-	   					Poder2= love.math.random(1,68)
+	   			Poder2= love.math.random(1,68)
+	   		end
+		  	if(Poder2==67 and bandera==false)then
+	   			ver2()
 	   		end
 		   	objects.o16.body:setPosition(10000/2, 10000/2)
 		   	Primer16=1
@@ -1255,7 +1322,7 @@ function jugoNuevo(  )
 		if Primer17==0 then
 		   if button == 1 and x >= 256 and x<=336 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		   	printx = x
-	   	printy = y
+	    	printy = y
 		   	P2 = carta17
 		   	Poder2=listB1[17]
 		 	 	if(jugador==2)then
@@ -1263,6 +1330,9 @@ function jugoNuevo(  )
 		   	end
 		   	if(Poder2==0)then
 	   					Poder2= love.math.random(1,68)
+	   		end
+		  	if(Poder2==67 and bandera==false)then
+	   			ver2()
 	   		end
 		   	objects.o17.body:setPosition(10000/2, 10000/2)
 		   	Primer17=1
@@ -1274,7 +1344,6 @@ function jugoNuevo(  )
 		    if button == 1 and x >= 365 and x<=425 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		    printx = x
 	   		printy = y
-
 		    P2 = carta18
 		    if(jugador==2)then
 		   		CantdiadCartas2=CantdiadCartas2+1
@@ -1282,6 +1351,9 @@ function jugoNuevo(  )
 		    Poder2=listB1[18]
 		    if(Poder2==0)then
 	   			Poder2= love.math.random(1,68)
+	   		end
+		   	if(Poder2==67 and bandera==false)then
+	   			ver2()
 	   		end
 		    objects.o18.body:setPosition(10000/2, 10000/2)
 		    Primer18=1
@@ -1300,6 +1372,9 @@ function jugoNuevo(  )
 		   	if(Poder2==0)then
 	   					Poder2= love.math.random(1,68)
 	   		end
+		   	if(Poder2==67 and bandera==false)then
+	   			ver2()
+	   		end
 		   	objects.o19.body:setPosition(10000/2, 10000/2)
 		   	Primer19=1
 		   	Primeracarta2=1
@@ -1316,6 +1391,9 @@ function jugoNuevo(  )
 		   	end
 		   	if(Poder2==0)then
 	   					Poder2= love.math.random(1,68)
+	   		end
+		   	if(Poder2==67 and bandera==false)then
+	   			ver2()
 	   		end
 		   	objects.o20.body:setPosition(10000/2, 10000/2)
 		   	Primer20=1
