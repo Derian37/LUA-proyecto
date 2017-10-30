@@ -66,6 +66,12 @@
 		printx=0
 		printy=0
 
+		R = 255
+		G = 255
+		B = 255
+
+
+
 	if cancion == 1 then
 		love.audio.stop()
 		love.audio.play(love.audio.newSource("Data/audio/audio1.mp3","stream"))
@@ -527,7 +533,82 @@
 		 	objects.o10.body:setPosition(542, 165)
 		 end
 		end
+		function jugoNuevo(  )
+		toca1=false
+		toca2=false
+		habilitar=false
+		ganador=0
+		jiandro=false
+		jugador = 1
+		creditos1=100;
+		creditos2=100;
+		Primeracarta=0
+		Segundacarta=0
+		Primeracarta2=0
+		Segundacarta2=0
+		totalpts1=0
+		totalpts2=0
+		apuesta1=0
+		apuesta2=0
+		dr=false
+		pase=false
+		Primer11=0
+		Primer12=0
+		Primer13=0
+		Primer14=0
+		Primer15=0
+		Primer16=0
+		Primer17=0
+		Primer18=0
+		Primer19=0
+		Primer20=0
+		Prime=0
+		Prime2=0
+		bandera=true
+	    Ronda=1
+	   	CantdiadCartas1=0
+	   	CantdiadCartas2=0
+		Poder1=0;
+		Poder2=0;
+		message = ""
+		listB1 = {}
+		listCartas1={"c1","c2","c3","c4","c5","c6","c7","c8","c9","c10","c11","c12","c13","c14","c15","c16","c17","c18","c19","c20"} 
+		listB2 = {}
+		listCartas2={}
+		rand=0;
+		aux=0;
+		aux2=0;
+		cancion= love.math.random(1,2)
+		text = 1
+		texto = 2
+		printx=0
+		printy=0
+		R = 255
+		G = 255
+		B = 255
+	if cancion == 1 then
+		love.audio.stop()
+		love.audio.play(love.audio.newSource("Data/audio/audio1.mp3","stream"))
+	end
+	if cancion == 2 then
+		love.audio.stop()
+		love.audio.play(love.audio.newSource("Data/audio/audio2.mp3","stream"))
+	end
+	i=1;
+	j=1;
+	k=1;
+	--
+	a=1;
+	m=1;
+	e=1;
+	d=1;	
+	z=1;
 
+	volver1()
+	volver2()
+	aleatorio()
+
+	end
 	function love.textinput(t)
 		if(apuesta1==0)then
 			text = text .. t
@@ -1395,29 +1476,29 @@
 		if Primer18==0 then
 		
 		    if button == 1 and x >= 365 and x<=425 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-		    	printx = x
+		    printx = x
 	   		printy = y
 
-		    	P2 = carta18
-		    	 	if(jugador==2)then
+		    P2 = carta18
+		    if(jugador==2)then
 		   		CantdiadCartas2=CantdiadCartas2+1
 		   	end
-		    	Poder2=listB1[18]
-		    	if(Poder2==0)then
-	   					Poder2= love.math.random(1,68)
-	   			end
-		    	objects.o18.body:setPosition(10000/2, 10000/2)
-		    	Primer18=1
-		    	Primeracarta2=1
+		    Poder2=listB1[18]
+		    if(Poder2==0)then
+	   			Poder2= love.math.random(1,68)
+	   		end
+		    objects.o18.body:setPosition(10000/2, 10000/2)
+		    Primer18=1
+		    Primeracarta2=1
 		    end
 		end
 		if Primer19==0 then
 		   if button == 1 and x >= 454 and x<=514 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-		   printx = x
-	   	printy = y
+		    printx = x
+	   		printy = y
 		   	P2 = carta19
 		   	Poder2=listB1[19]
-		    	if(jugador==2)then
+		    if(jugador==2)then
 		   		CantdiadCartas2=CantdiadCartas2+1
 		   	end
 		   	if(Poder2==0)then
@@ -1431,10 +1512,10 @@
 		if Primer20==0 then
 		   if button == 1 and x >= 541 and x<=601 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		   	printx = x
-	   	printy = y
+	  		printy = y
 		   	P2 = carta20
 		   	Poder2=listB1[20]
-			 	if(jugador==2)then
+			if(jugador==2)then
 		   		CantdiadCartas2=CantdiadCartas2+1
 		   	end
 		   	if(Poder2==0)then
@@ -1451,15 +1532,15 @@
 
 	      if button == 1 and x >= 187 and x<=250 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 	      	printx = x
-	   	printy = y
+	   		printy = y
 	      	P1 = carta1
 	      	Poder1=listB1[1]
 	      	objects.o1.body:setPosition(10000/2, 10000/2)
 	      	Segundacarta2=1
 			end
 			   if button == 1 and x >= 276 and x<=337 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-			  printx = x
-	   	printy = y
+			    printx = x
+			   	printy = y
 			    P1 = carta2
 			   	Poder1=listB1[2]
 			   	objects.o2.body:setPosition(10000/2, 10000/2)
@@ -1469,7 +1550,7 @@
 
 			   if button == 1 and x >= 365 and x<=425 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 			    printx = x
-	   	printy = y
+	 		  	printy = y
 			   	P1 = carta3
 			   	Poder1=listB1[3]
 			   	objects.o3.body:setPosition(10000/2, 10000/2)
@@ -1479,7 +1560,7 @@
 
 			   if button == 1 and x >= 454 and x<=514 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 				printx = x
-	   	printy = y
+	 		  	printy = y
 			   	P1 = carta4
 			   	Poder1=listB1[4]
 			   	objects.o4.body:setPosition(10000/2, 10000/2)
@@ -1489,7 +1570,7 @@
 
 			   if button == 1 and x >= 541 and x<=601 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 			  	printx = x
-	   	printy = y
+	 		  	printy = y
 			   	P1 = carta5
 			   	Poder1=listB1[5]
 			   	objects.o5.body:setPosition(10000/2, 10000/2)
@@ -1499,7 +1580,7 @@
 
 			   if button == 1 and x >= 186 and x<=250 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 			    printx = x
-	   	printy = y
+	  		 	printy = y
 			   	P1 = carta6
 			   	Poder1=listB1[6]
 			   	objects.o6.body:setPosition(10000/2, 10000/2)
@@ -1509,7 +1590,7 @@
 
 			   if button == 1 and x >= 276 and x<=337 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 			 	printx = x
-	   	printy = y
+	   			printy = y
 			   	P1 = carta7
 			   	Poder1=listB1[7]
 			   	objects.o7.body:setPosition(10000/2, 10000/2)
@@ -1518,8 +1599,8 @@
 			   end
 
 			if button == 1 and x >= 365 and x<=425 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-				 printx = x
-	   	printy = y	
+			    printx = x
+	  		 	printy = y	
 				P1 = carta8
 				Poder1=listB1[8]
 				objects.o8.body:setPosition(10000/2, 10000/2)
@@ -1539,7 +1620,7 @@
 
 		   if button == 1 and x >= 541 and x<=601 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		  printx = x
-	   	printy = y
+	   		printy = y
 		   	P1 = carta10
 		   	Poder1=listB1[10]
 		   	objects.o10.body:setPosition(10000/2, 10000/2)
@@ -1634,15 +1715,38 @@ end
 end
 
 	end
-		if(CantdiadCartas1==5 and CantdiadCartas2==4 or CantdiadCartas1==4 and CantdiadCartas2==5)then
-		habilitar=true
+	
+--repeat
+	if(CantdiadCartas1==5 and CantdiadCartas2==4 or CantdiadCartas1==4 and CantdiadCartas2==5)then
+		  habilitar=true
 		 if button == 1 and x >= 669 and x<=694 and y >=124 and y <= 149 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		    CantdiadCartas1=5
 		    CantdiadCartas2=5
 		    winronda(CantdiadCartas1,CantdiadCartas2)
 		 end
-  	
+	
 	end
+if(creditos2==1000) then 
+ R=255; G=48; B=7
+ print("creditos fin P2 win") 
+ message="Juego Terminado, Ganador Jugador II\n\n(Click para jugar de nuevo)"
+ if button == 1  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+		    -- R=255; G=255; B=255
+		     --message=""
+		     jugoNuevo()
+ end
+ 
+ end
+ if(creditos1==1000) then 
+ R=255; G=48; B=7
+ print("creditos fin P1 win") 
+ message="Juego Terminado, Ganador Jugador I\n\n(Click para jugar de nuevo)"
+ if button == 2  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+		     --R=255; G=255; B=255
+		     --message=""
+		     jugoNuevo()
+ end
+ end
 end
 	
 
@@ -1748,7 +1852,10 @@ end
 			--print("CantdiadCartas: "..CantdiadCartas)
 		end
 
-		--__________________________________________________________________________-
+		--_________________________________________________________________________-
+		love.graphics.setColor(255, 255, 255)
+		love.graphics.setColor(R, G, B)
+		--_________________________________________________________________________-
 		collectgarbage("collect")
 		--_________________________________________________________________________-
 		
