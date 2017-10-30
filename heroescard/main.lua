@@ -90,7 +90,7 @@
 	end
 	if cancion == 2 then
 		love.audio.stop()
-		--love.audio.play(love.audio.newSource("Data/audio/audio2.mp3","stream"))
+		love.audio.play(love.audio.newSource("Data/audio/audio2.mp3","stream"))
 	end
 	if cancion == 3 then
 		love.audio.stop()
