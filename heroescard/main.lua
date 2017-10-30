@@ -1480,12 +1480,13 @@ function jugoNuevo(  )
 		habilitar=false
 		Poder1=0
 		Poder2=0
-		objects.P1.body:setPosition(460, 274)
-		objects.P2.body:setPosition(262, 272)
+		P1 = love.graphics.newImage("Data/recursos/P1.png")
+		P2 = love.graphics.newImage("Data/recursos/P2.png")
 		x=0
 		y=0
 		printy=y
 		printx=x
+		Jugador=1
 	end
 	if(ganador==totalpts2)then
 		creditos2= creditos2+apuesta2
@@ -1509,12 +1510,13 @@ function jugoNuevo(  )
 		habilitar=false
 		Poder1=0
 		Poder2=0
-		objects.P1.body:setPosition(460, 274)
-		objects.P2.body:setPosition(262, 272)
+		P1 = love.graphics.newImage("Data/recursos/P1.png")
+		P2 = love.graphics.newImage("Data/recursos/P2.png")
 		x=0
 		y=0
 		printy=y
 		printx=x
+		Jugador=1
 	end
 end
 end
