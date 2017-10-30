@@ -8,7 +8,7 @@
 		habilitar=false
 		ganador=0
 		jugador = 1
-		creditos1=1000;
+		creditos1=100;
 		creditos2=100;
 		Primeracarta=0
 		Segundacarta=0
@@ -77,8 +77,8 @@
 		aux=0;
 		aux2=0;
 		cancion= love.math.random(1,3)
-		text = 1
-		texto = 2
+		text = 0
+		texto = 0
 		printx=0
 		printy=0
 		R = 255
@@ -1970,7 +1970,8 @@ function jugoNuevo(  )
 		index, ganador = NearestValue(totales,ReglaOro)
 		print(ganador)
 	if(ganador==totalpts1)then
-		creditos1= creditos1+apuesta1
+		creditos1= creditos1+apuesta2
+		creditos2= creditos2-apuesta2
 		print("Win: P1")
 		apuesta1=0
 		totalpts1=0
@@ -2020,7 +2021,8 @@ function jugoNuevo(  )
 		Jugador=1
 	end
 	if(ganador==totalpts2)then
-		creditos2= creditos2+apuesta2
+		creditos2= creditos2+apuesta1
+		creditos1= creditos1-apuesta1
 		print("Win: P2")
 		totalpts1=0
 		totalpts2=0
@@ -2090,6 +2092,15 @@ if(creditos2==1000) then
 		     jugoNuevo()
  end
  end
+ if(creditos2==0) then 
+ R=255; G=48; B=7
+ message="(Jugador II BUSTED), Gana Jugador I\n\n(Click para jugar de nuevo)"
+ if button == 1  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+		     R=255; G=255; B=255
+		     message=""
+		     jugoNuevo()
+ end
+ end
  if(creditos1==1000) then 
  R=255; G=48; B=7
  print("creditos fin P1 win") 
@@ -2100,6 +2111,18 @@ if(creditos2==1000) then
 		     jugoNuevo()
  end
  end
+
+ if(creditos1==0) then 
+ R=255; G=48; B=7
+ print("creditos fin P1 win") 
+ message="(Jugador I BUSTED), Gana Jugador II\n\n(Click para jugar de nuevo)"
+ if button == 2  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+		     R=255; G=255; B=255
+		     message=""
+		     jugoNuevo()
+ end
+ end
+
 end
 	function love.draw()
 		love.graphics.draw(arena, 0, 0)
