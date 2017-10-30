@@ -840,6 +840,9 @@ function jugoNuevo(  )
 	   	printy = y
 	   	P1 = carta1
 	   	Poder1=listB1[1]
+	   	if(Poder1==0)then
+	   		Poder1= love.math.random(1,68)
+	   	end
 	   	objects.o1.body:setPosition(10000/2, 10000/2)
 	   	Prime =1
 	   end
@@ -848,6 +851,9 @@ function jugoNuevo(  )
 	   	printy = y
 	   	P1 = carta2
 	   	Poder1=listB1[2]
+	   	if(Poder1==0)then
+	   		Poder1= love.math.random(1,68)
+	   	end
 	   	objects.o2.body:setPosition(10000/2, 10000/2)
 	   	Prime =1
 	   end
@@ -856,6 +862,9 @@ function jugoNuevo(  )
 	   	printy = y
 	   	P1 = carta3
 	   	Poder1=listB1[3]
+	   	if(Poder1==0)then
+	   		Poder1= love.math.random(1,68)
+	   	end
 	   	objects.o3.body:setPosition(10000/2, 10000/2)
 	   	Prime =1
 	   end
@@ -864,6 +873,9 @@ function jugoNuevo(  )
 	   	printy = y
 	   	P1 = carta4
 	   	Poder1=listB1[4]
+	   	if(Poder1==0)then
+	   		Poder1= love.math.random(1,68)
+	   	end
 	   	objects.o4.body:setPosition(10000/2, 10000/2)
 	   	Prime =1
 	   end
@@ -872,6 +884,9 @@ function jugoNuevo(  )
 	   	printy = y
 	   	P1 = carta5
 	   	Poder1=listB1[5]
+	   	if(Poder1==0)then
+	   		Poder1= love.math.random(1,68)
+	   	end
 	   	objects.o5.body:setPosition(10000/2, 10000/2)
 	   	Prime =1
 	   end
@@ -880,6 +895,9 @@ function jugoNuevo(  )
 	   	printy = y
 	   	P1 = carta6
 	   	Poder1=listB1[6]
+	   	if(Poder1==0)then
+	   		Poder1= love.math.random(1,68)
+	   	end
 	   	objects.o6.body:setPosition(10000/2, 10000/2)
 	   	Prime =1
 	   end
@@ -888,6 +906,9 @@ function jugoNuevo(  )
 	   	printy = y
 	   	P1 = carta7
 	   	Poder1=listB1[7]
+	   	if(Poder1==0)then
+	   		Poder1= love.math.random(1,68)
+	   	end
 	   	objects.o7.body:setPosition(10000/2, 10000/2)
 	   	Prime =1
 	   end
@@ -896,6 +917,9 @@ function jugoNuevo(  )
 	   	printy = y
 	   	P1 = carta8
 	   	Poder1=listB1[8]
+	   	if(Poder1==0)then
+	   		Poder1= love.math.random(1,68)
+	   	end
 	   	objects.o8.body:setPosition(10000/2, 10000/2)
 	   	Prime =1
 	   end
@@ -904,6 +928,9 @@ function jugoNuevo(  )
 	   	printy = y
 	   	P1 = carta9
 	   	Poder1=listB1[9]
+	   	if(Poder1==0)then
+	   		Poder1= love.math.random(1,68)
+	   	end
 	   	objects.o9.body:setPosition(10000/2, 10000/2)
 	   	Prime =1
 	   end
@@ -912,6 +939,9 @@ function jugoNuevo(  )
 	   	printy = y
 	   	P1 = carta10
 	   	Poder1=listB1[10]
+	   	if(Poder1==0)then
+	   		Poder1= love.math.random(1,68)
+	   	end
 	   	objects.o10.body:setPosition(10000/2, 10000/2)
 	   	Prime =1
 	   end
@@ -923,6 +953,9 @@ function jugoNuevo(  )
 				printy = y
 				P2 = carta11
 				Poder2=listB1[11]
+				if(Poder2==0)then
+	   				Poder2= love.math.random(1,68)
+	   			end
 				objects.o11.body:setPosition(10000/2, 10000/2)
 				Prime2=1
 			end
@@ -931,6 +964,9 @@ function jugoNuevo(  )
 		   	printy = y
 		   	P2 = carta12
 		   	Poder2=listB1[12]
+		   	if(Poder2==0)then
+	   			Poder2= love.math.random(1,68)
+	  	 	end
 		   	objects.o12.body:setPosition(10000/2, 10000/2)
 		   	Prime2=1
 		   end
@@ -939,6 +975,9 @@ function jugoNuevo(  )
 		   	printy = y
 		   	P2 = carta13
 		   	Poder2=listB1[13]
+		   	if(Poder2==0)then
+	   			Poder2= love.math.random(1,68)
+	  	 	end
 		   	objects.o13.body:setPosition(10000/2, 10000/2)
 		   	Prime2=1
 		   end
@@ -947,6 +986,9 @@ function jugoNuevo(  )
 		   	printy = y
 		   	P2 = carta14
 		   	Poder2=listB1[14]
+		   	if(Poder2==0)then
+	   			Poder2= love.math.random(1,68)
+	  	 	end
 		   	objects.o14.body:setPosition(10000/2, 10000/2)
 		   	Prime2=1
 		   end
@@ -955,6 +997,9 @@ function jugoNuevo(  )
 		   	printy = y
 		   	P2 = carta15
 		   	Poder2=listB1[15]
+		   	if(Poder2==0)then
+	   			Poder2= love.math.random(1,68)
+	  	 	end
 		   	objects.o15.body:setPosition(10000/2, 10000/2)
 		   	Prime2=1
 		   end
@@ -963,6 +1008,9 @@ function jugoNuevo(  )
 		   	printy = y
 		   	P2 = carta16
 		   	Poder2=listB1[16]
+		   	if(Poder2==0)then
+	   			Poder2= love.math.random(1,68)
+	  	 	end
 		   	objects.o16.body:setPosition(10000/2, 10000/2)
 		   	Prime2=1
 		   end
@@ -971,6 +1019,9 @@ function jugoNuevo(  )
 		   	printy = y
 		   	P2 = carta17
 		   	Poder2=listB1[17]
+		   	if(Poder2==0)then
+	   			Poder2= love.math.random(1,68)
+	  	 	end
 		   	objects.o17.body:setPosition(10000/2, 10000/2)
 		   	Prime2=1
 		   end
@@ -979,6 +1030,9 @@ function jugoNuevo(  )
 		    	printy = y
 		    	P2 = carta18
 		    	Poder2=listB1[18]
+		    	if(Poder2==0)then
+	   				Poder2= love.math.random(1,68)
+	  	 		end
 		    	objects.o18.body:setPosition(10000/2, 10000/2)
 
 		    	Prime2=1
@@ -988,6 +1042,9 @@ function jugoNuevo(  )
 		   	printy = y
 		   	P2 = carta19
 		   	Poder2=listB1[19]
+		   	if(Poder2==0)then
+	   			Poder2= love.math.random(1,68)
+	  	 	end
 		   	objects.o19.body:setPosition(10000/2, 10000/2)
 
 		   	Prime2=1
@@ -997,6 +1054,9 @@ function jugoNuevo(  )
 		   	printy = y
 		   	P2 = carta20
 		   	Poder2=listB1[20]
+		   	if(Poder2==0)then
+	   			Poder2= love.math.random(1,68)
+	  	 	end
 		   	objects.o20.body:setPosition(10000/2, 10000/2)
 		   	Prime2=1
 		  end   
@@ -1970,7 +2030,7 @@ function jugoNuevo(  )
 		index, ganador = NearestValue(totales,ReglaOro)
 		print(ganador)
 	if(ganador==totalpts1)then
-		creditos1= creditos1+apuesta2
+		creditos1= creditos1+(apuesta1*2)
 		creditos2= creditos2-apuesta2
 		print("Win: P1")
 		apuesta1=0
@@ -1997,31 +2057,31 @@ function jugoNuevo(  )
 		x=0
 		y=0
 			v1=0
-				v2=0
-				v3=0
-				v4=0
-				v5=0
-				v6=0
-				v7=0
-				v8=0
-				v9=0
-				v10=0
-				s11=0
-				s12=0
-				s13=0
-				s14=0
-				s15=0
-				s16=0
-				s17=0
-				s18=0
-				s19=0
-				s20=0
+			v2=0
+			v3=0
+			v4=0
+			v5=0
+			v6=0
+			v7=0
+			v8=0
+			v9=0
+			v10=0
+			s11=0
+			s12=0
+			s13=0
+			s14=0
+			s15=0
+			s16=0
+			s17=0
+			s18=0
+			s19=0
+			s20=0
 		printy=y
 		printx=x
 		Jugador=1
 	end
 	if(ganador==totalpts2)then
-		creditos2= creditos2+apuesta1
+		creditos2= creditos2+(apuesta2*2)
 		creditos1= creditos1-apuesta1
 		print("Win: P2")
 		totalpts1=0
