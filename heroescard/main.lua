@@ -363,6 +363,7 @@
 	i=1;
 	j=1;
 	k=1;
+	rand=0;
 	listB1 = {}
 	while i<=20 do
 		rand=love.math.random(0,67)
@@ -644,8 +645,8 @@ function jugoNuevo(  )
 		aux=0;
 		aux2=0;
 		cancion= love.math.random(1,3)
-		text = 1
-		texto = 2
+		text = 0
+		texto = 0
 		printx=0
 		printy=0
 		R = 255
@@ -676,7 +677,7 @@ function jugoNuevo(  )
 		volver2()
 		aleatorio()
 
-		end
+	end
 	function love.textinput(t)
 		if(apuesta1==0)then
 			text = text .. t
