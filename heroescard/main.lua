@@ -101,6 +101,8 @@ function love.load()
 		love.audio.play(love.audio.newSource("Data/audio/audio3.mp3","stream"))
 	end
 	sfx = love.audio.newSource("Data/audio/LifePointEffect.mp3","static")
+	spxwineer=love.audio.newSource("Data/audio/Winner.mp3","static")
+	spxfinal=love.audio.newSource("Data/audio/FinalLooser.mp3","static")
 	--_________________________________________________________________________________--
 	--							Sección de elementos para aleatorio      			   --
 	--_________________________________________________________________________________--
@@ -723,6 +725,9 @@ function jugoNuevo(  )
 		love.audio.stop()
 		love.audio.play(love.audio.newSource("Data/audio/audio3.mp3","stream"))
 	end
+	sfx = love.audio.newSource("Data/audio/LifePointEffect.mp3","static")
+	spxwineer=love.audio.newSource("Data/audio/Winner.mp3","static")
+	spxfinal=love.audio.newSource("Data/audio/FinalLooser.mp3","static")
 	i=1;
 	j=1;
 	k=1;
@@ -2299,9 +2304,10 @@ function love.mousepressed(x, y, button, istouch)
 		end
 	end
 	if(creditos2==1000) then 
-		 R=255; G=48; B=7
+		R=255; G=48; B=7
  		print("creditos fin P2 win") 
  		message="Juego Terminado, Ganador Jugador II\n\n(Click para jugar de nuevo)"
+ 		love.audio.play(spxwineer)
  		if button == 2  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		    R=255; G=255; B=255
 		    message=""
@@ -2311,6 +2317,7 @@ function love.mousepressed(x, y, button, istouch)
  	if(creditos2==0) then 
  		R=255; G=48; B=7
  		message="(Jugador II BUSTED), Gana Jugador I\n\n(Click para jugar de nuevo)"
+ 		love.audio.play(spxfinal)
  		if button == 2  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		    R=255; G=255; B=255
 		    message=""
@@ -2321,6 +2328,7 @@ function love.mousepressed(x, y, button, istouch)
  		R=255; G=48; B=7
  		print("creditos fin P1 win") 
  		message="Juego Terminado, Ganador Jugador I\n\n(Click para jugar de nuevo)"
+ 		love.audio.play(spxwineer)
  		if button == 2  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		    R=255; G=255; B=255
 		    message=""
@@ -2331,6 +2339,7 @@ function love.mousepressed(x, y, button, istouch)
 		R=255; G=48; B=7
  		print("creditos fin P1 win") 
  		message="(Jugador I BUSTED), Gana Jugador II\n\n(Click para jugar de nuevo)"
+ 		love.audio.play(spxfinal)
  		if button == 2  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		    R=255; G=255; B=255
 		    message=""
