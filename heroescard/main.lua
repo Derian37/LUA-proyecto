@@ -1538,6 +1538,9 @@ function love.mousepressed(x, y, button, istouch)
 	      		printy = y
 	      		P2 = carta11
 	      		Poder2=listB1[11]
+	      		if(Poder2==0)then
+	   				Poder2= love.math.random(1,68)
+	   			end
       			s11=1
 	    	  	objects.o11.body:setPosition(10000/2, 10000/2)
 	       		Segundacarta=1
@@ -1547,6 +1550,9 @@ function love.mousepressed(x, y, button, istouch)
 	     		printy = y
 		   		P2 = carta12
 		   		Poder2=listB1[12]
+		   		if(Poder2==0)then
+	   				Poder2= love.math.random(1,68)
+	   			end
 	   			s12=1
 		   		objects.o12.body:setPosition(10000/2, 10000/2)
 		   		Segundacarta=1
@@ -1556,6 +1562,9 @@ function love.mousepressed(x, y, button, istouch)
 		   		printy = y
 		   		P2 = carta13
 		   		Poder2=listB1[13]
+		   		if(Poder2==0)then
+	   				Poder2= love.math.random(1,68)
+	   			end
 	    		s13=1
 			   	objects.o13.body:setPosition(10000/2, 10000/2)
 		   		Segundacarta=1
@@ -1565,6 +1574,9 @@ function love.mousepressed(x, y, button, istouch)
 			   	printy = y
 			   	P2 = carta14
 			   	Poder2=listB1[14]
+			   	if(Poder2==0)then
+	   				Poder2= love.math.random(1,68)
+	   			end
 		      	s14=1
 			   	objects.o14.body:setPosition(10000/2, 10000/2)
 			   	Segundacarta=1
@@ -1574,6 +1586,9 @@ function love.mousepressed(x, y, button, istouch)
 			   	printy = y
 			   	P2 = carta15
 			   	Poder2=listB1[15]
+			   	if(Poder2==0)then
+	   				Poder2= love.math.random(1,68)
+	   			end
 		    	s15=1
 			   	objects.o15.body:setPosition(10000/2, 10000/2)
 			   	Segundacarta=1
@@ -1583,6 +1598,9 @@ function love.mousepressed(x, y, button, istouch)
 			    printy = y
 			   	P2 = carta16
 			   	Poder2=listB1[16]
+			   	if(Poder2==0)then
+	   				Poder2= love.math.random(1,68)
+	   			end
 		    	s16=1
 			   	objects.o16.body:setPosition(10000/2, 10000/2)
 			   	Segundacarta=1
@@ -1592,6 +1610,9 @@ function love.mousepressed(x, y, button, istouch)
 			   	printy = y
 			   	P2 = carta17
 			   	Poder2=listB1[17]
+			   	if(Poder2==0)then
+	   				Poder2= love.math.random(1,68)
+	   			end
 		   		s17=1
 			   	objects.o17.body:setPosition(10000/2, 10000/2)
 			   	Segundacarta=1
@@ -1601,6 +1622,9 @@ function love.mousepressed(x, y, button, istouch)
 	    		printy = y
 	    		P2 = carta18
 	    		Poder2=listB1[18]
+	    		if(Poder2==0)then
+	   				Poder2= love.math.random(1,68)
+	   			end
       			s18=1
 	    		objects.o18.body:setPosition(10000/2, 10000/2)
 	    		Segundacarta=1
@@ -1610,6 +1634,9 @@ function love.mousepressed(x, y, button, istouch)
 			   	printy = y
 			   	P2 = carta19
 			   	Poder2=listB1[19]
+			   	if(Poder2==0)then
+	   				Poder2= love.math.random(1,68)
+	   			end
 		    	s19=1
 			   	objects.o19.body:setPosition(10000/2, 10000/2)
 			   	Segundacarta=1
@@ -1619,6 +1646,9 @@ function love.mousepressed(x, y, button, istouch)
 			   	printy = y
 			   	P2 = carta20
 			   	Poder2=listB1[20]
+			   	if(Poder2==0)then
+	   				Poder2= love.math.random(1,68)
+	   			end
 			   	s20=1
 		       	objects.o20.body:setPosition(10000/2, 10000/2)
 			   	Segundacarta=1
@@ -1982,6 +2012,9 @@ function love.mousepressed(x, y, button, istouch)
 			   		printy = y
 			      	P1 = carta1
 			      	Poder1=listB1[1]
+			      	if(Poder1==0)then
+	   					Poder1= love.math.random(1,68)
+	   				end
 			      	v1=1
 			      	objects.o1.body:setPosition(10000/2, 10000/2)
 			      	Segundacarta2=1
@@ -1991,6 +2024,9 @@ function love.mousepressed(x, y, button, istouch)
 				   	printy = y
 				    P1 = carta2
 				   	Poder1=listB1[2]
+				   	if(Poder1==0)then
+	   					Poder1= love.math.random(1,68)
+	   				end
 				   	v2=1
 				   	objects.o2.body:setPosition(10000/2, 10000/2)
 				   	Segundacarta2=1
@@ -2001,6 +2037,9 @@ function love.mousepressed(x, y, button, istouch)
 		 		  	printy = y
 				   	P1 = carta3
 				   	Poder1=listB1[3]
+				   	if(Poder1==0)then
+	   					Poder1= love.math.random(1,68)
+	   				end
 				   	v3=1
 				   	objects.o3.body:setPosition(10000/2, 10000/2)
 				   	Segundacarta2=1
@@ -2011,6 +2050,9 @@ function love.mousepressed(x, y, button, istouch)
 		 		  	printy = y
 				   	P1 = carta4
 				   	Poder1=listB1[4]
+				   	if(Poder1==0)then
+	   					Poder1= love.math.random(1,68)
+	   				end
 				   	v4=1
 				   	objects.o4.body:setPosition(10000/2, 10000/2)
 				   	Segundacarta2=1
@@ -2021,6 +2063,9 @@ function love.mousepressed(x, y, button, istouch)
 		 		  	printy = y
 				   	P1 = carta5
 				   	Poder1=listB1[5]
+				   	if(Poder1==0)then
+	   					Poder1= love.math.random(1,68)
+	   				end
 				   	v5=1
 				   	objects.o5.body:setPosition(10000/2, 10000/2)
 				   	Segundacarta2=1
@@ -2031,6 +2076,9 @@ function love.mousepressed(x, y, button, istouch)
 		  		 	printy = y
 				   	P1 = carta6
 				   	Poder1=listB1[6]
+				   	if(Poder1==0)then
+	   					Poder1= love.math.random(1,68)
+	   				end
 				   	v6=1
 				   	objects.o6.body:setPosition(10000/2, 10000/2)
 				   	Segundacarta2=1
@@ -2041,6 +2089,9 @@ function love.mousepressed(x, y, button, istouch)
 		   			printy = y
 				   	P1 = carta7
 				   	Poder1=listB1[7]
+				   	if(Poder1==0)then
+	   					Poder1= love.math.random(1,68)
+	   				end
 				   	v7=1
 				   	objects.o7.body:setPosition(10000/2, 10000/2)
 				   	Segundacarta2=1
@@ -2051,6 +2102,9 @@ function love.mousepressed(x, y, button, istouch)
 		  		 	printy = y	
 					P1 = carta8
 					Poder1=listB1[8]
+					if(Poder1==0)then
+	   					Poder1= love.math.random(1,68)
+	   				end
 					v8=1
 					objects.o8.body:setPosition(10000/2, 10000/2)
 					Segundacarta2=1
@@ -2061,6 +2115,9 @@ function love.mousepressed(x, y, button, istouch)
 		   			printy = y
 					P1 = carta9
 					Poder1=listB1[9]
+					if(Poder1==0)then
+	   					Poder1= love.math.random(1,68)
+	   				end
 					v9=1
 					objects.o9.body:setPosition(10000/2, 10000/2)
 					Segundacarta2=1
@@ -2071,6 +2128,9 @@ function love.mousepressed(x, y, button, istouch)
 		   			printy = y
 			   		P1 = carta10
 			   		Poder1=listB1[10]
+			   		if(Poder1==0)then
+	   					Poder1= love.math.random(1,68)
+	   				end
 			   		v10=1
 			   		objects.o10.body:setPosition(10000/2, 10000/2)
 			   		Segundacarta2=1
