@@ -914,6 +914,10 @@ function love.mousepressed(x, y, button, istouch)
 	if button == 1 and x >= 20 and x<=55 and y >=77 and y <= 100 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		if(tonumber(text)<=creditos1)then
 			apuesta1=text
+			x=0
+			y=0
+			printx=x
+			printy=y
 			jugador=2
 		else
 			apuesta1=0
@@ -923,6 +927,10 @@ function love.mousepressed(x, y, button, istouch)
 	if button == 1 and x >= 724 and x<=760 and y >=566 and y <= 596 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		if(tonumber(texto)<=creditos2)then
 			apuesta2=texto
+			x=0
+			y=0
+			printx=x
+			printy=y
 			jugador=1
 		else
 			texto=""
@@ -2191,7 +2199,7 @@ function love.mousepressed(x, y, button, istouch)
 				if(ganador==totalpts1)then
 					R=255; G=48; B=7
 	 				print("creditos fin P2 win") 
-	 				message="Ronda Terminada, Ganador Jugador I\n\n(Click derecho para jugar de nuevo)"
+	 				message="Ronda Terminada, Ganador Jugador I\n\n(Precione cualquier Click para continuar)"
 	 				love.audio.play(spxwineer)
 	 				creditos1= creditos1+(apuesta1*2)
 					creditos2= creditos2-apuesta2
@@ -2317,7 +2325,7 @@ function love.mousepressed(x, y, button, istouch)
 	if(creditos2==1000) then 
 		R=255; G=48; B=7
  		print("creditos fin P2 win") 
- 		message="Juego Terminado, Ganador Jugador II\n\n(Precione cualquier Click para continuar)"
+ 		message="Juego Terminado, Ganador Jugador II\n\n(Click derecho para jugar de nuevo)"
  		love.audio.play(spxwineer)
  		if button == 2  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		    R=255; G=255; B=255
