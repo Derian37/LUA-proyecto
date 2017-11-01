@@ -90,15 +90,15 @@ function love.load()
 	cancion= love.math.random(1,3)
 	if cancion == 1 then
 		love.audio.stop()
-		love.audio.play(love.audio.newSource("Data/audio/audio1.mp3","stream"))
+		--love.audio.play(love.audio.newSource("Data/audio/audio1.mp3","stream"))
 	end
 	if cancion == 2 then
 		love.audio.stop()
-		love.audio.play(love.audio.newSource("Data/audio/audio2.mp3","stream"))
+	--	love.audio.play(love.audio.newSource("Data/audio/audio2.mp3","stream"))
 	end
 	if cancion == 3 then
 		love.audio.stop()
-		love.audio.play(love.audio.newSource("Data/audio/audio3.mp3","stream"))
+	--	love.audio.play(love.audio.newSource("Data/audio/audio3.mp3","stream"))
 	end
 	sfx = love.audio.newSource("Data/audio/LifePointEffect.mp3","static")
 	spxwineer=love.audio.newSource("Data/audio/Winner.mp3","static")
@@ -905,6 +905,8 @@ function love.mousepressed(x, y, button, istouch)
 	if button == 1  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		printx=x
 		printy=y
+		R=255; G=255; B=255
+	    message=""
 	end
 	--_________________________________________________________________________________--
 	--	Condicional de coordenas que se encarga de el boton que acepta las apuestas    --
@@ -2169,25 +2171,29 @@ function love.mousepressed(x, y, button, istouch)
 				end
 			end
 		end
-		--Funcion que determinara el ganador de una ronda, repatiendo al ganador su apuesta y quitando al perdedor su apuesta
-		function winronda(CantdiadCartas1,CantdiadCartas2)
-					if(CantdiadCartas1==5 and CantdiadCartas2==5)then
-						ReglaOro = 34
-						totales = {totalpts1,totalpts2}
-						function NearestValue(totales, number)
-				    		local smallestSoFar, smallestIndex
-				   			for i, y in ipairs(totales) do
-				        		if not smallestSoFar or (math.abs(number-y) < smallestSoFar) then
-				            	smallestSoFar = math.abs(number-y)
-				           	    smallestIndex = i
-				        	end
-				    	end
+			--Funcion que determinara el ganador de una ronda, repatiendo al ganador su apuesta y quitando al perdedor su apuesta
+			function winronda(CantdiadCartas1,CantdiadCartas2)
+				if(CantdiadCartas1==5 and CantdiadCartas2==5)then
+					ReglaOro = 34
+					totales = {totalpts1,totalpts2}
+					function NearestValue(totales, number)
+					local smallestSoFar, smallestIndex
+					for i, y in ipairs(totales) do
+				   		if not smallestSoFar or (math.abs(number-y) < smallestSoFar) then
+				           	smallestSoFar = math.abs(number-y)
+				       	    smallestIndex = i
+				       	end
+				   	end
 				   	return smallestIndex, totales[smallestIndex]
 				end
 				index, ganador = NearestValue(totales,ReglaOro)
 				print(ganador)
 				if(ganador==totalpts1)then
-					creditos1= creditos1+(apuesta1*2)
+					R=255; G=48; B=7
+	 				print("creditos fin P2 win") 
+	 				message="Ronda Terminada, Ganador Jugador I\n\n(Click derecho para jugar de nuevo)"
+	 				love.audio.play(spxwineer)
+	 				creditos1= creditos1+(apuesta1*2)
 					creditos2= creditos2-apuesta2
 					print("Win: P1")
 					totalpts1=0
@@ -2238,9 +2244,14 @@ function love.mousepressed(x, y, button, istouch)
 					printy=y
 					printx=x
 					Jugador=1
+
 				end
 				if(ganador==totalpts2)then
-					creditos2= creditos2+(apuesta2*2)
+					R=255; G=48; B=7
+	 				print("creditos fin P2 win") 
+	 				message="Ronda Terminada, Ganador Jugador II\n\n(Precione cualquier Click para continuar)"
+	 				love.audio.play(spxwineer)
+	 				creditos2= creditos2+(apuesta2*2)
 					creditos1= creditos1-apuesta1
 					print("Win: P2")
 					totalpts1=0
@@ -2291,9 +2302,9 @@ function love.mousepressed(x, y, button, istouch)
 					printy=y
 					printx=x
 					Jugador=1
-				end
+	 			end
 			end
-		end
+		end	
 	end
 	if(CantdiadCartas1==5 and CantdiadCartas2==4 or CantdiadCartas1==4 and CantdiadCartas2==5)then
 		habilitar=true
@@ -2306,7 +2317,7 @@ function love.mousepressed(x, y, button, istouch)
 	if(creditos2==1000) then 
 		R=255; G=48; B=7
  		print("creditos fin P2 win") 
- 		message="Juego Terminado, Ganador Jugador II\n\n(Click para jugar de nuevo)"
+ 		message="Juego Terminado, Ganador Jugador II\n\n(Precione cualquier Click para continuar)"
  		love.audio.play(spxwineer)
  		if button == 2  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		    R=255; G=255; B=255
@@ -2316,7 +2327,7 @@ function love.mousepressed(x, y, button, istouch)
  	end
  	if(creditos2==0) then 
  		R=255; G=48; B=7
- 		message="(Jugador II BUSTED), Gana Jugador I\n\n(Click para jugar de nuevo)"
+ 		message="(Jugador II BUSTED), Gana Jugador I\n\n(Click derecho para jugar de nuevo)"
  		love.audio.play(spxfinal)
  		if button == 2  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		    R=255; G=255; B=255
@@ -2327,7 +2338,7 @@ function love.mousepressed(x, y, button, istouch)
  	if(creditos1==1000) then 
  		R=255; G=48; B=7
  		print("creditos fin P1 win") 
- 		message="Juego Terminado, Ganador Jugador I\n\n(Click para jugar de nuevo)"
+ 		message="Juego Terminado, Ganador Jugador I\n\n(Click derecho para jugar de nuevo)"
  		love.audio.play(spxwineer)
  		if button == 2  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		    R=255; G=255; B=255
@@ -2338,7 +2349,7 @@ function love.mousepressed(x, y, button, istouch)
 	if(creditos1==0) then 
 		R=255; G=48; B=7
  		print("creditos fin P1 win") 
- 		message="(Jugador I BUSTED), Gana Jugador II\n\n(Click para jugar de nuevo)"
+ 		message="(Jugador I BUSTED), Gana Jugador II\n\n(Click derecho para jugar de nuevo)"
  		love.audio.play(spxfinal)
  		if button == 2  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		    R=255; G=255; B=255
