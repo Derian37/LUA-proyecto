@@ -25,16 +25,6 @@ function love.load()
 		apuesta2=0
 		dr=false
 		pase=false
-		Primer11=0
-		Primer12=0
-		Primer13=0
-		Primer14=0
-		Primer15=0
-		Primer16=0
-		Primer17=0
-		Primer18=0
-		Primer19=0
-		Primer20=0
 		v1=0
 		v2=0
 		v3=0
@@ -258,83 +248,83 @@ function love.load()
 		objects.o1={}
 		objects.o1.body = love.physics.newBody(world,187,65,"static")
 		objects.o1.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o1.fixture = love.physics.newFixture(objects.c1.body, objects.c1.shape, 5)
+		objects.o1.fixture = love.physics.newFixture(objects.o1.body, objects.o1.shape, 5)
 		objects.o2={}
 		objects.o2.body = love.physics.newBody(world,277,65,"static")
 		objects.o2.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o2.fixture = love.physics.newFixture(objects.c2.body, objects.c2.shape, 5)
+		objects.o2.fixture = love.physics.newFixture(objects.o2.body, objects.o2.shape, 5)
 		objects.o3={}
 		objects.o3.body = love.physics.newBody(world,364,65,"static")
 		objects.o3.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o3.fixture = love.physics.newFixture(objects.c3.body, objects.c3.shape, 5)
+		objects.o3.fixture = love.physics.newFixture(objects.o3.body, objects.o3.shape, 5)
 		objects.o4={}
 		objects.o4.body = love.physics.newBody(world,454,65,"static")
 		objects.o4.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o4.fixture = love.physics.newFixture(objects.c4.body, objects.c4.shape, 5)
+		objects.o4.fixture = love.physics.newFixture(objects.o4.body, objects.o4.shape, 5)
 		objects.o5={}
 		objects.o5.body = love.physics.newBody(world,542,65,"static")
 		objects.o5.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o5.fixture = love.physics.newFixture(objects.c5.body, objects.c5.shape, 5)
+		objects.o5.fixture = love.physics.newFixture(objects.o5.body, objects.o5.shape, 5)
 		objects.o6={}
 		objects.o6.body = love.physics.newBody(world,187,165,"static")
 		objects.o6.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o6.fixture = love.physics.newFixture(objects.c6.body, objects.c6.shape, 5)
+		objects.o6.fixture = love.physics.newFixture(objects.o6.body, objects.o6.shape, 5)
 		objects.o7={}
 		objects.o7.body = love.physics.newBody(world,277,165,"static")
 		objects.o7.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o7.fixture = love.physics.newFixture(objects.c7.body, objects.c7.shape, 5)
+		objects.o7.fixture = love.physics.newFixture(objects.o7.body, objects.o7.shape, 5)
 		objects.o8={}
 		objects.o8.body = love.physics.newBody(world,364,165,"static")
 		objects.o8.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o8.fixture = love.physics.newFixture(objects.c8.body, objects.c8.shape, 5)
+		objects.o8.fixture = love.physics.newFixture(objects.o8.body, objects.o8.shape, 5)
 		objects.o9={}
 		objects.o9.body = love.physics.newBody(world,454,165,"static")
 		objects.o9.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o9.fixture = love.physics.newFixture(objects.c9.body, objects.c9.shape, 5)
+		objects.o9.fixture = love.physics.newFixture(objects.o9.body, objects.o9.shape, 5)
 		objects.o10={}
 		objects.o10.body = love.physics.newBody(world,542,165,"static")
 		objects.o10.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o10.fixture = love.physics.newFixture(objects.c10.body, objects.c10.shape, 5)
+		objects.o10.fixture = love.physics.newFixture(objects.o10.body, objects.o10.shape, 5)
 		objects.o11={}
 		objects.o11.body = love.physics.newBody(world,187,388,"static")
 		objects.o11.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o11.fixture = love.physics.newFixture(objects.c11.body, objects.c11.shape, 5)
+		objects.o11.fixture = love.physics.newFixture(objects.o11.body, objects.o11.shape, 5)
 		objects.o12={}
 		objects.o12.body = love.physics.newBody(world,277,388,"static")
 		objects.o12.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o12.fixture = love.physics.newFixture(objects.c12.body, objects.c12.shape, 5)
+		objects.o12.fixture = love.physics.newFixture(objects.o12.body, objects.o12.shape, 5)
 		objects.o13={}
 		objects.o13.body = love.physics.newBody(world,364,388,"static")
 		objects.o13.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o13.fixture = love.physics.newFixture(objects.c13.body, objects.c13.shape, 5)
+		objects.o13.fixture = love.physics.newFixture(objects.o13.body, objects.o13.shape, 5)
 		objects.o14={}
 		objects.o14.body = love.physics.newBody(world,454,388,"static")
 		objects.o14.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o14.fixture = love.physics.newFixture(objects.c14.body, objects.c14.shape, 5)
+		objects.o14.fixture = love.physics.newFixture(objects.o14.body, objects.o14.shape, 5)
 		objects.o15={}
 		objects.o15.body = love.physics.newBody(world,542,388,"static")
 		objects.o15.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o15.fixture = love.physics.newFixture(objects.c15.body, objects.c15.shape, 5)
+		objects.o15.fixture = love.physics.newFixture(objects.o15.body, objects.o15.shape, 5)
 		objects.o16={}
 		objects.o16.body = love.physics.newBody(world,187,486,"static")
 		objects.o16.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o16.fixture = love.physics.newFixture(objects.c16.body, objects.c16.shape, 5)
+		objects.o16.fixture = love.physics.newFixture(objects.o16.body, objects.o16.shape, 5)
 		objects.o17={}
 		objects.o17.body = love.physics.newBody(world,277,486,"static")
 		objects.o17.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o17.fixture = love.physics.newFixture(objects.c17.body, objects.c17.shape, 5)
+		objects.o17.fixture = love.physics.newFixture(objects.o17.body, objects.o17.shape, 5)
 		objects.o18={}
 		objects.o18.body = love.physics.newBody(world,364,486,"static")
 		objects.o18.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o18.fixture = love.physics.newFixture(objects.c18.body, objects.c18.shape, 5)
+		objects.o18.fixture = love.physics.newFixture(objects.o18.body, objects.o18.shape, 5)
 		objects.o19={}
 		objects.o19.body = love.physics.newBody(world,454,486,"static")
 		objects.o19.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o19.fixture = love.physics.newFixture(objects.c19.body, objects.c19.shape, 5)
+		objects.o19.fixture = love.physics.newFixture(objects.o19.body, objects.o19.shape, 5)
 		objects.o20={}
 		objects.o20.body = love.physics.newBody(world,542,486,"static")
 		objects.o20.shape =love.physics.newRectangleShape(0,0,10,10)
-		objects.o20.fixture = love.physics.newFixture(objects.c20.body, objects.c20.shape, 5)
+		objects.o20.fixture = love.physics.newFixture(objects.o20.body, objects.o20.shape, 5)
 	--_________________________________________________________________________________--
 	--						Creacion de Objetos Cartas Necesarios para el mundo:       --
 	--					-Puntos de vida.											   --
@@ -422,7 +412,7 @@ function aleatorio()
 	end
 	m=1
 	while m<=20 do
-	 	print("Carta"..m..": "..listB1[m])
+	 	--print("Carta"..m..": "..listB1[m])
 		m=m+1
 	end
 	--_________________________________________________________________________________--
@@ -662,16 +652,6 @@ function jugoNuevo(  )
 	apuesta2=0
 	dr=false
 	pase=false
-	Primer11=0
-	Primer12=0
-	Primer13=0
-	Primer14=0
-	Primer15=0
-	Primer16=0
-	Primer17=0
-	Primer18=0
-	Primer19=0
-	Primer20=0
 	v1=0
 	v2=0
 	v3=0
@@ -905,6 +885,8 @@ function love.mousepressed(x, y, button, istouch)
 	if button == 1  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		printx=x
 		printy=y
+		print(x)
+		print(y)
 		R=255; G=255; B=255
 	    message=""
 	end
@@ -1412,7 +1394,7 @@ function love.mousepressed(x, y, button, istouch)
 		   		end	
 	   		end
 	 		if button == 1 and x >= 186 and x<=250 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-	   			if(v1==6)then
+	   			if(v6==0)then
 		   			printx = x
 		  			printy = y
 		   			if(jugador==1)then
@@ -1442,8 +1424,8 @@ function love.mousepressed(x, y, button, istouch)
 		   			end
 	   			end
 	   		end
-	   		if button == 1 and x >= 276 and x<=337 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-	 		  	if(v7==0)then
+	   		if button == 1 and  x >= 276 and x<=337 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+	   		 	if(v7==0)then
 		 		  	printx = x
 		   			printy = y
 		   			if(jugador==1)then
@@ -1460,17 +1442,17 @@ function love.mousepressed(x, y, button, istouch)
 		   				ver1()
 		   				R=073; G=103; B=141
 		   				message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
-		   			function love.keypressed(key)
-							if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-		  			 			R=255;G=255;B=255
-		      					message=""
-		   						voltear1()
-		   						Primeracarta =1
-					    	end
-						end
-		   			else
-		   			 	Primeracarta =1
-		   			end	
+			   			function love.keypressed(key)
+								if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+			  			 			R=255;G=255;B=255
+			      					message=""
+			   						voltear1()
+			   						Primeracarta =1
+						    	end
+							end
+			   			else
+			   			 	Primeracarta =1
+			   			end	
 	   			end
 	   		end
 	   		if button == 1 and x >= 365 and x<=425 and y >=162 and y <= 251 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
@@ -1741,41 +1723,37 @@ function love.mousepressed(x, y, button, istouch)
 	--____________________________________________________________________________________________________________________--
 	if jugador == 2 then
 			if Primeracarta2 == 0 or Primeracarta2==1 then
-				if Primer11==0 then 
-					if button == 1 and x >= 187 and x<=250 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-						if(s11==0)then
-							printx = x
-							printy = y
-							if(jugador==2)then
-				   				CantdiadCartas2=CantdiadCartas2+1
-				 	  		end
-							P2 = carta11
-							Poder2=listB1[11]
-							if(Poder2==0)then
-			   					Poder2= love.math.random(1,68)
-			   				end
-			   				s11=1
-							objects.o11.body:setPosition(10000/2, 10000/2)
-							Primer11=1
-			   		 		if(Poder2==67 and bandera==false)then
-			   					ver2()
-			   					R=073; G=103; B=141
-			   					message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
-			   					function love.keypressed(key)
-									if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
-			  			 				R=255;G=255;B=255
-			      						message=""
-			   							voltear2()
-			   							Primeracarta2 =1
-							    	end
-								end
-							else
-								Primeracarta2=1
-							end
+				if button == 1 and x >= 187 and x<=250 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+					if(s11==0)then
+						printx = x
+						printy = y
+						if(jugador==2)then
+			   				CantdiadCartas2=CantdiadCartas2+1
+			 	  		end
+						P2 = carta11
+						Poder2=listB1[11]
+						if(Poder2==0)then
+		   					Poder2= love.math.random(1,68)
 		   				end
-		   			end
-				end
-				if Primer12==0 then 
+		   				s11=1
+						objects.o11.body:setPosition(10000/2, 10000/2)
+		   		 		if(Poder2==67 and bandera==false)then
+		   					ver2()
+		   					R=073; G=103; B=141
+		   					message="DR MANHATAN\n\n Precione (Espacio) para desactivar poder"
+		   					function love.keypressed(key)
+								if key == "space" then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+		  			 				R=255;G=255;B=255
+		      						message=""
+		   							voltear2()
+		   							Primeracarta2 =1
+						    	end
+							end
+						else
+							Primeracarta2=1
+						end
+	   				end
+	   			end
 			   		if button == 1 and x >= 276 and x<=337 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 			   			if(s12==0)then
 				   			printx = x
@@ -1790,7 +1768,6 @@ function love.mousepressed(x, y, button, istouch)
 					   		end
 						 	s12=1
 						   	objects.o12.body:setPosition(10000/2, 10000/2)
-						   	Primer12=1
 						    if(Poder2==67 and bandera==false)then
 			   					ver2()
 			   					R=073; G=103; B=141
@@ -1808,8 +1785,6 @@ function love.mousepressed(x, y, button, istouch)
 							end
 		   				end
 			   		end
-				end
-				if Primer13==0 then
 				    if button == 1 and x >= 365 and x<=425 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 					  	if(s13==0)then
 						  	printx = x
@@ -1824,7 +1799,6 @@ function love.mousepressed(x, y, button, istouch)
 					   		end
 						  	s13=1
 						   	objects.o13.body:setPosition(10000/2, 10000/2)
-						   	Primer13=1
 						    if(Poder2==67 and bandera==false)then
 					   			ver2()
 					   			R=073; G=103; B=141
@@ -1842,8 +1816,6 @@ function love.mousepressed(x, y, button, istouch)
 							end
 		   				end
 			   		end
-				end
-				if Primer14==0 then
 				   if button == 1 and x >= 454 and x<=514 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 				    	if(s14==0)then
 					    	printx = x
@@ -1858,7 +1830,6 @@ function love.mousepressed(x, y, button, istouch)
 				   			end
 					 		s14=1
 					   		objects.o14.body:setPosition(10000/2, 10000/2)
-					   		Primer14=1
 					   		if(Poder2==67 and bandera==false)then
 				   				ver2()
 				   				R=073; G=103; B=141
@@ -1876,8 +1847,6 @@ function love.mousepressed(x, y, button, istouch)
 							end
 		   				end
 			   		end
-				end
-				if Primer15==0 then
 			   		if button == 1 and x >= 541 and x<=601 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 					   	if(s15==0)then
 						   	printx = x
@@ -1892,7 +1861,6 @@ function love.mousepressed(x, y, button, istouch)
 					   		end
 						  	s15=1
 						   	objects.o15.body:setPosition(10000/2, 10000/2)
-						   	Primer15=1
 						   	if(Poder2==67 and bandera==false)then
 					   			ver2()
 					   			R=073; G=103; B=141
@@ -1910,8 +1878,6 @@ function love.mousepressed(x, y, button, istouch)
 							end
 				   		end
 			  		end
-			 	end
-				if Primer16==0 then
 				   if button == 1 and x >= 186 and x<=250 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 					    if(s16==0)then
 						   	printx = x
@@ -1926,7 +1892,6 @@ function love.mousepressed(x, y, button, istouch)
 					   		end
 							s16=1
 						   	objects.o16.body:setPosition(10000/2, 10000/2)
-						   	Primer16=1
 						   	if(Poder2==67 and bandera==false)then
 					   			ver2()
 					   			R=073; G=103; B=141
@@ -1944,8 +1909,6 @@ function love.mousepressed(x, y, button, istouch)
 							end
 				   		end
 			   		end
-				end
-				if Primer17==0 then
 			  		if button == 1 and x >= 256 and x<=336 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 					   	if(s17==0)then
 						   	printx = x
@@ -1960,7 +1923,6 @@ function love.mousepressed(x, y, button, istouch)
 					   		end
 						 	s17=1
 						   	objects.o17.body:setPosition(10000/2, 10000/2)
-						   	Primer17=1
 					   		if(Poder2==67 and bandera==false)then
 			   					ver2()
 			   					R=073; G=103; B=141
@@ -1978,8 +1940,6 @@ function love.mousepressed(x, y, button, istouch)
 		   					end
 		   				end
 			   		end
-				end
-				if Primer18==0 then
 				    if button == 1 and x >= 365 and x<=425 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 					    if(s18==0)then
 						    printx = x
@@ -1994,7 +1954,6 @@ function love.mousepressed(x, y, button, istouch)
 					   		end
 							s18=1
 						    objects.o18.body:setPosition(10000/2, 10000/2)
-						    Primer18=1
 						    if(Poder2==67 and bandera==false)then
 					   			ver2()
 					   			R=073; G=103; B=141
@@ -2012,8 +1971,6 @@ function love.mousepressed(x, y, button, istouch)
 				   			end
 				   		end
 					end
-				end
-				if Primer19==0 then
 			   		if button == 1 and x >= 454 and x<=514 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 					    if(s19==0)then
 						    printx = x
@@ -2028,7 +1985,6 @@ function love.mousepressed(x, y, button, istouch)
 					   		end
 						  	s19=1
 						   	objects.o19.body:setPosition(10000/2, 10000/2)
-						   	Primer19=1
 						   	if(Poder2==67 and bandera==false)then
 					   			ver2()
 					   			R=073; G=103; B=141
@@ -2045,9 +2001,8 @@ function love.mousepressed(x, y, button, istouch)
 								Primeracarta2=1
 		   					end
 		   				end
-			 		  end
-				end
-				if Primer20==0 then
+			 		end
+			
 			 		if button == 1 and x >= 541 and x<=601 and y >=486 and y <= 570 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 					    if(s20==0)then
 						    printx = x
@@ -2062,7 +2017,6 @@ function love.mousepressed(x, y, button, istouch)
 					   		end
 						  	s20=1
 						   	objects.o20.body:setPosition(10000/2, 10000/2)
-						   	Primer20=1
 						    if(Poder2==67 and bandera==false)then
 				   				ver2()
 				   				R=073; G=103; B=141
@@ -2080,7 +2034,6 @@ function love.mousepressed(x, y, button, istouch)
 							end
 		   				end
 			  		end   
-				end  	  
 			if Segundacarta2 == 0 then
 		    	 if button == 1 and x >= 187 and x<=250 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		      		if(v1==0)then
