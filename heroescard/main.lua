@@ -2231,16 +2231,18 @@ function love.mousepressed(x, y, button, istouch)
 						if(totales[2] > totales[1] and totales[2] > ReglaOro and totales[1] < ReglaOro)then
 							ganador = totales[1]
 						end
-						if(totales[2] == totales[1] and totales[2] > ReglaOro or totales[1] > ReglaOro )then
+						if(totales[2] == totales[1] and totales[2] > ReglaOro or totales[1] > ReglaOro or totales[1] < 0 and totales[2] < 0 )then
 							ganador=1000
 						end
 						if(totales[2] ==  totales[1] and totales[2] < ReglaOro )then
-							ganador=37
+							ganador=2000
 						end
-
+						if(totales[1] < 0 and totales[2] < 0 )then
+							ganador=3000
+						end
 						return ganador
 					end
-				if(Ganador()==1000)then
+				if(Ganador()==1000 or Ganador()==3000)then
 					R=137; G=172; B=118
 	 				print("creditos fin P2 win") 
 	 				message="Casa Gana Apuestas\n\n(Precione cualquier Click para continuar)"
@@ -2296,7 +2298,7 @@ function love.mousepressed(x, y, button, istouch)
 					printx=x
 					Jugador=1
 				end
-				if(Ganador()==37)then
+				if(Ganador()==2000)then
 					R=255; G=48; B=7
 	 				print("creditos fin P2 win") 
 	 				message="Ronda Empatada\n\n(Precione cualquier Click para continuar)"
