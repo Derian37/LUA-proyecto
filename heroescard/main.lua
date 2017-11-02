@@ -885,8 +885,6 @@ function love.mousepressed(x, y, button, istouch)
 	if button == 1  then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		printx=x
 		printy=y
-		print(x)
-		print(y)
 		R=255; G=255; B=255
 	    message=""
 	end
@@ -1722,7 +1720,7 @@ function love.mousepressed(x, y, button, istouch)
 	--							Condicionales que hacen realiadad el juego mediante turnos 	del jugador 2                 --
 	--____________________________________________________________________________________________________________________--
 	if jugador == 2 then
-			if Primeracarta2 == 0 or Primeracarta2==1 then
+			if Primeracarta2 == 0  then
 				if button == 1 and x >= 187 and x<=250 and y >=386 and y <= 472 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 					if(s11==0)then
 						printx = x
@@ -2033,8 +2031,10 @@ function love.mousepressed(x, y, button, istouch)
 								Primeracarta2=1
 							end
 		   				end
-			  		end   
-			if Segundacarta2 == 0 then
+			  		end
+			  	end   
+			 print("Primeracarta2= "..Primeracarta2.." Segundacarta2= "..Segundacarta2)
+			if Segundacarta2 == 0 and Primeracarta2==1 then
 		    	 if button == 1 and x >= 187 and x<=250 and y >=67 and y <= 152 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		      		if(v1==0)then
 			      		printx = x
@@ -2185,7 +2185,7 @@ function love.mousepressed(x, y, button, istouch)
 				   	end
 			   	end
 			end
-		end
+		
 			--____________________________________________________________________________________________________________________--
 			--							Condicionales que hacen realiadad la ejecucion de las reglas del jugador 2                --
 			--____________________________________________________________________________________________________________________--
