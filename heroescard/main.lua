@@ -2217,19 +2217,140 @@ function love.mousepressed(x, y, button, istouch)
 				if(CantdiadCartas1==5 and CantdiadCartas2==5)then
 					ReglaOro = 34
 					totales = {totalpts1,totalpts2}
-					function NearestValue(totales, number)
-					local smallestSoFar, smallestIndex
-					for i, y in ipairs(totales) do
-				   		if not smallestSoFar or (math.abs(number-y) < smallestSoFar) then
-				           	smallestSoFar = math.abs(number-y)
-				       	    smallestIndex = i
-				       	end
-				   	end
-				   	return smallestIndex, totales[smallestIndex]
+					function Ganador()
+						ganador=0
+						if (totales[1] > totales[2] and totales[1] <= ReglaOro) then
+							ganador = totales[1]
+						end
+						if(totales[2] > totales[1] and totales[2] <= ReglaOro)then
+							ganador =  totales[2]
+						end
+						if(totales[1] > totales[2] and totales[1] > ReglaOro and totales[2] < ReglaOro)then
+							ganador = totales[2]
+						end
+						if(totales[2] > totales[1] and totales[2] > ReglaOro and totales[1] < ReglaOro)then
+							ganador = totales[1]
+						end
+						if(totales[2] == totales[1] and totales[2] > ReglaOro or totales[1] > ReglaOro )then
+							ganador=1000
+						end
+						if(totales[2] ==  totales[1] and totales[2] < ReglaOro )then
+							ganador=37
+						end
+
+						return ganador
+					end
+				if(Ganador()==1000)then
+					R=137; G=172; B=118
+	 				print("creditos fin P2 win") 
+	 				message="Casa Gana Apuestas\n\n(Precione cualquier Click para continuar)"
+	 				love.audio.play(spxwineer)
+	 				creditos2= creditos2-apuesta2
+					creditos1= creditos1-apuesta1
+					totalpts1=0
+					totalpts2=0
+					Ronda=Ronda+1
+					apuesta1=0
+					apuesta2=0
+					text=0
+					texto=0
+					aleatorio()
+					cubrir()
+					Primeracarta=0
+					Segundacarta=0
+					Primeracarta2=0
+					Segundacarta2=0
+					CantdiadCartas1=0
+					CantdiadCartas2=0
+					Prime2=0
+					Prime=0
+					bandera=true
+					habilitar=false
+					Poder1=0
+					Poder2=0
+					P1 = love.graphics.newImage("Data/recursos/P1.png")
+					P2 = love.graphics.newImage("Data/recursos/P2.png")
+					x=0
+					y=0
+					v1=0
+					v2=0
+					v3=0
+					v4=0
+					v5=0
+					v6=0
+					v7=0
+					v8=0
+					v9=0
+					v10=0
+					s11=0
+					s12=0
+					s13=0
+					s14=0
+					s15=0
+					s16=0
+					s17=0
+					s18=0
+					s19=0
+					s20=0
+					printy=y
+					printx=x
+					Jugador=1
 				end
-				index, ganador = NearestValue(totales,ReglaOro)
-				print(ganador)
-				if(ganador==totalpts1)then
+				if(Ganador()==37)then
+					R=255; G=48; B=7
+	 				print("creditos fin P2 win") 
+	 				message="Ronda Empatada\n\n(Precione cualquier Click para continuar)"
+	 				love.audio.play(spxwineer)
+					totalpts1=0
+					totalpts2=0
+					Ronda=Ronda+1
+					apuesta1=0
+					apuesta2=0
+					text=0
+					texto=0
+					aleatorio()
+					cubrir()
+					Primeracarta=0
+					Segundacarta=0
+					Primeracarta2=0
+					Segundacarta2=0
+					CantdiadCartas1=0
+					CantdiadCartas2=0
+					Prime2=0
+					Prime=0
+					bandera=true
+					habilitar=false
+					Poder1=0
+					Poder2=0
+					P1 = love.graphics.newImage("Data/recursos/P1.png")
+					P2 = love.graphics.newImage("Data/recursos/P2.png")
+					x=0
+					y=0
+					v1=0
+					v2=0
+					v3=0
+					v4=0
+					v5=0
+					v6=0
+					v7=0
+					v8=0
+					v9=0
+					v10=0
+					s11=0
+					s12=0
+					s13=0
+					s14=0
+					s15=0
+					s16=0
+					s17=0
+					s18=0
+					s19=0
+					s20=0
+					printy=y
+					printx=x
+					Jugador=1
+				end
+				if(Ganador()==totalpts1)then
 					R=255; G=48; B=7
 	 				print("creditos fin P2 win") 
 	 				message="Ronda Terminada, Ganador Jugador I\n\n(Precione cualquier Click para continuar)"
@@ -2287,7 +2408,7 @@ function love.mousepressed(x, y, button, istouch)
 					Jugador=1
 
 				end
-				if(ganador==totalpts2)then
+				if(Ganador()==totalpts2)then
 					R=255; G=48; B=7
 	 				print("creditos fin P2 win") 
 	 				message="Ronda Terminada, Ganador Jugador II\n\n(Precione cualquier Click para continuar)"
