@@ -80,15 +80,15 @@ function love.load()
 	cancion= love.math.random(1,3)
 	if cancion == 1 then
 		love.audio.stop()
-		--love.audio.play(love.audio.newSource("Data/audio/audio1.mp3","stream"))
+		love.audio.play(love.audio.newSource("Data/audio/audio1.mp3","stream"))
 	end
 	if cancion == 2 then
 		love.audio.stop()
-	--	love.audio.play(love.audio.newSource("Data/audio/audio2.mp3","stream"))
+		love.audio.play(love.audio.newSource("Data/audio/audio2.mp3","stream"))
 	end
 	if cancion == 3 then
 		love.audio.stop()
-	--	love.audio.play(love.audio.newSource("Data/audio/audio3.mp3","stream"))
+		love.audio.play(love.audio.newSource("Data/audio/audio3.mp3","stream"))
 	end
 	sfx = love.audio.newSource("Data/audio/LifePointEffect.mp3","static")
 	spxwineer=love.audio.newSource("Data/audio/Winner.mp3","static")
