@@ -1554,6 +1554,7 @@ function love.mousepressed(x, y, button, istouch)
 		      		printy = y
 		      		P2 = carta11
 		      		Poder2=listB1[11]
+		      		CantdiadCartas1=CantdiadCartas1+1
 		      		if(Poder2==0)then
 		   				Poder2= love.math.random(1,68)
 		   			end
@@ -1568,6 +1569,7 @@ function love.mousepressed(x, y, button, istouch)
 		     		printy = y
 			   		P2 = carta12
 			   		Poder2=listB1[12]
+			   		CantdiadCartas1=CantdiadCartas1+1
 			   		if(Poder2==0)then
 		   				Poder2= love.math.random(1,68)
 		   			end
@@ -1582,6 +1584,7 @@ function love.mousepressed(x, y, button, istouch)
 			   		printy = y
 			   		P2 = carta13
 			   		Poder2=listB1[13]
+			   		CantdiadCartas1=CantdiadCartas1+1
 			   		if(Poder2==0)then
 		   				Poder2= love.math.random(1,68)
 		   			end
@@ -1596,6 +1599,7 @@ function love.mousepressed(x, y, button, istouch)
 				   	printy = y
 				   	P2 = carta14
 				   	Poder2=listB1[14]
+				   	CantdiadCartas1=CantdiadCartas1+1
 				   	if(Poder2==0)then
 		   				Poder2= love.math.random(1,68)
 		   			end
@@ -1610,6 +1614,7 @@ function love.mousepressed(x, y, button, istouch)
 				   	printy = y
 				   	P2 = carta15
 				   	Poder2=listB1[15]
+				   	CantdiadCartas1=CantdiadCartas1+1
 				   	if(Poder2==0)then
 		   				Poder2= love.math.random(1,68)
 		   			end
@@ -1624,6 +1629,7 @@ function love.mousepressed(x, y, button, istouch)
 				    printy = y
 				   	P2 = carta16
 				   	Poder2=listB1[16]
+				   	CantdiadCartas1=CantdiadCartas1+1
 				   	if(Poder2==0)then
 		   				Poder2= love.math.random(1,68)
 		   			end
@@ -1638,6 +1644,7 @@ function love.mousepressed(x, y, button, istouch)
 				   	printy = y
 				   	P2 = carta17
 				   	Poder2=listB1[17]
+				   	CantdiadCartas1=CantdiadCartas1+1
 				   	if(Poder2==0)then
 		   				Poder2= love.math.random(1,68)
 		   			end
@@ -1652,6 +1659,7 @@ function love.mousepressed(x, y, button, istouch)
 		    		printy = y
 		    		P2 = carta18
 		    		Poder2=listB1[18]
+		    		CantdiadCartas1=CantdiadCartas1+1
 		    		if(Poder2==0)then
 		   				Poder2= love.math.random(1,68)
 		   			end
@@ -1666,6 +1674,7 @@ function love.mousepressed(x, y, button, istouch)
 				   	printy = y
 				   	P2 = carta19
 				   	Poder2=listB1[19]
+				   	CantdiadCartas1=CantdiadCartas1+1
 				   	if(Poder2==0)then
 		   				Poder2= love.math.random(1,68)
 		   			end
@@ -1680,6 +1689,7 @@ function love.mousepressed(x, y, button, istouch)
 				   	printy = y
 				   	P2 = carta20
 				   	Poder2=listB1[20]
+				   	CantdiadCartas1=CantdiadCartas1+1
 				   	if(Poder2==0)then
 		   				Poder2= love.math.random(1,68)
 		   			end
@@ -2041,6 +2051,7 @@ function love.mousepressed(x, y, button, istouch)
 				   		printy = y
 				      	P1 = carta1
 				      	Poder1=listB1[1]
+				      	CantdiadCartas2=CantdiadCartas2+1
 				      	if(Poder1==0)then
 		   					Poder1= love.math.random(1,68)
 		   				end
@@ -2055,6 +2066,7 @@ function love.mousepressed(x, y, button, istouch)
 					   	printy = y
 					    P1 = carta2
 					   	Poder1=listB1[2]
+					   	CantdiadCartas2=CantdiadCartas2+1
 					   	if(Poder1==0)then
 		   					Poder1= love.math.random(1,68)
 		   				end
@@ -2070,6 +2082,7 @@ function love.mousepressed(x, y, button, istouch)
 			 		  	printy = y
 					   	P1 = carta3
 					   	Poder1=listB1[3]
+					   	CantdiadCartas2=CantdiadCartas2+1
 					   	if(Poder1==0)then
 		   					Poder1= love.math.random(1,68)
 		   				end
@@ -2085,6 +2098,7 @@ function love.mousepressed(x, y, button, istouch)
 			 		  	printy = y
 					   	P1 = carta4
 					   	Poder1=listB1[4]
+					   	CantdiadCartas2=CantdiadCartas2+1
 					   	if(Poder1==0)then
 		   					Poder1= love.math.random(1,68)
 		   				end
@@ -2100,6 +2114,7 @@ function love.mousepressed(x, y, button, istouch)
 			 		  	printy = y
 					   	P1 = carta5
 					   	Poder1=listB1[5]
+					   	CantdiadCartas2=CantdiadCartas2+1
 					   	if(Poder1==0)then
 		   					Poder1= love.math.random(1,68)
 		   				end
@@ -2115,6 +2130,7 @@ function love.mousepressed(x, y, button, istouch)
 			  		 	printy = y
 					   	P1 = carta6
 					   	Poder1=listB1[6]
+					   	CantdiadCartas2=CantdiadCartas2+1
 					   	if(Poder1==0)then
 		   					Poder1= love.math.random(1,68)
 		   				end
@@ -2130,6 +2146,7 @@ function love.mousepressed(x, y, button, istouch)
 			   			printy = y
 					   	P1 = carta7
 					   	Poder1=listB1[7]
+					   	CantdiadCartas2=CantdiadCartas2+1
 					   	if(Poder1==0)then
 		   					Poder1= love.math.random(1,68)
 		   				end
@@ -2145,6 +2162,7 @@ function love.mousepressed(x, y, button, istouch)
 			  		 	printy = y	
 						P1 = carta8
 						Poder1=listB1[8]
+						CantdiadCartas2=CantdiadCartas2+1
 						if(Poder1==0)then
 		   					Poder1= love.math.random(1,68)
 		   				end
@@ -2160,6 +2178,7 @@ function love.mousepressed(x, y, button, istouch)
 			   			printy = y
 						P1 = carta9
 						Poder1=listB1[9]
+						CantdiadCartas2=CantdiadCartas2+1
 						if(Poder1==0)then
 		   					Poder1= love.math.random(1,68)
 		   				end
@@ -2175,6 +2194,7 @@ function love.mousepressed(x, y, button, istouch)
 			   			printy = y
 				   		P1 = carta10
 				   		Poder1=listB1[10]
+				   		CantdiadCartas2=CantdiadCartas2+1
 				   		if(Poder1==0)then
 		   					Poder1= love.math.random(1,68)
 		   				end
@@ -2225,28 +2245,27 @@ function love.mousepressed(x, y, button, istouch)
 						if(totales[2] > totales[1] and totales[2] <= ReglaOro)then
 							ganador =  totales[2]
 						end
-						if(totales[1] > totales[2] and totales[1] > ReglaOro and totales[2] < ReglaOro)then
+						if(totales[1] > totales[2] and totales[1] > ReglaOro and totales[2] <= ReglaOro)then
 							ganador = totales[2]
 						end
-						if(totales[2] > totales[1] and totales[2] > ReglaOro and totales[1] < ReglaOro)then
+						if(totales[2] >= 0 and totales[1] > ReglaOro and totales[2] <= ReglaOro)then
+							ganador = totales[2]
+						end
+						if(totales[2] > totales[1] and totales[2] > ReglaOro and totales[1] <= ReglaOro)then
 							ganador = totales[1]
 						end
-						if(totales[2] == totales[1] and totales[2] > ReglaOro or totales[1] > ReglaOro or totales[1] < 0 and totales[2] < 0 )then
+						if(totales[2] == totales[1] and totales[1]>= 0 and totales[2]>=0 and totales[1]<= ReglaOro and totales[2] <=ReglaOro )then
 							ganador=1000
 						end
-						if(totales[2] ==  totales[1] and totales[2] < ReglaOro )then
-							ganador=2000
-						end
-						if(totales[1] < 0 and totales[2] < 0 )then
+						if(totales[1] > ReglaOro and totales[2] > ReglaOro or totales[1] < 0 and totales[2] < 0 or totales[1] < 0 and totales[2] > ReglaOro or totales[2] < 0 and totales[1] > ReglaOro)then
 							ganador=3000
 						end
 						return ganador
 					end
-				if(Ganador()==1000 or Ganador()==3000)then
+				if(Ganador()==3000)then
 					R=137; G=172; B=118
 	 				print("creditos fin P2 win") 
 	 				message="Casa Gana Apuestas\n\n(Precione cualquier Click para continuar)"
-	 				love.audio.play(spxwineer)
 	 				creditos2= creditos2-apuesta2
 					creditos1= creditos1-apuesta1
 					totalpts1=0
@@ -2270,6 +2289,7 @@ function love.mousepressed(x, y, button, istouch)
 					habilitar=false
 					Poder1=0
 					Poder2=0
+					Jugador=1
 					P1 = love.graphics.newImage("Data/recursos/P1.png")
 					P2 = love.graphics.newImage("Data/recursos/P2.png")
 					x=0
@@ -2296,13 +2316,11 @@ function love.mousepressed(x, y, button, istouch)
 					s20=0
 					printy=y
 					printx=x
-					Jugador=1
 				end
-				if(Ganador()==2000)then
+				if(Ganador()==1000)then
 					R=255; G=48; B=7
 	 				print("creditos fin P2 win") 
 	 				message="Ronda Empatada\n\n(Precione cualquier Click para continuar)"
-	 				love.audio.play(spxwineer)
 					totalpts1=0
 					totalpts2=0
 					Ronda=Ronda+1
@@ -2356,7 +2374,6 @@ function love.mousepressed(x, y, button, istouch)
 					R=255; G=48; B=7
 	 				print("creditos fin P2 win") 
 	 				message="Ronda Terminada, Ganador Jugador I\n\n(Precione cualquier Click para continuar)"
-	 				love.audio.play(spxwineer)
 	 				creditos1= creditos1+(apuesta1*2)
 					creditos2= creditos2-apuesta2
 					print("Win: P1")
@@ -2408,13 +2425,11 @@ function love.mousepressed(x, y, button, istouch)
 					printy=y
 					printx=x
 					Jugador=1
-
 				end
 				if(Ganador()==totalpts2)then
 					R=255; G=48; B=7
 	 				print("creditos fin P2 win") 
 	 				message="Ronda Terminada, Ganador Jugador II\n\n(Precione cualquier Click para continuar)"
-	 				love.audio.play(spxwineer)
 	 				creditos2= creditos2+(apuesta2*2)
 					creditos1= creditos1-apuesta1
 					print("Win: P2")
@@ -2470,7 +2485,15 @@ function love.mousepressed(x, y, button, istouch)
 			end
 		end	
 	end
-	if(CantdiadCartas1==5 and CantdiadCartas2==4 or CantdiadCartas1==4 and CantdiadCartas2==5)then
+	if(CantdiadCartas1==10 and CantdiadCartas2==9)then
+		habilitar=true
+		if button == 1 and x >= 669 and x<=694 and y >=124 and y <= 149 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
+		    CantdiadCartas1=5
+		    CantdiadCartas2=5
+		    winronda(CantdiadCartas1,CantdiadCartas2)
+		end
+	end
+	if(CantdiadCartas2== 10 and CantdiadCartas1==9)then
 		habilitar=true
 		if button == 1 and x >= 669 and x<=694 and y >=124 and y <= 149 then -- Versions prior to 0.10.0 use the MouseConstant 'l'
 		    CantdiadCartas1=5
